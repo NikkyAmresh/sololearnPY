@@ -11,3 +11,7 @@ def addjscss(file):
 
 for file in glob("*/*.html"):
 	addjscss(file)
+# f = open('sl_snippets.html',"a")
+# for fol in glob("*"):
+# 	f.write("\n\t<li><a href='"+fol+"'>"+fol+"</a></li>")
+# f.close()
