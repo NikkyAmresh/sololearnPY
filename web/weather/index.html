@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body>
+    <div id="sicn" class="search"><i class="zmdi zmdi-search"></i></div>
+    <form id="form" onsubmit="return false">
+        <input list="slist" placeholder="Enter a city name" autofocus type="search" id="sbox">
+        <datalist id="slist">
+            <option value="patna"></option>
+            <option value="patna1"></option>
+        </datalist>
+        <input id="sbmit" value="Submit" type="submit">
+        <input id="can" value="Cancel" type="reset">
+    </form>
+      <div class="location"><i class="zmdi zmdi-pin"></i> <span id="city">Bahardurpur</span><br><small><small><span id="time">Mon 1 July 1:42 am</span></small></small></div>  
+      <div class="temp"><img id="icon" src="https://openweathermap.org/img/wn/01d.png"><span id="temp">29°</span></div><br>
+     <!--div class="dif" id="minmax">37°/29° feels like 36°</div-->
+     <br><br>
+     <div class="cncl" id="cncl">fog</div>
+     <br><br><br>
+     Sunset/Sunrise<br><br>
+     <table class="box">
+     <tr>
+     <td rowspan="2"><img height="30px" src="https://i.ibb.co/zx1Gb1k/sunrise.png" border="0"></a></td>
+           <td colspan="2" >Sunrise</td>  
+           <td rowspan="2" class="bar">
+           <img height="30px" src="https://i.ibb.co/9gy46kN/Sunset-512.png" border="0"></td>
+         <td class="td" colspan="2">Sunset</td>
+         
+     </tr>
+     <tr><td colspan=2 id="rise">10%</td>
+         <td colspan="2" id="set">low</td>
+         
+     </tr>
+     
+     </table>
+     <br><br><br>
+     <table class="box">
+     <tr>
+     <td rowspan="2"><img height="40px" src="https://openweathermap.org/img/wn/02d.png" border="0"></td>
+           <td colspan="2" class="td1" >Min Temp.</td>  
+           <td rowspan="2" class="bar1">
+           <img height="40px" src="https://openweathermap.org/img/wn/01d.png" border="0"></td>
+         <td class="td" colspan="2">Max Temp.</td>
+         
+     </tr>
+     <tr><td colspan=2 id="min">10%</td>
+         <td colspan="2" id="max">low</td>
+         
+     </tr>
+         
+     <tr>
+     <td rowspan="2"><img src="https://i.ibb.co/HXXWgHR/1561945243452.png"  height="30px" border="0"></td>
+           <td colspan="2" >Humidity</td>  
+           <td rowspan="2" class="bar">
+           <img src="https://i.ibb.co/JsB2Gh0/92-pressure-air-wind-weather-512.png" height="30px" border="0"></td>
+         <td class="td" colspan="2">Pressure</td>
+         
+     </tr>
+     <tr><td colspan=2 id="hum">100</td>
+         <td colspan="2" id="prs">low</td>
+         
+     </tr>
+     <tr>
+     <td rowspan="2"><img height="30px" src="https://i.ibb.co/J5YJ99G/unnamed-1.png" border="0"></td>
+           <td colspan="2" >Precipitation</td>  
+           <td rowspan="2" class="bar">
+           <img height="30px" src="https://i.ibb.co/y0QGnKJ/aami9-58-512.png" border="0"></td>
+         <td class="td" colspan="2">UV index</td>
+         
+     </tr>
+     <tr><td colspan=2 id="rain">10%</td>
+         <td colspan="2" id="uvi">low</td>
+         
+     </tr>
+     
+         
+     </table>
+     <br>
+     UPCOMING FORECAST<br>
+     <br>
+     <div class="box2">
+     <table>
+         <tr id="tmtd">
+             
+         </tr>
+         <tr id="mn">
+             
+         </tr>
+         <tr id="ic">
+             
+         </tr>
+         <tr id="h">
+             
+         </tr>
+     </table>
+     </div>
+     <br>
+    
+     
+    </body>
+</html>

@@ -1,0 +1,52 @@
+/* Created by Maxim Samoilov */
+
+/*Creator Maxim Samoilov*/
+body {
+    background-image:url("https://thumb.ibb.co/bOXCyG/images_16.jpg");
+    background-repeat:no-repeat;
+    background-size:350px 650px;
+}
+.out {
+    outline-color:red;
+    width:100px;
+    background-clip:padding-box;
+    opacity:0.5;
+}
+.petby {
+    border-radius:15px;
+}
+.DigitalTime {
+    font-size:50px;
+    color:white;
+}
+.wallapers {
+    background-image:url("https://thumb.ibb.co/gJx0Fw/i_Phone_X_wallpapers_by_Phone_Designer_7_1536w_derived.jpg");
+    background-repeat:no-repeat;
+    background-size:425px 590px;
+}
+.battery {
+    color:white;
+    font-size:10px;
+    margin-left:125px;
+}
+.not_sim {
+    color:white;
+    margin-left:1px;
+    font-size:8px;
+}
+.center1 {
+    margin:45px;
+}
+.cirl {
+    border-radius: 0 0 20px 20px;
+    background-color: black;
+    color: white;
+    height:15px;
+    width:1500px;
+    margin:0px 100px;
+}
+.Admin_user {
+    width:70px;
+    border-radius:100px;
+
+}

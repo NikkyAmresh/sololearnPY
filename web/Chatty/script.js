@@ -1,0 +1,1 @@
+alert("For best experience use Pc or Landscape mode in Handset")

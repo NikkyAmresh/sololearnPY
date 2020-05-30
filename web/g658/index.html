@@ -1,0 +1,58 @@
+<!-- Created by Sami Khan (Mr. Khan)-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Platinum Badge</title>
+         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+          <link href="https://fonts.googleapis.com/css?family=Popipins|Great+Vibes|Josefin+Sans|Tangerine:700|Lobster|Ubuntu" rel="stylesheet">
+     </head>
+    <body id="clk">  
+      <audio class="song" controls>
+   <source src="https://www.dropbox.com/s/px1q777pft8f919/sound.mp3?raw=1" type="audio/ogg"></audio>
+    <div id="Loader" class="loader">
+    <img class="icon" src="http://svgshare.com/i/2TA.svg">
+    <h2 class="Lhead">Put On Your Headphones!</h2>
+    <p class="Lsubhead">Tap Anywhere To Enjoy Music</p>
+   <div id="seconds" class="seconds">
+  <div id="bar" class="bar animating"></div>
+    </div></div>
+    <div id="note"></div>
+        <img id="edit" class="bgtext" src="https://inspirationhut.net/wp-content/uploads/2012/11/Grungy-Paper-Texture-3.jpg">
+    <div class="container">
+      <div class="shimmy">
+        <div class="circle">    
+          <div class="star">
+          <div class="shine">          
+            </div>
+          </div>
+           <div class="shadow">
+        </div>
+        </div>
+        </div>
+        </div>
+        <h1 class="blink-text">Platinum Member!!</h1>
+        <h6>Created by: Sami Khan</h6></div>
+    </body>
+    <script>
+     
+        var str = "<h1 class='header'>Thank You</h1><br /><p class='words'>A True Sololearner wants to say thanks to all the members of <a href='https://code.sololearn.com/W375avGk9S05/?ref=app'><q>Sololearn community</q></a> individually and to the moderators. I am blessed to be honoured as the 26<sup>th</sup> Platinum member in India. This have been the Best learning app of all time, which happily led me to quit the giant social sites. It really helps me to gain knowledge in every aspects of coding. Thanks again to every Sololearners here  who have helped me in coding, resolving my problems and shared their knowledge among us for better learning.</p><br /><h3 class='quote'><q>Before Coding, Make Sure You have the Blueprint in your mind!</q> </h3><h5>- Sami<h5>",
+    i = 0,
+    isTag,
+    text;
+setTimeout(function type() {
+    text = str.slice(0, ++i);
+    if (text === str) return;
+    
+    document.getElementById('note').innerHTML = text;
+
+    var char = text.slice(-1);
+    if( char === '<' ) isTag = true;
+    if( char === '>' ) isTag = false;
+
+    if (isTag) return type();
+      setTimeout(type, 86);
+},7400);
+   
+    </script>
+</html>

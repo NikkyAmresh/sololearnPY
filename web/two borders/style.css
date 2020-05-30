@@ -1,0 +1,17 @@
+.border {
+     border:2px solid #F36;     
+     position:relative;
+     padding:10px;
+      z-index:10
+ }
+ .border:before { 
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:-1;
+    top:2px;
+    left:2px; 
+   right:2px; 
+   bottom:2px;
+    border:2px solid #36F
+ }

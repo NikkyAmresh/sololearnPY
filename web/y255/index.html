@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="code.js"></script>
+    <script src="moderator.js"></script>
+    <style>
+        /*
+    ==== SoloLearn Colors ====
+    
+    #17a68a -- Dark Mint Green
+    #3a464b -- Navy Blue
+    #546e7b -- Default Cyan
+    
+    =======================
+*/
+body {
+    margin: 0;
+    background: #EEE;
+    color: #333;
+    overflow: hidden;
+}
+#header, #accHeader{
+    width: calc(100% - 25px);
+    height: 45px;
+    margin: 0;
+    padding-left: 25px;
+    color: #FFF;
+    background: #546e7b;
+    overflow: hidden;
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 5px #777;
+}
+#messages {
+    height: calc(100% - 75px);
+    width: 100vw;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    z-index: 1;
+    background: #EEE;
+}
+#input {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #EEE;
+}
+#message {
+    outline: none;
+    border: none;
+    resize: none;
+    display: inline-block;
+    height: 20px;
+    width: calc(80% - 10px);
+    padding: 5px;
+    margin: 0;
+    background: #FFF;
+    box-shadow: 0 0 1px #333 inset;
+    border-radius: 15px;
+    float: left;
+    font-family: arial;
+}
+#send {
+    width: 20%;
+    height: 30px;
+    margin: 0;
+    outline: none;
+    border: none;
+    display: inline-block;
+    float: right;
+    color: #FFF;
+    background: #546e7b;
+    border-radius: 15px;
+}
+#send:active {
+    background: #3a464b;
+}
+.bubble {
+    color: #FFF;
+    margin: 0;
+    display: inline-block;
+    max-width: calc(100% - 28px);
+    margin: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
+    padding-right: 15px;
+    background: #17a68a;
+    border-radius: 5px 5px 5px 0;
+}
+.bubble:active {
+    background: #15997e;
+}
+.bubble:last-child {
+    margin-bottom: 10px;
+}
+.name {
+    color: #DDD;
+    font-weight: bolder;
+    display: inline-block;
+}
+.you {
+    background: #3a464b;
+}
+#comment {
+    color: #555;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    width: calc(100% - 30px);
+    margin: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px;
+    padding-right: 15px;
+    background: transparent;
+}
+#options {
+    background: transparent;
+    color: #EEE;
+    font-weight: lighter;
+    letter-spacing: 0px;
+    border: none;
+    outline: none;
+    height: 45px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+#optionsMenu {
+    width: calc(80% - 50px);
+    height: calc(80% - 50px);
+    padding: 25px;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    z-index: -1;
+    background: #FFF;
+    color: #777;
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#optionsMenu > button {
+    background: transparent;
+    color: #AAA;
+    font-size: 13.5pt;
+    font-weight: lighter;
+    letter-spacing: 0px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+#optionsMenu > button:active {
+    background: #EEE;
+}
+#amt {
+    color: #333;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    position: fixed;
+    right: 0px;
+    top: 45px;
+    z-index: 1;
+    padding: 5px;
+    background: linear-gradient(90deg, transparent, #EEE);
+    text-decoration: underline;
+}
+a {
+    color: white !important;
+}
+.censored {
+    color: #FFF;
+    background: #000;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 1pt;
+}
+#optionsMenu > #closeOptions {
+    color: #E77;
+}
+code {
+    background: rgba(100, 100, 100, .5);
+    color: #333;
+    border-radius: 5px;
+    display: block;
+    font-size: 10pt;
+    padding: 2px;
+}
+.label {
+    background: transparent;
+    color: #AAA;
+    font-size: 13.5pt;
+    font-weight: lighter;
+    letter-spacing: 0px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+}
+#toggles {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#cmd {
+    display: none;
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: #EEE;
+    border-radius: 3px;
+}
+.time {
+    display: block;
+    background: transparent;
+    color: #AAA;
+    font-size: 7.5pt;
+    width: calc(100% - 5px);
+    padding: 0;
+    margin: 0;
+      padding-left: 5px;
+}
+mark {
+    color: #FFF;
+    display: inline;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 3px;
+    padding: 0;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + label {
+    border: none;
+    outline: none;
+    display: inline-block;
+    width: 13pt;
+    height: 13pt;
+    background: #EEE;
+    transition: background .25s linear;
+    border-radius: 50%;
+    float: right;
+}
+input[type=checkbox]:checked + label {
+    background: #5A5;
+}
+#log {
+    width: 60%;
+    height: 100%;
+    border: none;
+    resize: none;
+    margin: 0;
+    padding: 0;
+}
+.cover {
+    width: 100vw;
+    height: 100vh;
+    background: #546e7b;
+    color: #FFF;
+    letter-spacing: -1px;
+    font-size: 35pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.cover > * {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+.cover > small, small{
+    font-size: 13pt;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, .5);
+    margin-top: 5px;
+}
+#myAccount {
+    height: calc(100% - 45px);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 45px;
+    z-index: 4;
+    background: #FFF;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#accHeader {
+    z-index: 2;
+}
+#image {
+    margin: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #546e7b;
+}
+#pfp {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #FFF;
+}
+#accHeader {
+    overflow: hidden;
+    width: 100%;
+    padding-left: 0;
+    font-weight: lighter;
+}
+#exitAcc {
+    padding-left: 25px;
+    padding-right: 10px;
+    display: inline-block;
+    transform: rotate(180deg);
+}
+#bio {
+    width: calc(100% - 30px);
+    height: auto;
+    padding: 15px;
+}
+#nametag {
+    font-size: 20pt;
+    font-weight: bold;
+}
+    </style>
+    <title>SoloChat</title>
+    </head>
+    <body>
+        <div id="header">SoloChat</div>
+        <button id="options">OPTIONS</button>
+        <div id="messages">
+            
+        </div>
+        <div id="input">
+            <textarea id="message" placeholder="Type Something..." autocomplete="on"></textarea>
+            <button id="send">SEND</button>
+        </div>
+        <div id="amt">000 online</div>
+        <div id="optionsMenu">
+            <button id="closeOptions">CLOSE</button><br />
+            <button id="newName">CHANGE NAME</button><br >
+            <button id="help">HELP</button><br />
+            <button id="feedback">FEEDBACK</button><br />
+         <button id="account">ACCOUNT</button><br />
+            <button id="mod">MODERATOR?</button><br id='modBr' />
+            <table id="toggles">
+                <tr>
+                    <td class="label">DARK THEME</td>
+                    <td><input type="checkbox" id="theme" name="theme" /><label for="theme"></label></td>
+                </tr>
+            </table>
+            <input type="text" id="cmd" placeholder="Enter Command" />
+        </div>
+    <div id="accHeader"><span id="exitAcc">➔</span><span class="username"></span></div>
+    <div id="myAccount">
+        <div id="image">
+            <img src="Images/profile.png" alt="" id="pfp" />
+        </div>
+        <div id="bio">
+            <div class="username" id="nametag"></div>
+            <div id="id"></div>
+        </div>
+    </div>
+    </body>
+</html>

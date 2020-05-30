@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><script>$(document).bind("mobileinit",function(){$.mobile.changePage.defaults.changeHash=!1,$.mobile.hashListeningEnabled=!1,$.mobile.pushStateEnabled=!1});</script><script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script><link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /><script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+    </head>
+    <body>
+<div data-role="header" data-position="fixed" data-theme="a" class="ui-bar"><h1>Messenger</h1></div>
+<div id="error" title="Message!"></div>
+<div id="input">
+    <form>
+    <input type="hidden" id="txt1" name="textbox1">
+        <label for="name" id="p_n">Name</label>
+        <input type="text" name="name" id="txt2" class="text ui-widget-content ui-corner-all" />
+    </form>
+</div>
+<div class="bar"><h2 id="type"></h2></div>
+<div role="main" class="ui-content">
+<div id="login_form">
+<input id="email" type="tel" value="" placeholder="10-digit Mobile number" maxlength="17"/>
+<input id="pass" value="" type="password" placeholder="password"/>
+ <button data-role="button" id="login" data-theme="a" >Login</button>
+ <button data-role="button" id="sp" data-theme="a" >Sign Up</button>
+ </div>
+ <div id="sign_out">
+     <img class="avatar" onclick="photo_update()"/>
+     <br><span onclick="name_update()" id="p_name"></span>
+ <button data-role="button" id="so" data-theme="a" >Sign out</button></div>
+</div>
+<div data-role="footer" data-position="fixed" data-theme="a" class="ui-bar">
+
+<h2>Copyright &copy; Nikky Amresh</h2> 
+
+</div>
+    </body>
+</html>

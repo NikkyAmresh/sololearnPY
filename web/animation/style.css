@@ -1,0 +1,55 @@
+/* Created by Jman */
+
+/*Help from Maz */
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+    /* rules with -webkit- prefix */
+    -webkit-animation-name: colorchange;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: 
+    infinite;
+    
+    /* standard rules */
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+    border-radius: 50px;
+    border: solid black 1px;
+    box-shadow: 6px 3px 3px 3px grey;
+    
+}
+
+/* keyframes & transform with webkit */
+@-webkit-keyframes colorchange {
+    0% {
+      -webkit-transform:translate(0px, 0px); 
+    }
+    50% {
+      height:10px; 
+      -webkit-transform:translate(0px, 200px); 
+      background-color: yellow; 
+    }
+    100% {
+      -webkit-transform:translate(0px, 0px); 
+    }
+}
+
+/* keyframes and transform standard */
+@keyframes colorchange {
+    0% {
+      transform:translate(0px, 0px); 
+    }
+    50% {
+      height:10px; 
+      transform:translate(0px, 200px); 
+      background-color: yellow; 
+    }
+    100% {
+      transform:translate(0px, 0px); 
+    }
+}

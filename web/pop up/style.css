@@ -1,0 +1,51 @@
+#edit-bio-form{
+    position:fixed;
+    display:none;
+    left:0;
+    top:0;
+    width:100%;
+    opacity:1;
+    height:100%;
+    background:rgba(100,100,180,0.2);
+    text-align:center;
+    color:#000;
+}
+#edit-bio-form form{
+    top:30vw;
+    position:fixed;
+    opacity:1;
+    color:#000;
+    height:46vw;
+    border-radius:3vw;
+    width:80vw;
+    background:#dcdcff;
+    left:10vw;
+}
+#edit-bio-form form header{
+    margin-top:5vw;
+    color:#000;
+}
+#edit-bio-form form input,textarea{
+    padding:2vw;
+    border:none;
+    outline:none;
+    background-color:#eee;
+    margin:1vw;
+    border-radius:2vw;
+    font-size:5vw;
+}
+#edit-bio-form form input{
+    float:right;
+    margin-right:8vw;
+}
+
+#edit-bio-form form input[type=button]{
+    margin-right:3vw;
+    background:#babacc;
+}
+#edit-bio-form form input[type=submit]{
+    background:#ababff;
+}
+*{
+    font-weight:lighter;
+}

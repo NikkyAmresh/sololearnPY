@@ -1,0 +1,48 @@
+/* Created by Mitali */
+
+body{
+            margin-left:3%;
+            background-color: #ececec;
+        }
+        style { 
+              margin:5px;
+              display:block; 
+              white-space: pre; 
+              background:white ; 
+              color: #90ccf4; 
+              font: 20px ; 
+              font-family: 'Markazi Text', serif;
+              padding-left: 0px; 
+              border:2px solid #90ccf4;
+              border-radius: 12px;
+            }
+        h1{
+            background-color:#90ccf4;
+            color:white;
+            text-align: center;
+            border-radius:8px;
+            font-family: 'Fugaz One', cursive;
+        }
+        .title{
+            font-family: 'Abril Fatface', cursive;
+            color:#90ccf4;
+            padding-left:10px;
+            background-color: white;
+            font-size: 20px;
+        }
+        .how{
+            color:#90ccf4;
+            background-color: white;
+            font-size: 20px;
+            border:2px solid #90ccf4;
+
+        }
+        .desc{
+            background-color: #90ccf4;
+            color:white;
+            font-family: 'Markazi Text', serif;
+            font-size: 21px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            padding-left:5px;
+        }

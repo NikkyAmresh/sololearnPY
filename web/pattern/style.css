@@ -1,0 +1,51 @@
+/* Created by Andrew */
+
+body {
+    margin: 0;
+    background: #333;
+    color: #FFF;
+}
+pre {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    padding: 15px;
+    overflow: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+#test {
+    width: calc(100% - 30px);
+    padding: 15px;
+}
+textarea, input[type=text] {
+    resize: none;
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: #555;
+}
+textarea {
+    height: 75px;
+}
+#exec {
+    border: none;
+    outline: none;
+    background: #555;
+    color: #FFF;
+    width: 100%;
+    height: 30px;
+}
+#boolean {
+    width: 100%;
+    text-align: center;
+}
+small {
+    color: #555;
+}
+#label {
+    color: #AAA;
+}

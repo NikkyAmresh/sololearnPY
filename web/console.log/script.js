@@ -1,0 +1,1 @@
+for(var i=0;i<60;i++)console.log(i+1+". "+['January','February','March'][Math.floor(Math.random()*3)])

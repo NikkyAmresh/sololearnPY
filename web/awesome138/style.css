@@ -1,0 +1,522 @@
+/* Created by LukArToDo */
+
+body {
+    width:100%;
+    height:100%;
+    background:url(https://s-media-cache-ak0.pinimg.com/736x/9b/e2/5f/9be25f520188336df96d040450493c6b--north-shore-emerald-isle.jpg) no-repeat fixed; 
+    -webkit-background-size: cover; 
+    /*-moz-background-size: cover; */
+    -o-background-size: cover; 
+    background-size: cover;
+    font-family:Arial;
+    cursor:pointer;
+    padding:0;
+    margin:0;
+}
+
+.sweet-alert{
+    background-color:lightgrey;
+    opacity:0.9;
+    width:150px;
+}
+
+#containerSign , #containerReg{
+    position:fixed;
+    z-index:1;
+    background-color:rgba(90,150,230,0.85);
+    height:100%;
+    width:15%;
+    left:0;
+    top:0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+
+#containerReg{
+    background-color:rgba(230,150,90,0.85);
+    left:15%; /* transform to 85%*/
+    width:85%; /* transform to 15%*/
+ }
+
+#sideSign , #sideReg, #okReg, #okSign {
+    position: absolute;
+    display:block;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    transform: translateX(-50%) translateY(-50%);
+    font-size:18px;
+    letter-spacing: 0.2em;
+    color: white;
+    writing-mode: vertical-rl;
+}
+
+#sideSign:hover, #okS:hover {
+    color: DarkOrange;
+}
+
+#sideReg:hover , #okR:hover{
+    color: RoyalBlue;
+}
+
+#sideReg {
+    display:none;
+ }
+
+input{
+    position:relative;
+    background-color:inherit ;
+    font-size:18px;
+    color:rgb(250,250,250);
+    width:100%;
+    border:none;
+    border-bottom: 1px solid white;
+    padding:5px 5px 5px 2px;
+    display:block;
+}
+
+#okS, #okR {
+    border:none;
+    letter-spacing: 0.1em;
+}
+
+
+
+#reg, #sign{
+    margin-top:10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#sign{
+    display: none;
+}
+
+/***********************/
+
+input:focus{
+    outline:none;
+}
+
+
+.inputView{ 
+    position:relative ; 
+    margin-bottom:25px; 
+}
+
+label{
+    color:rgb(200,200,200); 
+    font-size:14px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+}
+
+input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:16px;
+    color:white;
+}
+
+.lbl{ 
+    position:relative; 
+    display:block; 
+    width:100%; 
+    }
+    
+.lbl:before, .lbl:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:white; 
+    transition:0.2s ease all; 
+}
+
+.lbl:before {
+  left:50%;
+}
+
+.lbl:after {
+  right:50%; 
+}
+
+input:focus ~ .lbl:before, input:focus ~ .lbl:after {
+    width:50%;
+}
+
+.upIn {
+    position:absolute;
+    height:60%; 
+    width:45%; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+input:focus ~ .upIn {
+    animation:inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from  { background:#5264AE; }
+    to    { width:0; background:transparent; }
+}
+
+input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:10px;
+    color: #3E4D87;
+}
+
+/* ========================= */
+
+#okReg, #okSign {
+    display:none;
+    writing-mode: horizontal-tb;
+}
+
+
+#btnMusic {
+    position:absolute;
+    top:2%;
+    left: 0;
+    width:70px;
+    height:40px;
+    z-index:1;
+    opacity:0.7;
+    transition: all 0.5s;
+}
+
+
+#author {
+    z-index:1;
+    position: absolute;
+    left:0;
+    top:98%;
+    color:white;
+    font-size: 9px;    
+}
+
+
+/*****FINAL VIEW*******/
+
+#final {
+    display: none; 
+    z-index:1;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 103%; 
+    width: 100%; 
+    background-color:rgba(230,150,90,0.85);
+    font-family: "Courier New";
+    font-size:30px; 
+    margin:0;
+}
+
+#logout{
+    position:absolute;
+    opacity:0.6;
+    top:5%;
+    left:2%;
+    width:20px;
+    height:20px; 
+}
+
+#mainBox{
+    margin:0;
+    padding:0;
+    position:absolute;
+    width:100%;
+    height:80%;
+    display:block;
+    top:15%;
+    left:10%;
+    width:80%;
+    height:80%;
+    z-index:1;  
+    transition:all 0.5s;
+}
+
+#msgBox, #musicBox, #drawBox, #gameBox{
+    position:absolute;
+    display:block;
+    width:48%;
+    height:48%;
+    transition:all 1s;
+    z-index:2;
+    margin:1;
+}
+
+#msgBox{
+    background-color:#97AEE7;
+    opacity:0.9;
+    top:0;
+    left:0;
+}
+
+#musicBox{
+    background-color:#A7BC5A;
+    opacity:0.9;
+    left:50%;
+    top:0;
+}
+
+#gameBox{
+    background-color:#D9815C;
+    opacity:0.9;
+    left:0;
+    top:50%;
+}
+
+#drawBox{
+    background-color:lightgrey;
+    opacity:0.9;
+    top:50%;
+    left:50%;    
+}
+
+#closeBtn {
+    position: absolute;
+    display:none;
+    z-index:4;
+    top:0;
+    left:90%;
+    width:8%;
+    height:8%;
+}
+
+.logoMenu{
+    position:absolute;
+    display:block;
+    width:30%;
+    height:30%;
+    top:50%;
+    left:50%;
+    z-index:2;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+/****MESSAGEBOX****/
+
+#t{
+    display: none;
+    position:absolute;
+    z-index:2;
+    top:5%;
+    left:3%;
+    width:90%;
+    height:92%;
+    font-family:Arial;
+}
+
+#text{
+    z-index:3;
+    font-size:16px;
+    color:white;
+    opacity:1;
+    margin:0;
+    top:5%;
+    left:3%;
+    width:90%;
+    height:92%;
+}
+
+p{
+    font-family:'Courier New';
+    font-size:20px;
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+
+#p1{
+    font-family:'Courier New';
+    font-size:12px;
+    text-align: center;
+    margin:0;
+}
+
+
+#p2{
+    font-family:'Courier New';
+    font-size:12px;
+    text-align: right;
+    margin:0;
+}
+
+
+/*****MUSICBOX*****/
+
+#musicSubBox{
+    position:absolute;
+    margin-top:8%;
+    display:none;
+    left:5%;
+    color:white;
+    font-family:Arial;
+    
+   
+}
+
+#vol-control{
+    width:80%;
+    border:none;
+    
+}
+
+.songSrc{
+    font-size: 2.5vh;
+    margin-top:7px;
+}
+
+#song4, #song7 {
+    margin-top:14px;
+}
+.songSrc:hover,.songSrc:focus {
+    
+    color:grey;
+}
+
+
+/******GAMEBOX******/
+
+#mainCardBox {
+    
+    display:none;
+    padding-top:50px;
+    margin: 0px auto;
+    width: 260px;
+    font: 12px Arial;
+    color: white;
+    z-index:3;
+}
+#cardBox {
+    z-index: 3;
+    margin: 5px 0 0;
+}
+#cardBox div{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    padding: 3px;
+    border: 2px solid rgba(90,150,230,0.3);
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    background: #B1B1B1;
+    
+}
+#cardBox div img {
+    display: none;
+    border-radius: 3px;
+    
+}
+#btnBox {
+    text-align: center;
+    margin: 10px;
+    margin-bottom:20px;
+    display: block;
+}
+#btnBox .btn {
+    background: rgba(90,150,230, 0.2);
+    padding: 3px 5px;
+    margin: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#btnBox .btn:hover {
+    background: rgb(90,150,230);
+}
+
+
+/******DRAWBOX*********/
+
+#drawPage{
+    display:none;
+    z-index:3;
+    height:100%;
+    width:100%;
+    background-color:#DCDCDC;
+ } 
+.footer{
+    position: absolute;
+    z-index:3;
+    bottom: 10%;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    margin-left:20%;   
+}
+
+.navbtn {
+    cursor: pointer;
+    float:left;
+    
+    font-weight: bold;
+    line-height: 18px;
+    font-size: 14px;
+    color: #eee;
+    text-shadow: 0px -1px #000;
+    border: solid 1px #111;
+    border-radius: 4px;
+    z-index:3;
+    box-shadow: 0 0 1px 1px #555,inset 0 1px 0 0 #666;     
+}
+.navbtn:hover, .navbtn:active {
+    background-color: grey;
+    text-shadow: 0px 1px #aaa;
+    box-shadow: 0 0 1px 1px #444,inset 0 1px 0 0 #ccc;   
+}
+#content{
+    z-index:3;
+    height:95%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    right: 0px;
+    overflow:hidden;
+    background-color:#ddd;
+    width:90%;
+}
+#canvas{
+    z-index:3;
+    cursor:crosshair ;
+    background-color:lightgrey;
+}
+
+.palette-box {
+    left:50px;
+    width:80%;
+    height:30px;
+    float:left;
+    padding:2px 6px 2px 6px;
+}
+#replacerClassName{
+    border:2px solid #777;
+    height:36px;
+    width:36px;
+}
+
+.awesome {
+    background: transparent;
+}
+
+#newImg, #eraserImg, #colors{
+    width:50px;
+    height:50px;
+    margin-left:1%;
+    margin-right:1%;
+}

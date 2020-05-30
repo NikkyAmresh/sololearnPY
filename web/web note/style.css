@@ -1,0 +1,77 @@
+#bg{
+   background-color:blue; 
+}
+
+.img{
+   border-radius:100%;
+   animation-name:pic;
+   animation-duration:6s;
+   animation-direction:reverse;
+   animation-iteration-count:infinite;
+}
+@keyframes pic{
+   0%{opacity:0;}
+   20%{opacity:1;}
+   40%{opacity:0;}
+   60%{opacity:1;}
+   80%{opacity:0;}
+   100%{opacity:1;}
+}
+
+.box{
+   width:200px;
+   height:200px;
+   background-color:transparent;
+}
+
+.table{
+   border:0px;
+   border-color:transparent ;
+   width:100%;
+}
+
+.page1{
+   width:150px;
+   height:150px;
+   color:green;
+   background-color:white;
+   border-style:dotted ;
+   border-radius:20px;
+   animation-name:plef;
+   animation-duration:6s;
+   animation-iteration-count:infinite;
+}
+@keyframes plef{
+   0%{opacity:0; transform:rotateX(10deg)rotateY(-65deg)rotateZ(10deg)};
+   25%{transform:rotateX()rotateY()rotateZ()};
+   50%{transform:rotateX()rotateY()rotateZ()};
+   75%{transform:rotateX()rotateY()rotateZ()};
+   100%{opacity:2; transform:rotateX()rotateY()rotateZ()};
+}
+
+.page2{
+   width:150px;
+   height:150px;
+   color:green;
+   background-color:white;
+   border-style:dotted;
+   border-radius:20px;
+   animation-name:prit;
+   animation-duration:6s;
+   animation-iteration-count:infinite;
+}
+@keyframes prit{
+   0%{opacity:0; transform:rotateX(-10deg)rotateY(-65deg)rotateZ(-10deg)};
+   25%{transform:rotateX()rotateY()rotateZ()};
+   50%{transform:rotateX()rotateY()rotateZ()};
+   75%{transform:rotateX()rotateY()rotateZ()};
+   100%{opacity:2; transform:rotateX()rotateY()rotateZ()};
+}
+
+.creator{
+    width:10px;
+    height:8px;
+    background-color:transparent;
+    color:red;
+    text-shadow:5px 5px 2px 5px gray;
+}

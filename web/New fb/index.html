@@ -1,0 +1,208 @@
+<!-- Created by ☀Brains-->
+
+<!DOCTYPE html>
+<!--thanks to nikky amresh who assisted me a bit on this code,took me two weeks to gather this code,i should have gone further but i have other things to do sooo..leave a like-->
+<html>
+    <head>
+        <title>Facebook</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+    
+    <div id="topbar"></div>
+    <p id="search">search</p>
+     <textarea id="form" style="border:black;width:200px;height:15px ">
+     </textarea>
+     <p id="home" onclick="Home()">Home</p>
+     <p id="prof" onclick="Profile()">Profile</p> 
+     <p id="mess" onclick="Mess()">Messages</p>
+     <p id="notif" onclick="Notif()" class="vibrate">Notifications(1)</p>
+     <p id="chat" onclick="Chat()">Chat(0)</p>
+     <p  id="frnds" onclick="Friends()">Friends(0)</p>
+     <p id="menu" onclick="Menu()">Menu</p>
+         
+     <div id="homebody">
+         
+     <div id="share">share with </div>
+     <textarea id="post"></textarea>
+     <div id="bpost">post</div>
+      <div id="requestcontainer">
+      <p id="txt"> Friend Requests</p>
+          
+  <!--request one from nomeh-->        
+          <div id="request1">
+           <img id="nomehR"
+           src="https://api.sololearn.com/Uploads/Avatars/3888540.jpg" alt="poor network"
+         /><div class="req"><p class="names" > Nomeh Uchenna Gabriel</p><div class="parent">
+<p class="mutual">10 mutual friends</p>
+
+<div id="confirm1"><div class="confirm" onclick="Nchange()">Confirm</div></div>
+    
+    
+<div id="delete1"><div  class="confirm" onclick="Ndelete()"> Delete request</div></div>  
+</div> </div>           
+          </div>
+          
+  <!--request2 from nikky amresh-->        
+  <div id="request2"><img 
+ id="nomehR"          src="https://api.sololearn.com/Uploads/Avatars/3268934.jpg" alt="poor network"
+         /><div class="req"><p class="names"> Nikky Amresh</p>
+         <div class="parent">
+<p class="mutual" >23 mutual friends</p></div>
+<div class="confirm2"><div class="confirm" onclick="Amchange()">Confirm</div></div>
+  
+    
+<div class="delete2"><div class="confirm" onclick="Amdelete()"> Delete request</div></div> </div> 
+</div>  
+ 
+  
+          
+<!--request 3 from nikolas-->  
+ <div id="request3"> <img 
+ id="nomehR"          src="https://api.sololearn.com/Uploads/Avatars/2551505.jpg" alt="poor network"
+         /><div class="req" ><p class="names">Nikolay Nachev</p>
+         <div class="parent">
+<p class="mutual" >71 mutual friends</p></div>
+    
+<div class="confirm2" ><div class="confirm" onclick="Nichange()">Confirm</div></div>
+    
+    
+<div class="delete2"><div class="confirm" onclick="Nidelete()"> Delete request</div></div></div>
+</div>
+          
+  <!--request 4 from Hatsey-->        
+ <div id="request4"><img 
+ id="nomehR"          src="https://api.sololearn.com/Uploads/Avatars/2034558.jpg" alt="poor network"
+         /><div class="req"><p class="names" >Hatsey rei</p>
+         <div class="parent">
+            
+<p class="mutual">4 mutual friends</p></div><div class="confirm2" id="last"><div class="confirm" onclick="Hachange()">Confirm</div></div>
+    
+    
+<div class="delete2" id="last2"><div class="confirm" onclick="Hadelete()"> Delete request</div></div></div>
+    
+    
+</div>
+     
+     
+     
+     
+     
+     <div id="rheinapost">
+      Rheina
+      <p style="color:black">I have finally decided the best way to increase your xp is by challenging😐😂,i wish coders got more xp though,but still that sololearn app is one in a kind😊😇</p>
+     <div><small style="color:grey;font-size:14px;font-weight:300">5hrs.</small><small style="color:blue;font-size:14px;font-weight:300;">Facebook</small><small style="color:grey;font-size:14px;font-weight:300;">.public</small>
+     </div>
+     <div id="likesone" style="font-size:13px;font-weight:300;">257 .<td id="rlike"> Like </td>. React .1 Comment . Fullstory . More</div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="nikolaypost">
+     Nikolay Nachev
+     <p style="color:black">
+         guys i have updated my hall of fame code,it now enables you to categorise the people you want to see in the hall of fame,took me quite some time.
+     </p> <small style="color:grey;font-size:14px;font-weight:300">8hrs.</small><small style="color:blue;font-size:14px;font-weight:300;">Facebook</small><small style="color:grey;font-size:14px;font-weight:300;">.Friends of Friends</small> <div id="likestwo" style="font-size:13px;font-weight:300;">560 .<td id="Nlike"> Like </td>. React . 2 Comments . Fullstory . More</div> 
+    </div>
+   
+   
+   
+   
+   
+   
+    <div id="ranjanpost">
+     #00FF00 <a style="color:black;font-size:13px;">😑is feeling bored</a>
+     <p style="color:black">
+         Lets a play a game,comment the time it is in your zone,ill comment mine,haaa i know right?that is not a game!😂😂so boored!
+     </p> <small style="color:grey;font-size:14px;font-weight:300">18 mins.</small><small style="color:blue;font-size:14px;font-weight:300;">Facebook</small><small style="color:grey;font-size:14px;font-weight:300;">.Public</small> <div id="likestwo" style="font-size:13px;font-weight:300;">12 .<td id="Nlike"> Like </td>. React . 0 Comments . Fullstory . More</div> 
+    </div>
+        
+ </div></div><div></div>
+        
+        
+        
+        
+        
+        
+        
+    <div id="brainpost">
+     Brains <a style="color:black;font-size:13px;">and <a style="color:blue">230</a></a><a style="color:black;font-size:13px"> others like this</a></a></a>
+     <p style="color:black">
+      
+      
+      
+      
+      <div id="Oribapost">
+      Oriba
+      <p style="color:black">If you havent liked my sololearn code "Try your name in japanese" then where hwve you been all this while?😄😄welcome!</p>
+ <small style="color:grey;font-size:14px;font-weight:300">just now.</small><small style="color:blue;font-size:14px;font-weight:300;">Facebook</small><small style="color:grey;font-size:14px;font-weight:300;">.Public</small> <div id="likestwo" style="font-size:13px;font-weight:300;">3 .<td id="Nlike"> Like </td>. React . 0 Comments . Fullstory . More</div></div></div> 
+        
+    </div>
+    </div>
+    
+    <div id="profbody" >
+    <div id="ptopbar">
+    <div id="profpic" class="profpic"><img src="https://api.sololearn.com/Uploads/Avatars/5134217.jpg" width="87px" height="89px" /></div>
+<p style="font-size:15px;color:blue;left:7px;top:83px;position:absolute;" onclick="editpfp()">Edit profile picture</p>
+    <div id="profname" class="profname">Brains<p style="font-size:12px;top:-12px;position:relative;color:blue">works at sololearn</p>
+     <p style="font-size:21px;color:blue;top:-25px;position:relative">Profile 10% done</p>   
+    </div>
+    <div id="bio"><p style="color:black;font-size:18px">Hello Facebook</p>
+        <p style="left:30px;top:-10px;position:relative;font-size:16px">Edit Bio</p></div>
+    
+    <div id="buttbar">About . Friends . Photos . Likes . Following
+    </div>
+    <div id="userpost">
+     Brains <a style="color:black;font-size:13px;">😑is feeling Happy</a>
+     <p style="color:black">
+    Hy everyone i am new on facebook,what are do and the don'ts?Should i leave like on this code?im probably thinking yes.Also how do i add friends?😀😊
+     </p> <small style="color:grey;font-size:14px;font-weight:300">just now.</small><small style="color:blue;font-size:14px;font-weight:300;">Facebook</small><small style="color:grey;font-size:14px;font-weight:300;">.Public</small> <div id="likestwo" style="font-size:13px;font-weight:300;">1 .<td id="Nlike"> Like </td>. React . 0 Comments . Fullstory . More</div> 
+    </div></div>
+    </div> <!--profbody--> 
+    <div id="messbody">
+    <div id="mname">
+    Messages</div>
+    <div id="newmessage">New message</div><div id="newgroup">New Group</div>
+    <div id="chat1">
+    <div style="border:0.5px solid grey;padding-left:30px;width:400px;height:75px;background-color:white">Facebook
+    <p style="color:black;top:-10px;position:relative">welcome to Facebook</p>
+    <p style="color:blue;top:-9px;position:relative">2 hours ago</p></div>
+    <div style="border:0.5px solid grey;padding-left:30px;width:400px;height;60px;background-color:white">Sololearn
+    <p style="color:black;top:-10px;position:relative">have you tried the awesome sololearn app?</p>
+    <p style="top:-9px;position:relative">1 hour ago </p> </div>  
+    </div>
+    </div><!--messagebody-->
+    <div id="notifbox">
+      Today 
+      <div class="nbox"><b style="color:black;font-size:14.5px;font-weight:700">Nikky Amresh</b> accepted your friend request.You can now see his latest photos and posts on his profile</div> 
+     <div class="nbox"><b style="color:black;font-size:14.5px;font-weight:700">Facebook </b>Welcome to facebook.You can now post and view awesome and up to date events with the app in your hands</div>
+        
+    </div><!--notifbox-->
+    <div id="chatbox">
+        Chat<div id="refresh">Refresh</div>
+        <div id="online">Nikky Amresh</div>
+        <div id="greendot">.</div>
+        <div id="online2">Nikolay Nachev</div>
+        <div id="greendot2">.</div>
+    </div><!--chatbox-->
+    <div id="friendbox">
+    <div id="frndrequests">Add more friends to use this feauture</div>
+    </div>
+    <div id="menubox">
+      Options 
+      <div style="color:blue;border:0.5px solid grey;background-color:white;padding-left:20px;left:-10px;position:relative;width:320px">
+        <p>Friends</p>
+        <p>Photos</p>
+        <p>Facebook lite</p>
+      </div>
+      More options
+      <div style="color:blue;border:0.5px solid grey;background-color:white;padding-left:20px;left:-10px;width:320px;position:relative"><p>Chat</p> 
+      <p>Group</p>
+      <p>Pages</p>
+      <p>Event</p></div>
+    </div>
+    </body>
+</html>

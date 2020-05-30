@@ -1,0 +1,110 @@
+body {
+    background-color:#3B5999;
+}
+.fil6 {
+    fill:none
+}
+.fil0 {
+    fill:#FEFEFE
+}
+.fil8 {
+    fill:#6383C1;
+    fill-rule:nonzero
+}
+.fil7 {
+fill:url(#id1);
+}
+.fil4 {
+    fill:#FCDC6B
+}
+.fil1 {
+    fill:#6A99D0
+}
+.fil5 {
+    fill:#201E1E
+}
+.fil2 {
+    fill:#F50953
+}
+.fil3 {
+    fill:#FEFEFE;
+    fill-rule:nonzero
+}
+#like:hover{
+    transform:scale(1.4);
+    transition: 0.5s;
+}
+#heart:hover{
+    transform:scale(1.4);
+    transition: 0.5s;
+}
+#laugh:hover{
+    transform:scale(1.4);
+    transition: 0.5s;
+}
+#cry:hover{
+    transform:scale(1.4);
+    transition: 0.5s;
+}
+#wow:hover{
+    transform:scale(1.4);
+    transition: 0.5s;
+}
+#angry:hover{
+    transform:scale(1.4);
+    transition: 0.5s;
+}
+#laugh,#heart,#like,#cry,#angry,#wow{
+    transition: transform 0.5s linear; 
+}
+svg{
+    width:65px;
+    margin-top:240px;
+    padding-left:-40px;
+    text-align:center;
+    margin-left:10px;
+    height:65px;
+}
+#heart{
+    margin-left:-15px;
+}
+#laugh{
+    margin-left:-20px;
+}
+#wow{
+    margin-left:-5px;
+}
+#cry{
+    margin-left:-20px;
+}
+#angry{
+    margin-left:-15px;
+}
+
+div#bg{
+    position:absolute;
+    top:255px;
+    height:48px;
+    border-radius:40px;
+    z-index:-1;
+    width:88%;
+    left:8%;
+    background-color:#FEFEFE;
+}
+#fb_bg{
+    background-color:#fff;
+    position:absolute;
+    top:80px;
+    color:#3B5999;
+    font-weight:bolder;
+    padding-left:23px;
+    padding-top:-20px;
+    padding-right:23px;
+    padding-bottom:-50px;
+    font-size:95px;
+    text-align:center;
+    transform:scale(0.8);
+    border-radius:10px;
+    height:75px;
+    left:40%;
+}

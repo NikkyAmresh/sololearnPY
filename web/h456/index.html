@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script>
+            var can=document.getElementById("canvas");
+var ctx=can.getContext("2d");
+var img = new Image();
+img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.onload = function() {
+ ctx.mozImageSmoothingEnabled = false;
+ ctx.webkitImageSmoothingEnabled = false;
+ ctx.imageSmoothingQuality = "Low";
+ ctx.msImageSmoothingEnabled = false;
+ ctx.imageSmoothingEnabled = false;
+ ctx.drawImage(img, 0, 0, 400, 200);
+};
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+/* Created by Prashanth Kumar */
+
+body {
+    margin:0px;
+}
+a{
+    color:salmon;
+    font-size:1.3em;
+    
+}
+#hidden{
+    top:25vh;
+    background:transparent ;
+    left:0px;
+    width:100vw;
+    padding:5px;
+    display:border-box;
+    position:fixed;
+    text-align:center;
+}

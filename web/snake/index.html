@@ -1,0 +1,52 @@
+<!-- Created by Martin-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Snake</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src = "script.js"></script>
+    </head>
+    <body>
+        <canvas id="board">CanvasError</canvas>
+        <button id="pause" onclick="pause(); toggleText()">&#x25b6;</button>
+        <p id="ps">Speed: <a id="sp">3</a> fps -- Score: <a id="s">0</a></p>
+        <div id="con">
+        <button id="speedDown" onclick="speedDown()"></button>
+        <button id="speedUp" onclick="speedUp()"></button>
+        <button id="up" onclick="dire('up')">↑</button>
+        <button id="right" onclick="dire('right')">→</button>
+        <button id="left" onclick="dire('left')">←</button>
+        <button id="down" onclick="dire('down')">↓</button>
+        <p id="plus">speed +</p>
+        <p id="minus">speed -</p>
+        </div>
+        <script>
+          var c = document.getElementById('board');
+          var ctx = c.getContext("2d");
+          if(window.innerWidth < window.innerHeight) {
+              c.width = window.innerWidth*.75;
+              c.height = c.width;
+          }
+          else {
+              c.height = window.innerHeight*.885;
+              c.width = c.height;
+          }
+          
+          window.addEventListener("orientationchange", function() {screen();});
+          function screen() {
+              if(window.innerWidth < window.innerHeight) {
+                  c.width = window.innerWidth*.75;
+                  c.height = c.width;
+                  location.reload();
+              }
+              else {
+                  c.height = window.innerHeight*.885;
+                  c.width = c.height;
+                  location.reload();
+              }
+          }
+        </script>
+    </body>
+</html>

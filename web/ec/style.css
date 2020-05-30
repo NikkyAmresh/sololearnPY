@@ -1,0 +1,64 @@
+/* Created by Aryan Sanghi */
+
+/* Created by Prudhvi Raaj */
+
+/*sky theme
+/* Edited by Aryan Sanghi */
+/* Styled by #00FF00 */
+body {
+background-image:url("https://wallpapershome.com/images/pages/pic_v/419.jpg");
+background-attachment:fixed;
+font-family:Arial;
+font-weight:300;
+}
+header {
+    background-color:#6495ed;
+    text-align:center;
+    color:#ffdead;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:40px;
+    padding:5px;
+    margin:0px;
+    font-size:20pt;
+    box-shadow:0px 5px 5px rgba(0,0,0,0.3);
+}
+li{
+    background-image:url("https://static.pexels.com/photos/110322/pexels-photo-110322.jpeg");
+    background-color:#00ffff;
+    color:#87cefa;
+    padding: 5px;
+    font-size:15pt;
+    font-weight:300;
+    margin-bottom: 3px;
+    border-radius: 12px;
+    box-shadow:0px 5px 5px rgba(0,0,0,0.3);
+}
+h2{
+    background-color:#90ee90;
+    color:#191970;
+}
+p{
+    font-size:20pt;
+    color:#Fff;
+    font-weight:Bold;
+    text-align:center ;
+}
+footer{
+    font-size:10pt;
+    font-weight:300;
+    text-align:center;
+}
+.hy{
+    position:relative;
+    top:25px;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    font-weight:lighter;
+    font-size:20pt;
+}

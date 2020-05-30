@@ -1,0 +1,113 @@
+/*inspired by nomeh*/
+body{
+    Background:#000;
+    position:fixed;
+}
+div {
+    background:#333A42;
+    height:330px;
+    width:320px;
+    color:#fff;
+    font-size:18px;
+    padding:10px;
+    z-index:1;
+}
+small{
+    color:#ccc;
+    font-size:13px;
+}
+.main{
+    position:fixed;
+    background:#405050;
+    height:190px;
+    width:320px;
+    padding:-2px;
+    z-index:2;
+    display:block;
+    position:absolute;
+}
+.man{
+    position:fixed;
+    top:70px;
+    width:130px;
+    height:140px;
+    z-index:4;
+    left:30px;
+    padding:0px;
+}
+.wh{
+    position:fixed;
+    background:#BAB9B8;
+    height:30px;
+    width:130px;
+    padding:0px;
+    right:40px;
+    border-radius:10px;
+    z-index:2;
+    top:65px;
+    display:block;
+}
+
+.wb{
+    position:fixed;
+    background:#21211F;
+    height:160px;
+    width:130px;
+    padding:0px;
+    right:40px;
+    border-radius:0px;
+    font-size:10.5px;
+    padding:0px;
+    z-index:3;
+    color:#fff;
+    top:80px;
+    display:block;
+}
+img{
+    position:fixed;
+    width:60px;
+    top:250px;
+    margin-top:10px;
+}
+.cname{
+    position:fixed;
+    top:280px;
+    padding-left:70px;
+    color:#ddd;
+    font-size:17px;
+}
+.oc{
+    position:fixed;
+    right:20px;
+    top:320px;
+    color:#cdd;
+    text-decoration:none;
+}
+.css{
+  padding-left:15%;
+}
+.top{
+  margin-top:40px;
+}
+.fill{
+    color:#9999EE;
+    padding-left:40px;
+}
+.color{
+    color:#99BB77;
+}
+.text{
+    color:#000;
+    background-color:#dcdcff;
+    text-decoration:none;
+    font-size:15px;
+    height:auto;
+    width:auto;
+    font-weight:bold;
+    padding:10px;
+    position:fixed;
+    bottom:10px;
+    right:100px;
+    border-radius:10px;
+}
+

@@ -1,0 +1,27 @@
+/* Created by NepZ */
+
+input{
+ background-color: black;
+ color: #20C20E;
+ border: 1px solid #20C20E;
+    
+}
+body {
+    background-color: black;
+    color: #20C20E;
+    font-style: italic;
+}
+img {
+    width: 90%;  
+    height: 90%; 
+    margin: auto;  
+}
+button{
+    font-family:monospace;
+    background: black;
+    color: #20C20E;
+   line-height: 1;
+   border: 1px solid #20C20E;
+   border-radius: 0;
+
+}

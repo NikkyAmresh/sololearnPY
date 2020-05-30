@@ -1,0 +1,104 @@
+body {
+    background-color:#242B33;
+}
+div.nav{
+    background-color:#36474F;
+    width:100%;
+    height:40px;
+    position:fixed;
+    left:0px;
+    z-index:-1;
+    top:0px;
+}
+span{
+   z-index:3;
+   padding:5px;
+   font-size:15px;
+}
+.HTML{
+    color:#fff;
+    z-index:5;
+    padding-left:6%;
+    font-weight:bold;
+    position:fixed;
+}
+.CSS{
+    color:#fff;
+    font-size:13.5px;
+    z-index:4;
+    font-weight:bold;
+    filter:invert(20%);
+    position:fixed;
+    left:34.3%;
+}
+.JS{
+    color:#fff;
+    font-size:13.5px;
+    font-weight:bold;
+    filter:invert(20%);
+    z-index:4;
+    position:fixed;
+    right:35.4%;
+}
+.OUTPUT{
+    color:#fff;
+    float:right;
+    filter:invert(20%);
+    font-size:13.5px;
+    font-weight:bold;
+    position:fixed;
+    z-index:4;
+    right:6%;
+}
+.selected{
+    background-color:#7DB343;
+    position:absolute;
+    top:123px;
+    left:140px;
+    width:85px;
+    z-index:3px;
+}
+textarea{
+   top:40px; 
+   background-color:#222;
+   border:none;
+   color:#fff;
+   padding-left:12px;
+   Left:0px;
+   padding-bottom:10px;
+   width:100%;
+   height:100%;
+   position:fixed;
+   outline:none;
+}
+#HTML{
+    z-index:5;
+}
+#CSS{
+    z-index:4;
+}
+#JS{
+    z-index:4;
+}
+#OUTPUT{
+    top:40px; 
+   border:none;
+   Left:0px;
+   width:100%;
+   opacity:1;
+   background-color:#fff;
+   height:100%;
+   z-index:4;
+   left:0px;
+   position:fixed;
+   outline:none;
+}
+.vr{
+   width:1px;
+   position:fixed;
+   background-color:#555;
+   top:40px;
+   left:10px;
+   height:100%;
+   z-index:5;
+}

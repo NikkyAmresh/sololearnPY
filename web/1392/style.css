@@ -1,0 +1,129 @@
+/* Created by Shovon */
+
+
+
+* { -webkit-box-sizing:border-box; box-sizing:border-box; }
+
+body {
+  background:#0a0a0a;
+  overflow:hidden;
+  text-align:center;
+}
+
+div {
+  -webkit-animation:wobble 5s ease-in-out infinite;
+  animation:wobble 5s ease-in-out infinite;
+  -webkit-transform-origin:center center;
+  transform-origin:center center;
+  -webkit-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+
+@-webkit-keyframes wobble {
+  0%,100%{ -webkit-transform:rotate3d(1,1,0,40deg); transform:rotate3d(1,1,0,40deg); }
+  25%{ -webkit-transform:rotate3d(-1,1,0,40deg); transform:rotate3d(-1,1,0,40deg); }
+  50%{ -webkit-transform:rotate3d(-1,-1,0,40deg); transform:rotate3d(-1,-1,0,40deg); }
+  75%{ -webkit-transform:rotate3d(1,-1,0,40deg); transform:rotate3d(1,-1,0,40deg); }
+}
+
+@keyframes wobble {
+  0%,100%{ -webkit-transform:rotate3d(1,1,0,40deg); transform:rotate3d(1,1,0,40deg); }
+  25%{ -webkit-transform:rotate3d(-1,1,0,40deg); transform:rotate3d(-1,1,0,40deg); }
+  50%{ -webkit-transform:rotate3d(-1,-1,0,40deg); transform:rotate3d(-1,-1,0,40deg); }
+  75%{ -webkit-transform:rotate3d(1,-1,0,40deg); transform:rotate3d(1,-1,0,40deg); }
+}
+
+h1 {
+  display:block;
+  width:100%;
+  padding:20px;
+  line-height:1.5;
+  font:900 18vw 'Concert One', sans-serif;
+  top:40px;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+
+h4 {
+  display:block;
+  width:100%;
+  top:0;
+  line-height:1.5;
+  font:900 6vw 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+
+@-webkit-keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+h1:nth-child(2){ -webkit-transform:translateZ(5px); transform:translateZ(5px); }
+h1:nth-child(3){ -webkit-transform:translateZ(10px); transform:translateZ(10px);}
+h1:nth-child(4){ -webkit-transform:translateZ(15px); transform:translateZ(15px); }
+h1:nth-child(5){ -webkit-transform:translateZ(20px); transform:translateZ(20px); }
+h1:nth-child(6){ -webkit-transform:translateZ(25px); transform:translateZ(25px); }
+h1:nth-child(7){ -webkit-transform:translateZ(30px); transform:translateZ(30px); }
+h1:nth-child(8){ -webkit-transform:translateZ(35px); transform:translateZ(35px); }
+h1:nth-child(9){ -webkit-transform:translateZ(40px); transform:translateZ(40px); }
+h1:nth-child(10){ -webkit-transform:translateZ(45px); transform:translateZ(45px); }
+
+
+h4:nth-child(2){ -webkit-transform:translateZ(5px); transform:translateZ(5px); }
+h4:nth-child(3){ -webkit-transform:translateZ(10px); transform:translateZ(10px);}
+h4:nth-child(4){ -webkit-transform:translateZ(15px); transform:translateZ(15px); }
+h4:nth-child(5){ -webkit-transform:translateZ(20px); transform:translateZ(20px); }
+h4:nth-child(6){ -webkit-transform:translateZ(25px); transform:translateZ(25px); }
+h4:nth-child(7){ -webkit-transform:translateZ(30px); transform:translateZ(30px); }
+h4:nth-child(8){ -webkit-transform:translateZ(35px); transform:translateZ(35px); }
+h4:nth-child(9){ -webkit-transform:translateZ(40px); transform:translateZ(40px); }
+h4:nth-child(10){ -webkit-transform:translateZ(45px); transform:translateZ(45px); }
+
+
+img {
+    margin: 0 auto;
+    width:20vw;
+    position:absolute;
+    bottom:0;
+}
+
+
+/* latin-ext */
+@font-face {
+  font-family: 'Concert One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Concert One'), local('ConcertOne-Regular'), url(https://fonts.gstatic.com/s/concertone/v9/VEM1Ro9xs5PjtzCu-srDqSTsjP6yuQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Concert One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Concert One'), local('ConcertOne-Regular'), url(https://fonts.gstatic.com/s/concertone/v9/VEM1Ro9xs5PjtzCu-srDqSTijP4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h1,h4 {
+  -webkit-animation:glow 10s ease-in-out infinite;
+  animation:glow 10s ease-in-out infinite;
+  
+}
+
+h4 {
+    color:#fff;
+    font:900 6vw 'Concert One', sans-serif;
+}

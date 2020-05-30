@@ -1,0 +1,39 @@
+<!-- Created by QuentinJanuel-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oscillovania</title>
+        <link href='https://fonts.googleapis.com/css?family=Bellefair' rel='stylesheet'>
+    </head>
+    <body>
+        <h2>Oscillovania</h2>
+        <p>
+I know this is far from being good yet but I find it rather fun.
+<br>
+I just discovered thanks to <b>The Coding Sloth</b> that I can create musics from scratch using an oscillator in JavaScript with a bit of maths so I did!
+<br><br>
+Thank you <b>Schindlabua</b> for the recommendation!
+        </p>
+<script>
+let audio = new AudioContext();
+let notes = [28,30,32,33,35,37,39,40];
+const bpm = 80;
+let t = 0;
+const playNote = (n, dur, dur2 = 0, sharp = 0, octave = 0, type = "square") => {
+    while(n < 0)
+        n += notes.length;
+    n %= notes.length;
+    let m = notes[n]+sharp+12*(octave+1);
+    let f = Math.pow(2, (m-49)/12)*440;
+    let o = audio.createOscillator();
+    o.type = type;
+    o.frequency.value = f;
+    o.start(t*60/bpm);
+    o.stop((t+dur)*60/bpm)
+    o.connect(audio.destination);
+    t += dur2;
+}
+</script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!-- Created by Andrew-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Page Title</title>
+    </head>
+    <body>
+        <pre>
+            A Regular Expression is a pattern used for searching strings.
+
+Regex Patterns are always between two forward slashes, "/" example: /pattern/
+
+A Pattern's root is usually some sort of string. Let's say this string is identified as the letter, "n"
+
+You can search if a string contains the word "Hi" by /hi/ however this will return a match also for words that contain the letters "hi" together like, "this", "hit", or "hide"
+
+at the end of regex patterns there are 3 modifiers. I, G, and M
+i - makes the pattern case insensitive, so the pattern matches Hi, hi, hI, or HI
+
+g - returns all the matches, otherwise the regex pattern only searches for the first occurance
+
+m - multi line searching, pretty self explanatory.
+
+There are special characters and variables for patterns too.
+
+"." represents any character except form feed characters
+
+"\0" stands for the null character 
+
+"\s" represents whitespace characters
+
+"\S" represents any non whitespace characters 
+
+"\f" represents any form feed characters
+
+"\d" represents any digit or number characters
+
+"\D" represents any non digit or non number characters 
+
+"|" the or operator, /x|y/ searches if a string contains the letter x or y and returns all matches.
+
+"\t" tab characters
+"\n" line breaks
+"\v" vertical tab characters
+
+"\uXXXX" is replaced with the unicode value given where 'XXXX' represents the Unicode number
+
+and there are a few other things useful to making efficient patterns
+
+\b - The block tag, its used as, /\bHi\b/i
+this pattern will search for the word, "Hi" and won't return other words that contain "hi"
+
+[^n] - Doesn't contain, the letter n can be replaced with characters, A-Za-z or 0-9 or specific characters like /[^hduvXQ]/ and returns true if the string doesn't contain those characters
+
+[n] - Same as the other just reversed, returns true if the string does contain those characters
+
+^n - Returns true if the string starts with the variable, n so /^hello/i would return true if used on the string "Hello World!"
+
+n$ - Returns true if the string ends with the variable, n
+ 
+n{x} - Returns true if n is repeated x times, so /l{3}/ would return true on "Helllo World!"
+
+n{x, } - Returns true if n is repeated x or more times
+
+n?=x - Returns true if n is followed by x at any point in the string
+
+n?!x - Returns true if n isn't followed by x at any point in the string
+
+Any Questions? I can explain anything in more detail if you are confused on anything.
+
+These patterns can be used in methods like:
+
+String.replace(/\bFuck\b/ig, "***");
+to replace all occurrences of the word, fuck
+
+String.search(/\bFuck\b/ig,);
+see if string contains the word fuck
+
+var x = String.match(/\bFuck\b/ig);
+x.length
+returns how many occurrences of the word, fuck
+        </pre>
+        <div id="test">
+            <p id="label">Try it yourself...</p>
+            <textarea id="string" placeholder="Text..."></textarea>
+            <input type="text" placeholder="Regular Expression" id="regexp"/>
+            <button id="exec">Test!</button>
+            <div id="boolean">True</div>
+        </div>
+    </body>
+</html>

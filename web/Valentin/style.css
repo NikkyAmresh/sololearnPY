@@ -1,0 +1,197 @@
+
+
+body {
+    /* for designing the boxes for the danbo I use this image as a background and make them on top of it to compare :https://s-media-cache-ak0.pinimg.com/originals/56/02/13/560213f6424da8bca9a2e6d0bc593ae1.jpg */
+    background-image:url(" http://freedesignfile.com/upload/2013/01/love_Background-2.jpg ");
+    background-size:130%;}
+#danbo
+{display:none;}  
+#head
+{
+background-image:url(" http://img10.deviantart.net/42f7/i/2011/306/4/7/danbo_by_unchartedwords-d4euizr.png ");
+background-size:cover;
+border:1px solid black;
+position:absolute;
+top:170px;
+left:100px;
+background-color:red;
+height:80px;
+width:120px;}
+/*I choosed to use the head image much bigger as background to have everything looking alike*/
+#body
+{ background-image:url("http://img10.deviantart.net/42f7/i/2011/306/4/7/danbo_by_unchartedwords-d4euizr.png");
+background-size:580%;
+border:1px solid black;
+position:absolute;
+top:251px;
+left:130px;
+height:70px;
+width:55px;}
+#arm1
+{ background-image:url("http://img10.deviantart.net/42f7/i/2011/306/4/7/danbo_by_unchartedwords-d4euizr.png");
+background-size:580%;
+border:1px solid black;
+position:absolute;
+top:225px;
+left:80px;
+height:75px;
+width:25px;
+-webkit-transform: rotate(90deg); 
+   -webkit-animation-duration:3s;
+   -webkit-animation-name:moveArm1;} 
+  /*The animation of the arms rotates and moves it's top and left position to pretend a pivot instead of rotating from the center*/
+@-webkit-keyframes moveArm1
+{ from { top:251px;
+left:104px;
+-webkit-transform: rotate(0deg);}  
+to{-webkit-transform: rotate(90deg); top:225px;
+left:80px }
+} 
+#arm2
+{ background-image:url("http://img10.deviantart.net/42f7/i/2011/306/4/7/danbo_by_unchartedwords-d4euizr.png");
+background-size:580%;
+border:1px solid black;
+position:absolute;
+top:225px;
+left:210px;
+height:75px;
+width:25px;
+-webkit-transform: rotate(-90deg); 
+   -webkit-animation-duration:3s;
+   -webkit-animation-name:moveArm;} 
+@-webkit-keyframes moveArm
+{ from { top:251px;
+left:184px;
+-webkit-transform: rotate(0deg);}  
+to{-webkit-transform: rotate(-90deg); top:225px;
+left:210px }
+}
+#leg1
+{ background-image:url("http://img10.deviantart.net/42f7/i/2011/306/4/7/danbo_by_unchartedwords-d4euizr.png");
+background-size:585%;
+border:1px solid black;
+position:absolute;
+top:322px;
+left:130px;
+height:75px;
+width:26px;}
+#leg2
+{ background-image:url("http://img10.deviantart.net/42f7/i/2011/306/4/7/danbo_by_unchartedwords-d4euizr.png");
+background-size:580%;
+border:1px solid black;
+position:absolute;
+top:322px;
+left:157px;
+height:75px;
+width:26px;}
+#sign
+{ /*I had to change the sign because de other image link doesn't work anymore*/
+background-image:url(" http://pngimg.com/uploads/valentines_day/valentines_day_PNG10785.png ");
+background-color:white;
+background-size:101%;
+border:1px solid black;
+top:255px;
+left:55px;
+height:100px;
+width:205px;
+position:absolute;
+   -webkit-animation-name:showNote;
+   -webkit-animation-duration:3s;} 
+ /*Made by Elizabeth Espíndola, please don't copy*/ 
+@-webkit-keyframes showNote
+{
+/*It streches proportionally as it mantains between the arms while they do their own animation*/
+ from{ top:320px;
+left:100px;
+ width:110px;
+ height:50px;} 
+ to{ top:255px;
+left:55px;
+height:100px;
+width:205px; } 
+}
+#sheet1
+{ border:1px solid black;
+position:absolute;
+top:0px;
+left:0px;
+height:405px;
+width:160px; 
+background-color:white;}
+#sheet2
+{ border:1px solid black;
+position:absolute;
+top:0px;
+right:0px;
+height:405px;
+width:160px; 
+background-color:white;}
+#opcl
+{ border:1px solid black; 
+  position:absolute;
+  top:50px;
+  left:130px;
+  height:60px;
+  width:60px;
+  border-radius:0px;
+  background-color:#F6CED8;}
+#floor
+{  background-image:url(" http://www.energeo.cl/wp-content/uploads/2015/01/pasto-1.png "); 
+   background-size:100%;
+   width:320px;
+   height:60px;
+   position:absolute;
+   top:350px;
+   left:0px;}
+ /*Aditional animated decorations*/
+#heart1
+{ background-image:url(" http://www.clker.com/cliparts/9/8/4/0/1194984843441313199heart_left-highlight_jon_01.svg.hi.png "); 
+   background-size:100%;
+   background-repeat:no-repeat;
+   width:80px;
+   height:90px;
+   position:absolute;
+   top:100px;
+   left:230px;    
+   /*The animation simply moves the div up from one to another top number, each heart has it's own up so they doesn't move the same way(also their duration is different)*/
+  -webkit-animation-duration:3s;
+  -webkit-animation-name:up1; }
+@-webkit-keyframes up1
+{
+ from{top:350px;} 
+ to{top:100px;} 
+}
+#heart2
+{ background-image:url(" http://www.clker.com/cliparts/9/8/4/0/1194984843441313199heart_left-highlight_jon_01.svg.hi.png "); 
+   background-size:100%;
+   background-repeat:no-repeat;
+   width:30px;
+   height:35px;
+   position:absolute;
+   top:40px;
+   left:30px;
+   -webkit-animation-duration:2s;
+   -webkit-animation-name:up2;}
+@-webkit-keyframes up2
+{
+ from{top:350px;} 
+ to{top:40px;} 
+}
+#heart3
+{ background-image:url(" http://www.clker.com/cliparts/9/8/4/0/1194984843441313199heart_left-highlight_jon_01.svg.hi.png "); 
+   background-size:100%;
+   background-repeat:no-repeat;
+   width:50px;
+   height:60px;
+   position:absolute;
+   top:80px;
+   left:50px;
+   -webkit-animation-duration:2.5s;
+   -webkit-animation-name:up3;
+}
+
+@-webkit-keyframes up3
+{
+ from{top:350px;} 
+ to{top:80px;} 
+}

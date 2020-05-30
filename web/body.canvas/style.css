@@ -1,0 +1,139 @@
+@font-face {
+    font-family: test;
+    src: url("Cooljazz.woff");
+}
+
+@font-face {
+    font-family: testt;
+    src: url("r.ttf");
+}
+*{
+    user-select:none;
+}
+body {
+    background: #1B2836;
+    font-family:italic;
+}
+
+.container {
+    padding-top:55px;
+    margin-top: 25%;
+    background: #1B2836;
+    position: fixed;
+    margin-top:;
+    width: 90%;
+    top: 0;
+    left: 5%;
+    border-style: solid;
+    border-radius:5px;
+    border-color: #3B4856;
+    box-shadow: 8px 15px 12px #0B1826;
+    border: 1px solid #3B4856;
+    height: 400px;
+    box-shadow: 8px 15px 12px #0B1826;
+}
+
+img.avatar {
+    margin: 20px;
+    width: 40px;
+    vertical-align: center;
+    border-radius: 50%;
+    height: 40px;
+}
+
+div.name {
+    color: #fff;
+    font-size: 13px;
+    margin-top: -65px;
+    margin-left: 70px;
+}
+
+div.username {
+    color: #8897A4;
+    font-size: 13px;
+    margin-left: 70px;
+    padding-top: 2px;
+}
+
+div.tweet {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 19px;
+    font-family: test;
+    margin-top: 29px;
+}
+
+div.frame {
+    position: fixed;
+    width: 90%;
+    top: 10%;
+    z-index: -1;
+    left: 5%;
+    border-style: solid;
+    border-radius:5px;
+    border-color: #3B4856;
+    box-shadow: 8px 15px 12px #0B1826;
+    border: 1px solid #3B4856;
+    height: 400px;
+    box-shadow: 8px 15px 12px #0B1826;
+}
+.btn{
+    position:absolute;
+    bottom:20%;
+    width:100%;
+    font-family:Times roman new;
+    color:#fff;
+    font-size:18px;
+    left:0;
+    z-index:-1;
+    text-align:center;
+}
+.btn span{
+    box-shadow: 4px 11px 8px #0B1826;
+    border: 1px solid #3B4856;
+    padding:5px;
+    border-radius:5px;
+    z-index:1;
+}
+.nxt{
+    right:10px;
+}
+.prv{
+    left:20px;
+}
+#count{
+    position:absolute;
+    color:#fff;
+    top:5%;
+    text-align:center;
+    left:0;
+    width:100%;
+}
+.nxt , .prv{
+    color:#fff;
+    box-shadow: 4px 11px 8px #0B1826;
+    position:absolute;
+    bottom:20%;
+    font-family:Times roman new;
+    font-size:18px;
+    border:1px solid #3B4856;
+    padding:5px;
+    border-radius:5px;
+}
+select{
+    position: fixed;
+    width: 90%;
+    bottom: 10%;
+    z-index: -1;
+    left: 5%;
+    color:#fff;
+    outline:none;
+    padding:5px;
+    border-style: solid;
+    background: #1B2836;
+    border-radius:5px;
+    border-color: #3B4856;
+    box-shadow: 8px 15px 12px #0B1826;
+    border: 1px solid #3B4856;
+    box-shadow: 8px 15px 12px #0B1826;
+}

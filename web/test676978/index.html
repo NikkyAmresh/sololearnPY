@@ -1,0 +1,43 @@
+<!-- Created by @n0nym0u§-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+<script src="https://cdn.rawgit.com/bureyburey/Scoreboard-Module/master/scoreboard.js"></script> 
+<!-- NOT REQUIRED, JUST A COOL FONT --> <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    
+      
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBBtDiVEw_74L5SecwDlgSodZaLgiS9B_w",
+    authDomain: "my-first-project-32413.firebaseapp.com",
+    databaseURL: "https://my-first-project-32413.firebaseio.com",
+    projectId: "my-first-project-32413",
+    storageBucket: "my-first-project-32413.appspot.com",
+    messagingSenderId: "460304501813"
+  };
+  firebase.initializeApp(config);
+</script> 
+
+   </head>
+    <body>
+     <div id="temp">Add Songs?</div>   
+
+    <form id="form"><hr>
+    <input class="input" id ="surl" type="url"placeholder ="song url" required>
+    <input class="input" id="iurl" type="url" placeholder ="image url" required>
+    <input class="input" id="sname" type="text" placeholder ="song name" required>
+    <input id="reset" type="button"  value ="Add"><hr><br /></form>  
+    <div id="container"> 
+    <div class = "pl">
+        <div id="list"></div>
+    </div>
+    </div></body>
+</html>

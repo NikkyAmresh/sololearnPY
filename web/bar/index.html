@@ -1,0 +1,65 @@
+<!-- Created by Çůřîöş ßąšäñț 🇮🇳-->
+
+<!DOCTYPE html>
+
+<!--
+    03/07/2018 : Date Published
+    04/07/2018 : Dark Mode Added (Credit : Lakhvir Singh)
+-->
+
+<html>
+<head>
+    <title>Glowing Bar!</title>
+</head>
+    
+<body>
+    <div id="bar">
+        <div class="top side"><div class="grow"></div></div>
+        <div class="bottom side"><div class="grow"></div></div>
+        <div class="back side"><div class="grow"></div></div>
+        <div class="front side"><p id="demo"></p><div class="grow"></div></div>
+        <div class="left side"><div class="grow" style="width: 2em"></div></div>
+        <div class="right side"></div>
+    </div>
+    
+    <ul>
+        <li onclick = "switchColor('rgba(210, 210, 210, 0.5)',0)">None</li>
+        <li onclick = "switchColor('rgba(255, 0, 0, 0.5)',1)">Red</li>
+        <li onclick = "switchColor('rgba(255, 0, 204, 0.45)',2)">Pink</li>
+        <li onclick = "switchColor('rgba(0, 30, 255, 0.5)',3)">Blue</li>
+        <li onclick = "switchColor('rgba(0, 128, 255, 0.55)',4)">Cyan</li>
+        <li onclick = "switchColor('rgba(0, 255, 0, 0.4)',5)">Green</li>
+        <li onclick = "switchColor('rgba(255, 255, 0, 0.4)',6)">Yellow</li>
+        <li onclick = "switchColor('rgba(255, 165, 0, 0.5)',7)">Orange</li>
+    </ul>
+    <input type="range" min="0" max="80" value="60" id="slider">
+    <input type="checkbox" onclick="mode()" id='clr'> Dark Mode
+</body>
+
+<script>
+var val = document.getElementById("demo");
+var glow = document.getElementsByClassName("grow");
+
+val.innerHTML = slider.value*10/8 + '%';
+
+document.getElementById("slider").oninput = function() {
+    val.innerHTML = Math.round(this.value*10/8) + '%';
+    for( var i = 0; i < glow.length; i++) {
+        if(i == 4) continue;
+//Ignore Right Side
+        glow[i].style.width = this.value/10 + 'em';
+    }
+}
+function switchColor(color, i) {
+    document.getElementsByTagName('li')[i].style.background = color;
+    document.getElementsByTagName('html')[0].style.setProperty('--color', color);
+}
+function mode() {
+    bg_clr = document.getElementsByTagName('body')[0];
+    if(document.getElementById('clr').checked)
+        bg_clr.style.background = '#333';
+    else
+        bg_clr.style.background = '#ccc';
+}
+</script>
+</html>

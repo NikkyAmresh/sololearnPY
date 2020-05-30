@@ -1,0 +1,234 @@
+body {
+    background-color:#242B33;
+}
+.nav{
+    background-color:#36474F;
+    width:320px;
+    height:85px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    padding:20px;
+}
+.heading{
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+}
+img.profile{
+    width:26px;
+    position:absolute;
+    top:20px;
+    left:250px;
+}
+img.notification{
+    width:37px;
+    position:absolute;
+    top:15px;
+    left:280px;
+}
+img.menu{
+    width:30px;
+    position:absolute;
+    top:17px;
+    left:320px;
+    filter:contrast(20);
+}
+img.course{
+    width:30px;
+    position:absolute;
+    top:75px;
+    left:30px;
+    filter:invert(30%);
+}
+img.play{
+    width:25px;
+    position:absolute;
+    top:78px;
+    left:100px;
+    filter:invert(30%);
+}
+img.home{
+    width:25px;
+    position:absolute;
+    top:78px;
+    left:170px;
+}
+img.code{
+    width:25px;
+    position:absolute;
+    top:78px;
+    left:250px;
+    filter:invert(30%);
+}
+img.posts{
+    width:25px;
+    position:absolute;
+    top:78px;
+    left:320px;
+    filter:invert(30%);
+}
+.selected{
+    background-color:#7DB343;
+    position:absolute;
+    top:123px;
+    height:2px;
+    left:140px;
+    width:85px;
+    z-index:3px;
+}
+.me{
+    background-color:#333A42;
+    position:absolute;
+    top:132px;
+    width:96%;
+    height:140px;
+    left:2%;
+}
+img.avatar{
+    border:none;
+    border-radius:50%;
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:60px;
+}
+.name{
+    color:#C1C6CA;
+    font-size:20px;
+    font-weight:bold;
+    position:absolute;
+    top:15px;
+    left:80px;
+}
+img.leaderboard{
+    position:absolute;
+    top:48px;
+    left:82px;
+    width:15px;
+    filter:brightness(150%);
+}
+.rank{
+    color:#919A9f;
+    font-weight:bold;
+    position:absolute;
+    top:50px;
+    left:100px;
+    font-size:13px;
+}
+img.plat{
+    border:none;
+    border-radius:50%;
+    position:absolute;
+    top:55px;
+    left:50px;
+    width:20px;
+}
+.platinum{
+    background-color:#7DB343;
+    position:absolute;
+    top:70px;
+    height:4px;
+    left:82px;
+    width:255px;
+    z-index:3px;
+}
+.platinum1{
+    position:absolute;
+    top:76px;
+    left:82px;
+    width:255px;
+    font-size:10px;
+    z-index:3px;
+    color:#919A9f;
+}
+.invite{
+    background-color:#7DB343;
+    width:auto;
+    height:auto;
+    color:#000;
+    font-weight:bold;
+    position:absolute;
+    right:5px;
+    border-radius:3px;
+    padding:10px;
+    top:90px;
+}
+.af{
+    color:#C1C6CA;
+    font-weight:bold;
+    position:absolute;
+    left:9px;
+    border-radius:3px;
+    font-size:13px;
+    top:280px;
+}
+.javascript{
+    background:#333A42;
+    height:280px;
+    width:340px;
+    color:#fff;
+    left:0px;
+    position:absolute;
+    font-size:18px;
+    top:300px;
+    padding:10px;
+    z-index:1;
+}
+small{
+    color:#ccc;
+    font-size:13px;
+}
+img.img{
+    position:absolute;
+    background:#405050;
+    height:190px;
+    width:100%;
+    left:0px;
+    margin-top:10px;
+    z-index:3;
+    display:block;
+    position:absolute;
+    filter: brightness(50%); 
+}
+.oc{
+    position:absolute;
+    right:40px;
+    top:265px;
+    color:#cdd;
+    text-decoration:none;
+}
+.imgtxt{
+    position:absolute;
+    top:150px;
+    left:15%;
+    font-size:22px;
+    z-index:4;
+    font-weight:bold;
+}
+.challenge{
+    display:none;
+    position:absolute;
+    top:300px;
+    width:80%;
+    background-color:#7DB343;
+    color:#fff;
+    padding:10px;
+    font-weight:bold;
+    left:10%;
+    text-align:center;
+}
+
+.learn{
+    display:none;
+    position:absolute;
+    top:300px;
+    width:80%;
+    background-color:#7DB343;
+    color:#fff;
+    padding:10px;
+    font-weight:bold;
+    left:10%;
+    text-align:center;
+}
+

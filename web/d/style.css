@@ -1,0 +1,15 @@
+body {
+    
+}
+i{
+    font-size:70px;
+}
+.circle{
+    width:82px;
+    height:82px;
+    left:40%;
+    position:fixed;
+    top:100px;
+    background:radial-gradient(circle, #ffff05 ,#ffff05, red );
+    border-radius:50%;
+}

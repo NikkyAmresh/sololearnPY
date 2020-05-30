@@ -1,0 +1,27 @@
+<!DOCTYPE html><html>    <head>        <title>Tweet</title>        <script src="jquery-1.12.4.min.js"></script>
+    <script src="list.js"></script>
+    <script src="http://yourjavascript.com/41211422905/html2canvas-min.js"></script>
+<script src="script.js"></script>
+<script>
+    function funck(link,html2canvas){
+var elem=document.getElementById("post");
+    html2canvas(elem).then(function(canvas) {
+    
+    link.href=canvas.toDataURL();
+    link.download="test.png";
+});
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="style.css"></head>
+ <body> <div id="count">Post #104</div>     <div class="container" id="post">            <img class="avatar" src="41544540_2092926370751484_5589436598967074816_n.jpg">            <div class="name">Ąloŋə Iıŋ Mılıoŋs</div>            <div class="username">@alone_in.millions</div>            <div class="tweet">One thing I learned about life: You can be important to someone, but not all the time.</div>        </div>  <div>
+    <botton class="prv" onclick=twt(nm--)>Prev post</botton>
+    <botton class="nxt" onclick=twt(nm++)>Next post</botton>
+    
+</div>
+<select onchange="twt(this.value);nm=this.value;">
+    
+</select> 
+<div class="btn"><span onclick="tweet()">Random post</span></div>
+<a target=_blank onclick=funck(this,html2canvas)>copy</a>
+  </body></html>         

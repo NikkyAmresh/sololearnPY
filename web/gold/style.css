@@ -1,0 +1,427 @@
+/* Created by Shinbi ドリアン */
+
+body, html{margin:0; box-sizing: none;}
+
+/* Basic */
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1:hover, h2:hover, h3:hover, p:hover, span:hover {
+    cursor: default;
+}
+
+a {
+    text-decoration : none;
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+    height: 100%;
+}
+
+h1, h3, h4 {
+    color: #333;
+    padding-top: 20px;
+}
+
+h3 {
+    padding-top: 10px;
+}
+
+button {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+/* The 'Gold Rank div' */
+
+#header-fixed {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#header {
+    background-color: #FFE4C4;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    text-align: center;
+    position: fixed;
+    border-bottom: 20px solid #DEB887;
+    z-index: 49;
+    transition-duration: 0.8s;
+    top: 0;
+    left: 0;
+}
+
+/* 'I've achieved gold status' */
+
+#header p {
+    letter-spacing: 5px;
+    word-spacing: 7px;
+    margin-top: 100px;
+    transition-duration: 0.6s;
+}
+
+/* 'gold rank' */
+
+#hHeader {
+    position: absolute;
+    top: 30px;
+    tex-align: center;
+    margin: 0;
+    left: 0; right: 0;
+    width: 100%;
+    font-size: 33px;
+    transition-duration: 0.8s;
+
+}
+
+
+/* submenu */
+
+#submenu-link {
+    z-index: 50;
+    position: fixed;
+    margin-left: 93%;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+    transition-duration: 0.8s;
+}
+
+#submenu-link span {
+   display: block;
+   height: 2px;
+   display: block;
+   width: 90px;
+   margin-top: 6px;
+   z-index: 50;
+   background-color: #333;
+   transition-duration: 1s;
+}
+
+#sub-Menu {
+    display: none;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: #FFE4C4;
+    transition-duration: 1s;
+}
+
+
+/* copyright */
+
+footer {
+    width: 100%;
+    height: auto;
+    z-index: 50;
+    background-color: #444;
+    margin-top: 30px;
+    padding: 7px 0;
+}
+
+#inner {
+    color: #EEE;
+    text-align: center;
+}
+
+/* all content of the page */
+
+#content {
+    width: 100%;
+    height:70%;
+    z-index: -1;
+    margin-top: 170px;
+    position: absolute;
+    background-color: white;
+}
+
+/* 'I need your support etc...' */
+
+.prog {
+    background-color: #333;
+    width: 90%;
+    height: auto;
+    padding: 3px 7px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-left: 8px solid #DEB887;
+    color: #AAA;
+}
+
+/* 'Thanks' */
+
+#resume {
+    width: 100%;
+    height: auto;
+    padding: 6px 0;
+    margin: 20px 0;
+    text-align: justify;
+    background-color: #F1F1F1;
+    margin-top: 60px;
+}
+
+#resume-inner {
+    padding: 0 10px;
+}
+
+/* Shinbi img + stats */
+
+#profil{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#avatar-img {
+    border-radius: 5em;
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.level-12 {
+    color: rgba(33,33,33,0.7);
+    display: block;
+}
+
+/* level of account */
+
+#level {
+    display: block;
+    width: 100%;
+    height: 5px;
+}
+
+#progress {
+    background-color: white;
+    height: 3px;
+    width: 100px;
+    display: inline;
+    position: relative;
+}
+
+#value {
+    display: inline;
+    width: 5px;
+    height: 5px;
+    margin-left: 0;
+    background-color: #0A0;
+}
+
+/* my stats */
+
+#table {
+  /*  margin-top: 60px;*/
+    width: 100%;
+    overflow-x: hidden;
+    border-top: 2px solid #444;
+    border-bottom: 2px solid #444;
+    margin-top: 40px;
+}
+
+#table4 .tdf {
+    display:flex;
+    align-items:center;
+}
+
+.td {
+    text-align: center;
+    height: 25px;
+    width: 24%;
+    padding: none;
+    margin: none;
+    display: inline-block;
+    padding-top: 5px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+#content-data {
+    with: 100%;
+    height: 350px;
+    background-color: #F1F1F1;
+    border-bottom: 2px solid #333;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.5), inset 0 -3px 5px rgba(0,0,0,0.5);
+}
+
+#table2 img {
+    background-color: #444;
+    width: 50px;
+    border-radius: 5em;
+}
+
+#table3 td {
+    width: 100%;
+    font-size: 15px;
+    color: white;
+}
+
+#table3 a {
+    padding: 20px 10px;
+}
+
+#table3 img {
+    width: 20px;
+    height: auto;
+    display: inline;
+    margin-right: 0;
+    float: right;
+    padding-right: 10px;
+    align-items: center;
+}
+
+#table3 tr, #table3 td {
+    height: 50px;
+}
+
+#table3 td:hover {
+    background-color: #555;
+}
+
+#table3 tr:nth-child(odd){ 
+    background-color:#444; 
+}
+
+#table3 tr:nth-child(even){
+    background-color:#333;
+}
+
+#table1 img {
+    border: 3px solid #666;
+    border-radius: 5em;
+    margin-left: 10px;
+    width: 50px;
+}
+
+#table2 tr {
+    border-bottom: 2px solid #DEB887;
+    margin: 2px 0;
+}
+
+table {
+    width: 100%;
+}
+
+.certifiate {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin: 0;
+}
+
+#table4 td {
+    width: 100%;
+    height: 50px;
+    background-color: #444;
+    padding-left: 10px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#table4 .honor {
+    background-color: #DEB887;
+    font-weight: none;
+    padding: 5px;
+    text-align: justify;
+    font-size: 10px;
+}
+
+#table4 .honor div {
+    background-color: #444;
+    width: 15px;
+    height: 15px;
+    border-radius: 3em;
+    color: #EEE;
+    line-height: 1.6;
+    text-align: center;
+    align: right;
+    float: right;
+}
+
+#table4 div {
+    width: 45px;
+    height: 45px;
+    border-radius: 5em;
+    overflow: hidden;
+    display: inline;
+    background-size: cover;
+}
+
+#table4 td:hover {
+    background-color: #555;
+}
+
+#table4 span {
+    margin-left: 20px;
+    display: inline;
+}
+
+#page1, #page2 {
+    background-color: #222;
+}
+
+#page1 {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+#page2 {
+    width: 100%;
+    height: auto;
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+}
+
+#page3 {
+    width: 100%;
+    height: 350px;
+    display: none;
+}
+
+#page4 {
+    width: 100%;
+    height: 350px;
+    display: none;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* submenu */
+#comeback {
+    width: 40px;
+    height: 40px;
+    background-color: #DEB887;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    border-radius: 0 0 3em 0;
+    padding: 7px 0 0 10px;
+    position: absolute;
+    z-index: 99;
+}
+
+#canvas {
+    background-color: #FFE4C4;  
+    height: 100vh; 
+    position: absolute;
+    z-index: 50;
+    top: 0;
+}

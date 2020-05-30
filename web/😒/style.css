@@ -1,0 +1,25 @@
+body {
+    margin:0;
+    padding:0;
+}
+canvas{
+    top:0px;
+    width:100%;
+}
+.container{
+    position:fixed;
+    color:#fff;
+    font-size:50px;
+    top:200px;
+    left:2%;
+    animation: lt 6s linear;
+}
+ @-webkit-keyframes lt {
+ 0% { -webkit-transform: rotate(6000000deg);
+        font-size:180px;
+          }
+  25% { -webkit-transform: rotate(-6000000deg);font-size:150px; } 
+  50% { -webkit-transform: rotate(6000000deg); font-size:100px;} 
+  100% { -webkit-transform: rotate(-6000000deg); 
+  font-size:50px;
+  } }

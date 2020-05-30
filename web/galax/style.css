@@ -1,0 +1,23 @@
+/* Created by Andrew */
+
+body {
+    background-color: #000000;
+    margin: auto;
+}
+div{
+   width: 1px;
+   height: 1px;
+   position: fixed; 
+   left: 0;
+   top: 0;
+   right:;
+   bottom:;
+   transition: all 2s linear;
+   margin: auto;
+   box-shadow: 0px 0px 3px #FFF;
+}
+#num{
+   width:;
+   height: 25px;
+   color: #FFF;
+}

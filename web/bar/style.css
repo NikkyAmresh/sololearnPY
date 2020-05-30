@@ -1,0 +1,71 @@
+/* Created by Çůřîöş ßąšäñț 🇮🇳 */
+
+html{
+    --glass: rgba(230, 230, 230, 0.4);
+    --color:  rgba(0, 128, 255, 0.55);
+}
+body{ background: #ccc }
+#bar{
+    perspective: 800px;
+    perspective-origin: top;
+    transform-style: preserve-3d;
+}
+.side{
+    position: absolute;
+    top:150px;    left:40px;
+    font-size: 2.5em;
+    background: var(--glass);
+    height: 2em; width: 8em; /* This will change size of Bar */
+}
+
+.top{transform: rotateX(90deg) translateZ(1em) }
+.bottom{
+    transform: rotateX(-90deg) translateZ(1em);
+    box-shadow: 0 .1em 0.6em rgba(0,0,0,.3), .6em -0.5em 3em rgba(0,0,0,.3), 1em -0.8em 8em #DDD;
+}
+.back{ transform: translateZ(-1em) }
+.front{transform: translateZ(1em) }
+.left{
+    transform: rotateY(90deg) translateZ(-1em);
+    width: 2em;
+}
+.right{
+    transform: rotateY(90deg) translateZ(7em);
+    box-shadow: inset 0 0 2em .5em rgba(220, 220, 220, 0.3);
+    width: 2em;
+
+}
+.grow{
+    height: 2em;
+    width: 6em;   /* This Fills the Bar */
+    background: var(--color);
+}
+.bottom .grow{
+    box-shadow: -0.5em -1em 5em 0.5em var(--color);
+}
+.front .grow{
+    box-shadow: -0.5em -0.5em 3em .5em var(--color)
+}
+.left .grow{
+    box-shadow: inset 0 0 2em .05em var(--color)
+}
+ul{ position: relative; top:22em; left:-3em; width: 100% }
+li{
+    background: #353535;
+    font: bold 1.2em cambria;
+    list-style-type: none;
+    float:left; color: white;
+    padding: 10px 20px;
+    width: 12.5%;
+    text-align: center;
+    border: 1px solid;
+}
+
+#slider{
+    position: relative;
+    top:30em;
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+}
+#demo { position: absolute; right: 0; font-size: 15px; }

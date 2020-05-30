@@ -1,0 +1,16 @@
+div {
+    position:fixed;
+    top:0%;
+    width:25%;
+    height:35%;
+    background:black;
+    border:1px grey solid;
+}
+
+hr {
+    position:fixed;
+    top:-3%;
+    height:103%;
+}
+
+/* only for mobiles… */

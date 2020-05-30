@@ -1,0 +1,32 @@
+/* Created by meet khurana */
+
+body {
+    background-color:white;
+}
+.runner{
+    background-image:url(" http://i66.tinypic.com/10x924y.png");
+    width:400px; 
+    height:115px;
+    animation : walk 1s steps(12) infinite,forward 5s linear infinite;
+    
+}
+@keyframes walk{
+    0%{
+        background-position:0px;
+    
+    }
+    100%{
+        background-position:600px;
+    }
+}
+
+
+@keyframes forward{
+0%{
+    transform:translateX(-100px) ;
+    
+  }
+    100%{
+        transform:translateX(1200px);
+    }
+}

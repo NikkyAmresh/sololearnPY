@@ -1,0 +1,136 @@
+*{
+    user-select: none;
+}
+body {
+    background-color:#000;
+}
+#prev{
+    position:fixed;
+    bottom:40px;
+    left:15%;
+    width:40px;
+    vertical-align:middle;
+    height:40px;
+    text-align:center;
+    border-radius:50%;
+    border:0.1px solid #e9c;
+}
+#next{
+    position:fixed;
+    bottom:40px;
+    right:15%;
+    width:40px;
+    transform: rotate(180deg);
+    vertical-align:middle;
+    height:40px;
+    text-align:center;
+    border-radius:50%;
+    border:0.1px solid #e9c;
+}
+.hr{
+    position:fixed;
+    height:0.6px;
+    background-color:#e9c;
+    width:100%;
+    left:0px;
+}
+.down{
+    bottom:27px;
+}
+.up{
+    bottom:90px;
+}
+#play{
+    position:fixed;
+    bottom:40px;
+    right:43%;
+    transform:rotate(90deg);
+    width:40px;
+    vertical-align:middle;
+    height:40px;
+    text-align:center;
+    border-radius:50%;
+    border:0.1px solid #e9c;
+}
+#prev:active{
+    border:0.1px solid #f00;
+    transform:scale(1.1);
+    transition: 0.2s;
+}
+.prev:active{
+    color:#f00;
+}
+#next:active{
+    border:0.1px solid #f00;
+    transform:rotate(180deg) scale(1.1);
+    transition: 0.2s;
+}
+.next:active{
+    color:#f00;
+    
+}
+#play:active{
+    border:0.1px solid #f00;
+    transform:scale(1.1) rotate(90deg);
+    transition: 0.2s;
+}
+.play:active{
+    color:#f00;
+}
+.pause:active{
+    color:#f00;
+}
+.prev{
+    color:#e9c;
+    position:relative;
+    font-weight:lighter;
+    top:12px;
+    user-select: none;
+}
+.play{
+    color:#e9c;
+    position:relative;
+    font-weight:lighter;
+    left:1px;
+    font-size:20px;
+    top:8px;
+    user-select: none;
+}
+.next{
+    color:#e9c;
+    user-select: none;
+    position:relative;
+    font-weight:lighter;
+    top:12px;
+}
+.pause{
+    color:#e9c;
+    position:relative;
+    font-weight:lighter;
+    display:none;
+    left:1px;
+    font-size:30px;
+    top:3px;
+    user-select: none;
+}
+#status{
+    position:fixed;
+    color:#e9c;
+    top:150px;
+    font-size:40px;
+    font-weight:lighter;
+    text-align:center;
+    width:100%;
+    left:0px;
+}
+#s_name{
+    position:fixed;
+    color:#e9c;
+    top:10px;
+    overflow-x:ellipsis;
+    width:100%;
+    font-size:20px;
+    font-weight:lighter;
+    text-align:center;
+    left:0px;
+}

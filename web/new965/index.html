@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Login|Register Form </title>  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body onload="alert('Welcome To Login|Register Form \nHope you like it.. \n THANKS ')"><div id="login" class="login">
+        <form action="#" onsubmit="alert('Please one Like? 😊👍🏻🙏🏻')" name="login"> 
+    <h3 onclick="a();">Enter Your Login Details To Continue</h3>
+    <input id="username" name="username" type="text"  class="reg-input" placeholder="Username" required autofocus/> 
+ <input name="password" id="pass1"  type="password"  class="reg-input" placeholder="Password" required />
+   <input type="checkbox" onchange="document.getElementById('pass1').type = this.checked ? 'text' : 'password'"> Show password
+
+    <div class="fdooter">
+   <input type="submit" name="submit" id="log_submit" value="Login" class="reg-submit" /><center>or</form>
+    <p id='result'></p><button value="Register" type=reset class="reg-submit" id="show_reg" >Register</button>
+    </center></div> </div></div>
+<div id="reg" style="display:none;"> 
+   <form action="#" name="form" onsubmit="alert('Please one Like? 😊👍🏻🙏🏻')" class="reg" method="post">
+  <div class="contdent">
+  <h3 align=center>Enter Your Details To Register</h3></div>
+    <input name="reg_name" title="Please Enter Your Name" type="text"  class="reg-input" placeholder="Full Name" required />
+  <input name="reg_username" type="text"  class="reg-input" placeholder="username" required autofocus />
+  <input name="reg_email" class="reg-input" placeholder="someone@email.com" type="email" required /> 
+  <select name="reg_gender" class=reg-input required>
+    <option value="">Gender</option>
+    <option  value="Male">Male</option>
+     <option value="Female" > <h3>Female</h3></option></select>
+ <input type=date placeholder="YYYY/MM/DD" required name=reg_dob class=reg-input>
+  <input name="reg_password" type="password"  value="" class="reg-input" id="pass" placeholder="Enter New Password" required />
+  <input type="checkbox" onchange="document.getElementById('pass').type = this.checked ? 'text' : 'password'"> Show password
+  <div class="fdooter">
+    <button type="submit" name="submit" value="Register" class="reg-submit" > Register</button><center>
+    or</center>
+    <button  type="reset" class="reg-submit" id="show_login">Login</button>  </div>  
+</form> </div></div></div>
+</body>
+</html>
+        
+    

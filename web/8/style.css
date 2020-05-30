@@ -1,0 +1,87 @@
+body{
+    background-color:#000;
+    color:#fff;
+}
+img.entry-image{
+    width:95%;
+    margin-left:2.5%;
+}
+.featured-image{
+    margin-top:60px;
+}
+p{
+    font-size:20px;
+    padding:10px;
+    font-weight:lighter;
+    
+}
+.header{
+    background-color:#6a8ae7;
+    position:fixed;
+    color:#de6e37;
+    top:0px;
+    left:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-weight:bold;
+    font-size:40px;
+    height:40px;
+    text-align:center;
+    width:100%;
+}
+
+**CSS4**
+
+**picture**{
+scale:proportionally;
+color-ehancement:brighter;
+quality-enhancement:high;
+load-optimizer:fast;
+}
+
+**responsive**{
+mobile[240px, 320px, 480px, 640px]: respond;
+desktop[960px, 1024px, 1200px, 1600px]: respond;
+fitted: true;
+}
+
+**social > facebook**{
+background-color:fb-color;
+hint: ‘Like us on facebook’;
+hint-popup: top; /*This will have right, left, top and bottom*/
+hint-color: #fff;
+hint-bg: #000;
+
+}
+
+**translate**{
+lang: ‘french’; /*It will support other languages like: Portuguese, German, Greek, Latin, Arabic, etc*/
+}
+
+**list**{
+type: ul; /*You can also set the value to ol*/
+bullet: disc; /*You can also set to square, circle, etc.*/
+}
+
+**link**{
+color: red;
+hover: black; /*No more something like a:hover*/
+}
+
+**info**{
+/*This will have normal css styling like color, font-size, etc, but it will have a special styling by default.*/
+}
+
+**page**{
+/*This will have normal css styling like width, border, background, etc.*/
+}
+
+**logo**{
+place: left; /*the value can be set to right or center. Left is the default value*/
+}
+
+**paint**{
+style: splatter; /*This will have values like: splash, smooth, rough, zigzag, etc*/
+color-mixture: red + yellow; /*You can mix multiple colors as long as you mix them with + sign*/
+}
+

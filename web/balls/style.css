@@ -1,0 +1,31 @@
+body{
+    background:#000;
+    color:#fff;
+}
+div{
+    box-shadow:0px 0px 30px 4px;
+    top:40%;
+    right:40%;
+    border-radius:50%;
+    width: 70px; 
+    position:fixed;
+    height: 70px;
+    animation:rt 4s infinite;
+    margin: 20px;
+    color: #FFF;  
+    background: linear-gradient(rgba(0,225,225,5), rgba(225,0,225,5));
+} 
+@keyframes rt{
+    0%{
+        transform:rotateZ(0deg);
+        position:fixed;
+    }
+    50%{
+        transform:rotateZ(90deg);
+        
+    }
+    100%{
+        transform:rotateZ(360deg);
+        position:fixed;
+    }
+}

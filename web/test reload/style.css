@@ -1,0 +1,14 @@
+body {
+    
+}
+.reload{
+    background-color:#4286F5;
+    color:#fff;
+    width:90%;
+    position:fixed;
+    Top:100px;
+    left:2%;
+    font-weight:bold;
+    text-align:center;
+    padding:10px;
+}

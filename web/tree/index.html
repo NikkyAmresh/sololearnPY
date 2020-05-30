@@ -1,0 +1,62 @@
+<!-- Created by Ava 🐈-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+      <canvas id="canvas"></canvas> 
+      <script>
+   /*
+   Credits to progur.com for the course on fractal trees
+   */
+        
+var       
+canvas=document.querySelector("canvas");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+var ctx=canvas.getContext("2d");
+ctx.strokeStyle = "darkgreen"; 
+ctx.fillStyle = "green";
+
+
+
+
+function draw(startX, startY, len, angle, branchWidth) { 
+   
+    ctx.lineWidth = branchWidth;
+    ctx.beginPath(); 
+    ctx.save(); 
+    ctx.translate(startX, startY); 
+    ctx.rotate(angle * Math.PI/180); 
+    ctx.moveTo(0, 0); 
+    ctx.lineTo(0, -len); 
+    ctx.stroke();
+    ctx.shadowBlur = 15; 
+    ctx.shadowColor = "rgba(0,0,0,0.8)";
+ 
+
+if(len < 9) { 
+    ctx.beginPath(); 
+    ctx.arc(0, -len, 10, 0, Math.PI/2);                 
+    ctx.fill(); 
+    ctx.restore(); 
+    return; 
+}
+ 
+
+draw(0, -len, len*0.8, angle+10, branchWidth*0.8); 
+draw(0, -len, len*0.8, angle-10, branchWidth*0.8); 
+
+ctx.restore(); 
+
+}
+
+draw(170,400,65,0,10);  
+//startX, startY, len, angle, branchWidth)          
+          
+          
+      </script> 
+    </body>
+</html>

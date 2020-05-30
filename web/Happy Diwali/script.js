@@ -1,0 +1,1 @@
+ alert("Send your personalize wishing greating to your Friends and Family Members​​");

@@ -1,0 +1,1841 @@
+<!-- Created by Řïã💞-->
+
+<!--
+
+.... Hello world,This is Ria💞.
+.... This is the app version of shopping website.
+.... Lots of images in  the code.so,it takes more time to load.Have patience:)
+
+.... please dont copy without permission.
+.... All rights reserved.
+.... All images are taken from Google.
+
+.... click on the particular category to show products.
+.... Designed by: Ria
+.... Date of posting:26-Apr-2020.
+.... Learn create..💞..keep coding and learning.
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shopping web app</title>
+        <meta charset="utf-8">
+<link rel="stylesheet" href="style1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        
+<div class="loader">
+    <div class="text">Loading...</div>
+    <div class="load"></div>
+</div>
+     <div class="main" id="main">
+        <div class="nav-bar">
+           <div class="nav-logo">
+             <form>
+              <input type="text" placeholder="Search by product,brand ">
+             </form>
+           </div>
+        <div class="nav-links" id="nav-links">
+         <i class="fa fa-close"onclick="closeNav()"></i>
+           <ul>
+           <div class="profile">
+               <i class="fa fa-user"></i>
+               <p>Hello,User</p>
+           </div><br><br><br><br>
+<br><br>
+            <a href="#"><i class="fa fa-shopping-cart"><li>My orders</li></i></a>
+            <a href="#"><i class="fa fa-shopping-bag"><li>My wishlist</li></i></a>
+            <a href="#"><i class="fa fa-user"><li>My Account</li></i></a>
+            <div class ="line"></div>
+            <a href="#"><i class="fa fa-th-list"><li class="down_1"> Language</li></i></a>
+            <a href="#"><i class="fa fa-gear"><li>settings</li></i></a>
+            <div class="line1"></div>
+           <a href="#"><i class="fa fa-envelope"><li class="down_1">sign in</li></i></a>
+           </ul>
+        </div>
+<div class="icon" ><i class="fa fa-shopping-cart"></i><span class="super">3</span></div>
+<i class="fa fa-bars"onclick="show()"></i></div>
+
+<div class="categories">
+    <div class="images">
+        <div class="img_1" id="men">    
+            <img src="https://i.ibb.co/Sw629Sw/men.png" alt="men">
+            <h6>men</h6> 
+        </div>
+        <div class="img_1"id="women">    
+            <img src="https://i.ibb.co/Tk0QHTr/dress.png" alt="women">
+            <h6>women</h6> 
+        </div>
+        <div class="img_1"id="beauty">    
+            <img src="https://i.ibb.co/gdPYpZT/l5.png" alt="beauty">
+            <h6>Beauty </h6> 
+        </div>
+        <div class="img_1"id="gadgets">    
+            <img src="https://i.ibb.co/p05NmZJ/g.png" alt="gadgets">
+            <h6>gadgets</h6> 
+        </div>
+        <div class="img_1"id="home">    
+            <img src="https://i.ibb.co/9Y9hjgL/h5.png" alt="home">
+            <h6>home</h6> 
+        </div>
+        <div class="img_1"id="furniture">    
+            <img src="https://i.ibb.co/qp8wBpp/Screenshot-20200412-055921.png"alt="furniture">
+            <h6>furniture</h6> 
+        </div>
+        <div class="img_1"id="kids">    
+            <img src="https://i.ibb.co/RjJDgJK/c.png" alt="kids">
+            <h6>kids</h6> 
+        </div>
+    </div>
+</div>  
+</div>
+    <div class="slider">
+        <div class="dis">
+            <p>50% off</p>
+        </div>
+    <div class="pic">
+        <img src="https://i.ibb.co/JRtbGHr/fa.png">
+    </div>
+    <div class="text">
+        <p>shop essential products for you and your family </p>
+        <div class="btn btn-primary">shop now <i class="fa fa-angle-double-right"></i></div>
+    </div>
+    </div>
+    <!--
+    <div class="sale">
+       
+    <div class="countdown">
+         <p>Flash sale ends in  </p>
+        <div id="day">00</div>
+        <div id="hours">00</div>
+        <div id="minutes">00</div>
+        <div id="seconds">00</div>
+        <h6>view All<i class="fa fa-angle-double-right"></i></h6>
+        </div>
+        
+        </div>-->
+<!-----------------men ware starts------------>
+    <div id="men_click">
+        <div class="men_related">
+        <div class="list">
+            <div class="mensware" id="suits">
+               <h5>suits</h5>
+           </div>
+           <div class="mensware"id="tshirts">
+               <h5>T-shirts</h5>
+           </div>
+           <div class="mensware"id="watches">
+               <h5>watches</h5>
+           </div>
+           <div class="mensware"id="shoes">
+               <h5>shoes</h5>
+           </div>
+           <div class="mensware"id="shirts">
+               <h5>shirts</h5>
+           </div>
+           </div>
+        </div>
+<div id="first">
+    <div class="products_section"id="pr_1">
+        <div class="container">
+            <div class="product">
+                <div class="img_2">    
+                    <img src="https://i.ibb.co/jbmN71W/Screenshot-20200413-060926.png">
+                    <h6>$15<span>300+ sold</span></h6>
+                    <h5>$32</h5>
+                <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>   
+               </div>
+               <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+</div>
+</div>
+  
+ <div class="product">
+    <div class="img_2">    
+        <img src="https://i.ibb.co/1n75WCd/Screenshot-20200413-060646.png"alt="suite1">
+        <h6>$15<span>300+ sold</span></h6>
+        <h5>$32</h5>
+        <div class="star">
+<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             </div>
+
+<div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/gJgCzbf/Screenshot-20200411-165850.png"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/z5q5q2T/Screenshot-20200413-061119.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+              
+        </div>
+    </div>
+    <div class="products_section" id="pr_2">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/hFQ8TV9/Screenshot-20200413-064755.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/rHV806G/Screenshot-20200413-064531.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>            </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/RjFbMLt/Screenshot-20200413-064013.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   
+<div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/1fX5RJg/Screenshot-20200413-063633.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ <div class="products_section"id="pr_3">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/wSWcF09/watch.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/fCrXG4H/Screenshot-20200413-071720.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/sHwh5f9/Screenshot-20200413-071612.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/JjRBkw4/Screenshot-20200413-071457.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section" id="pr_4">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/zfPghgv/Screenshot-20200413-074350.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/k6Wwv8Q/Screenshot-20200413-074325.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/rHJP4cv/Screenshot-20200413-074222.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/3Bw957c/Screenshot-20200413-074121.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section"id="pr_5">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/gb0HCp9/Screenshot-20200413-075448.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/M64H2R4/Screenshot-20200413-075315.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+  <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/RB7nPd4/Screenshot-20200413-075242.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/kMgf39K/Screenshot-20200413-075043.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+  <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+<!----------men ware ends------------------>
+<!-----------women ware starts------------->
+  <div id="women_click">
+        <div class="men_related">
+        <div class="list">
+            <div class="mensware" id="ornaments">
+               <h5>Ornaments</h5>
+           </div>
+           <div class="mensware"id="tops">
+               <h5>tops</h5>
+           </div>
+           <div class="mensware"id="handbags">
+               <h5>Handbags</h5>
+           </div>
+           <div class="mensware"id="footware">
+               <h5>footware</h5>
+           </div>
+           <div class="mensware"id="kurthis">
+               <h5>kurthis</h5>
+           </div>
+           </div>
+        </div>
+  
+    <div id="second">
+    <div class="products_section" id="pr_6">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/t2QRpxj/Screenshot-20200413-103747.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/dPmm26W/Screenshot-20200413-103704.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/2sKkDgm/Screenshot-20200413-103631.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/MVqBQqH/Screenshot-20200413-103345.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+  <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section"id="pr_7">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/QFvmCzF/Screenshot-20200331-160358.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/kS8MSFY/Screenshot-20200414-143122.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/LPNwgbx/Screenshot-20200414-143311.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/3YQm75d/Screenshot-20200414-143503.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section"id="pr_8">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/2YMfnM5/bag.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/rmDhQDc/Screenshot-20200414-143653.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/4gxBnLJ/Screenshot-20200414-143854.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/gMKMpjQ/Screenshot-20200414-143941.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section"id="pr_9">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/k2rPmzW/ft1.jpg" alt="ft1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/LP4t5CY/ft2.png" alt="ft2">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/bbYJjnw/ft3.jpg" alt="ft3">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/g72FHBz/ft4.jpg" alt="ft4">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="products_section"id="pr_10">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/86Dr1HV/Screenshot-20200414-172714.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/8Mfs488/Screenshot-20200414-202425.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/QbncLFs/Screenshot-20200414-175546.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/4156btH/Screenshot-20200414-175604.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  </div>
+  </div>
+  <!------------women ware ends----->
+  <!------------beauty section starts---------->
+  <div id="beauty_click">
+        <div class="men_related">
+        <div class="list">
+           <div class="mensware"id="menn">
+               <h5>men</h5>
+           </div>
+           <div class="mensware"id="womenn">
+               <h5>women</h5>
+           </div>
+           </div>
+        </div>
+    <div id="third">
+    <div class="products_section"id="pr_11">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/Qr2LqPc/m1.jpg" alt="m1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/b6zV7jr/m.png" alt="m" >
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/NF6BJc5/m3.jpg"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/ZBVDv9n/mm.png" alt="mm">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+              
+        </div>
+    </div>
+    <div class="products_section" id="pr_12">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/3szvJR2/b1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/cb90rHj/b2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>            </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/Rp2Sy9D/b3.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/6DsPXgR/b4.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <!------------beauty section ends------------>
+  <!-----------gadget section starts---------->
+  <div id="gadget_click">
+        <div class="men_related">
+        <div class="list">
+            <div class="mensware" id="laptops">
+               <h5>laptops</h5>
+           </div>
+           <div class="mensware"id="mobiles">
+               <h5>mobiles</h5>
+           </div>
+           <div class="mensware"id="hp">
+               <h5>headphones</h5>
+           </div>
+           <div class="mensware"id="sw">
+               <h5>smart wearables</h5>
+           </div>
+           </div>
+        </div>
+    <div id="four">
+    <div class="products_section"id="pr_13">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/3NxCpzS/l1.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/558ZSbB/l2.jpg"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/txFfm5d/l3.jpg"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/18zSWWH/l4.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+              
+        </div>
+    </div>
+    <div class="products_section" id="pr_14">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/R2Shf1J/Screenshot-20200417-111236.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/k1h5vN4/Screenshot-20200417-111820.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>            </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/6y7BQcc/Screenshot-20200417-112201.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/x3qH4NL/Screenshot-20200417-112442.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ <div class="products_section"id="pr_15">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/RQXjFFg/h1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/s2gJJ2V/h2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/M82BhP7/h3.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/8BDwDTW/h4.jpg" alt="h4">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section" id="pr_16">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/XfB7RrG/sm1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/rZDXvJB/sw2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/H7pnMLj/sw3.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/NYdCfR2/sw4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <!-----------gadget section ends------------>
+  <!----------home section starts------------>
+  <div id="home_click">
+        <div class="men_related">
+        <div class="list">
+            <div class="mensware" id="hd">
+               <h5>home decor</h5>
+           </div>
+           <div class="mensware"id="ka">
+               <h5>kitchen appliances</h5>
+           </div>
+           <div class="mensware"id="cs">
+               <h5>cookware&serveware</h5>
+           </div>
+           <div class="mensware"id="pf">
+               <h5>pooja&festive</h5>
+           </div>
+           </div>
+        </div>
+    <div id="five">
+    <div class="products_section"id="pr_17">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/CzjCCrh/hm1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/0sxkYBX/hm2.png"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/wLfMxkn/hm3.png"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/vvTJZzR/hm4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+              
+        </div>
+    </div>
+    <div class="products_section" id="pr_18">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/YNsgVhY/k1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/pwBtxgQ/k2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>            </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/rv97W1R/k3.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/b6X8sDx/k4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ <div class="products_section"id="pr_19">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/BL3PyNq/c1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/4NNtWYC/c2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/tDKqZHz/c3.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/2dwR8G2/c4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section" id="pr_20">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/m9t7hGR/p3.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/dD39TZT/p4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/8PdzNZ2/p1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/xjCzXJX/p2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+         <p>Add to cart</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <!---health section ends------------->
+  <!---furniture section starts---------->
+  <div id="furniture_click">
+        <div class="men_related">
+        <div class="list">
+            <div class="mensware" id="sofas">
+               <h5>sofas</h5>
+           </div>
+           <div class="mensware"id="dt">
+               <h5>dining tables</h5>
+           </div>
+           <div class="mensware"id="tables">
+               <h5>tables</h5>
+           </div>
+           <div class="mensware"id="ac">
+               <h5>accent chairs</h5>
+           </div>
+           </div>
+        </div>
+    <div id="six">
+    <div class="products_section"id="pr_21">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/1fcrrK3/s1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/6syrWmx/s2.png"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/6WPm8VG/s3.jpg"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/RY56cyd/s4.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+              
+        </div>
+    </div>
+    <div class="products_section" id="pr_22">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/933w3c9/d1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+   </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/HDYvNZL/d2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>            </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/nMSHf8t/d3.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/rsJWTDQ/d4.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  </div>
+  </div>
+ <div class="products_section"id="pr_23">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/ZSCSBMs/t1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/FqCJp0s/t2.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/BZJdS5y/t3.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/6nHtZKV/t4.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="products_section" id="pr_24">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/5GdFLjz/a1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/47SgvmL/a2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+ <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/sQxJpYR/a3.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+<div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+<div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/SXX0004/a4.jpg">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <!----furniture section ends---------->
+  <!----kids section starts--------->
+  <div id="kids_click">
+        <div class="men_related">
+        <div class="list">
+            <div class="mensware" id="kw">
+               <h5>kidswear</h5>
+           </div>
+           <div class="mensware"id="toys">
+               <h5>Toys</h5>
+           </div>
+           </div>
+        </div>
+    <div id="seven">
+    <div class="products_section"id="pr_25">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/zF4R7QG/Screenshot-20200417-101335.png"> 
+<h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>             
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/1RD09y8/kw2.png"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>           
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/6PgScDj/kw3.png"alt="suite1">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/FnsCX63/kw4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+              
+        </div>
+    </div>
+    <div class="products_section" id="pr_26">
+        <div class="container">
+      <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/tQ2cRsm/toy1.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>         
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/74g9B2V/toy2.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+   <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>            </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  
+ <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/3mTxfyr/toy3.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  <div class="product">
+    <div class="img_2">    
+<img src="https://i.ibb.co/pJspfqr/toy4.png">
+  <h6>$15<span>300+ sold</span></h6>
+  <h5>$32</h5>
+  <div class="star">
+  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+   </div>
+   <div class ="buy" onclick="aler()">
+                   <p>Add to cart</p>
+               </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+  <!-----kids section ends---------->
+  <div class="bottom">
+  <div class="bottom-categories">
+      <div class="fa-icons">
+          <i class="fa fa-home">
+          <p>home</p>
+</i>
+      </div>
+      <div class="fa-icons">
+          <i class="fa fa-shopping-cart">
+          <p> cart</p>
+</i>
+      </div>
+      <div class="fa-icons">
+          <i class="fa fa-user">
+          <p>profile</p></i>
+      </div>
+      <div class="fa-icons">
+          <i class="fa fa-ellipsis-h">
+          <p>more</p>
+</i>
+      </div>
+      </div>
+  </div>
+    <script>
+    /*
+    var _0xa393=["\x67\x65\x74\x54\x69\x6D\x65","\x4A\x75\x6E\x20\x33\x30\x2C\x20\x32\x30\x32\x30\x20\x30\x30\x3A\x33\x30\x3A\x33\x30","\x66\x6C\x6F\x6F\x72","\x69\x6E\x6E\x65\x72\x54\x65\x78\x74","\x64\x61\x79","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x68\x6F\x75\x72\x73","\x6D\x69\x6E\x75\x74\x65\x73","\x73\x65\x63\x6F\x6E\x64\x73"];var countDownDate= new Date(_0xa393[1])[_0xa393[0]]();var x=setInterval(function(){var _0x8919x3= new Date()[_0xa393[0]]();var _0x8919x4=countDownDate- _0x8919x3;var _0x8919x5=1000;var _0x8919x6=_0x8919x5* 60;var _0x8919x7=_0x8919x6* 60;var _0x8919x8=_0x8919x7* 24;var _0x8919x9=Math[_0xa393[2]](_0x8919x4/ _0x8919x8);var _0x8919xa=Math[_0xa393[2]]((_0x8919x4% (_0x8919x8))/ (_0x8919x7));var _0x8919xb=Math[_0xa393[2]]((_0x8919x4% (_0x8919x7))/ (_0x8919x6));var _0x8919xc=Math[_0xa393[2]]((_0x8919x4% (_0x8919x6))/ _0x8919x5);document[_0xa393[5]](_0xa393[4])[_0xa393[3]]= _0x8919x9;document[_0xa393[5]](_0xa393[6])[_0xa393[3]]= _0x8919xa;document[_0xa393[5]](_0xa393[7])[_0xa393[3]]= _0x8919xb;document[_0xa393[5]](_0xa393[8])[_0xa393[3]]= _0x8919xc},1000)*/
+ var _0x2739=["\x68\x69\x64\x65","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x69\x72\x73\x74\x2C\x23\x73\x65\x63\x6F\x6E\x64\x2C\x23\x74\x68\x69\x72\x64\x2C\x23\x66\x6F\x75\x72\x2C\x23\x66\x69\x76\x65\x2C\x23\x73\x69\x78\x2C\x23\x73\x65\x76\x65\x6E","\x73\x68\x6F\x77","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B","\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x73\x65\x63\x6F\x6E\x64\x2C\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B","\x63\x6C\x69\x63\x6B","\x23\x6D\x65\x6E","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x69\x72\x73\x74\x2C\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B","\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B","\x23\x77\x6F\x6D\x65\x6E","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B","\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B","\x23\x62\x65\x61\x75\x74\x79","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B","\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B","\x23\x67\x61\x64\x67\x65\x74\x73","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B","\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B","\x23\x68\x6F\x6D\x65","\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B","\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B","\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65","\x23\x62\x65\x61\x75\x74\x79\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x67\x61\x64\x67\x65\x74\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x68\x6F\x6D\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x66\x75\x72\x6E\x69\x74\x75\x72\x65\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B\x2C\x23\x77\x6F\x6D\x65\x6E\x5F\x63\x6C\x69\x63\x6B","\x23\x6B\x69\x64\x73\x5F\x63\x6C\x69\x63\x6B","\x23\x6B\x69\x64\x73","\x23\x66\x69\x72\x73\x74\x2C\x23\x70\x72\x5F\x31","\x23\x70\x72\x5F\x32\x2C\x23\x70\x72\x5F\x33\x2C\x23\x70\x72\x5F\x34\x2C\x23\x70\x72\x5F\x35","\x23\x73\x75\x69\x74\x73","\x23\x70\x72\x5F\x32\x2C\x23\x66\x69\x72\x73\x74","\x23\x70\x72\x5F\x31\x2C\x23\x70\x72\x5F\x33\x2C\x23\x70\x72\x5F\x34\x2C\x23\x70\x72\x5F\x35","\x23\x74\x73\x68\x69\x72\x74\x73","\x23\x70\x72\x5F\x33\x2C\x23\x66\x69\x72\x73\x74","\x23\x70\x72\x5F\x31\x2C\x23\x70\x72\x5F\x32\x2C\x23\x70\x72\x5F\x34\x2C\x23\x70\x72\x5F\x35","\x23\x77\x61\x74\x63\x68\x65\x73","\x23\x70\x72\x5F\x34\x2C\x23\x66\x69\x72\x73\x74","\x23\x70\x72\x5F\x31\x2C\x23\x70\x72\x5F\x32\x2C\x23\x70\x72\x5F\x33\x2C\x23\x70\x72\x5F\x35","\x23\x73\x68\x6F\x65\x73","\x23\x70\x72\x5F\x35\x2C\x23\x66\x69\x72\x73\x74","\x23\x70\x72\x5F\x31\x2C\x23\x70\x72\x5F\x32\x2C\x23\x70\x72\x5F\x33\x2C\x23\x70\x72\x5F\x34","\x23\x73\x68\x69\x72\x74\x73","\x23\x70\x72\x5F\x36\x2C\x23\x73\x65\x63\x6F\x6E\x64","\x23\x70\x72\x5F\x37\x2C\x23\x70\x72\x5F\x38\x2C\x23\x70\x72\x5F\x39\x2C\x23\x70\x72\x5F\x31\x30","\x23\x6F\x72\x6E\x61\x6D\x65\x6E\x74\x73","\x23\x70\x72\x5F\x37\x2C\x23\x73\x65\x63\x6F\x6E\x64","\x23\x70\x72\x5F\x36\x2C\x23\x70\x72\x5F\x38\x2C\x23\x70\x72\x5F\x39\x2C\x23\x70\x72\x5F\x31\x30","\x23\x74\x6F\x70\x73","\x23\x70\x72\x5F\x38\x2C\x23\x73\x65\x63\x6F\x6E\x64","\x23\x70\x72\x5F\x36\x2C\x23\x70\x72\x5F\x37\x2C\x23\x70\x72\x5F\x39\x2C\x23\x70\x72\x5F\x31\x30","\x23\x68\x61\x6E\x64\x62\x61\x67\x73","\x23\x70\x72\x5F\x39\x2C\x23\x73\x65\x63\x6F\x6E\x64","\x23\x70\x72\x5F\x36\x2C\x23\x70\x72\x5F\x37\x2C\x23\x70\x72\x5F\x38\x2C\x23\x70\x72\x5F\x31\x30","\x23\x66\x6F\x6F\x74\x77\x61\x72\x65","\x23\x70\x72\x5F\x31\x30\x2C\x23\x73\x65\x63\x6F\x6E\x64","\x23\x70\x72\x5F\x36\x2C\x23\x70\x72\x5F\x37\x2C\x23\x70\x72\x5F\x38\x2C\x23\x70\x72\x5F\x39","\x23\x6B\x75\x72\x74\x68\x69\x73","\x23\x70\x72\x5F\x31\x31\x2C\x23\x74\x68\x69\x72\x64","\x23\x70\x72\x5F\x31\x32","\x23\x6D\x65\x6E\x6E","\x23\x70\x72\x5F\x31\x32\x2C\x23\x74\x68\x69\x72\x64","\x23\x70\x72\x5F\x31\x31","\x23\x77\x6F\x6D\x65\x6E\x6E","\x23\x70\x72\x5F\x31\x33\x2C\x23\x66\x6F\x75\x72","\x23\x70\x72\x5F\x31\x34\x2C\x23\x70\x72\x5F\x31\x35\x2C\x23\x70\x72\x5F\x31\x36","\x23\x6C\x61\x70\x74\x6F\x70\x73","\x23\x70\x72\x5F\x31\x34\x2C\x23\x66\x6F\x75\x72","\x23\x70\x72\x5F\x31\x36\x2C\x23\x70\x72\x5F\x31\x35\x2C\x23\x70\x72\x5F\x31\x33","\x23\x6D\x6F\x62\x69\x6C\x65\x73","\x23\x70\x72\x5F\x31\x35\x2C\x23\x66\x6F\x75\x72","\x23\x70\x72\x5F\x31\x34\x2C\x23\x70\x72\x5F\x31\x33\x2C\x23\x70\x72\x5F\x31\x36","\x23\x68\x70","\x23\x70\x72\x5F\x31\x36\x2C\x23\x66\x6F\x75\x72","\x23\x70\x72\x5F\x31\x34\x2C\x23\x70\x72\x5F\x31\x35\x2C\x23\x70\x72\x5F\x31\x33","\x23\x73\x77","\x23\x70\x72\x5F\x31\x37\x2C\x23\x66\x69\x76\x65","\x23\x70\x72\x5F\x31\x38\x2C\x23\x70\x72\x5F\x31\x39\x2C\x23\x70\x72\x5F\x32\x30","\x23\x68\x64","\x23\x70\x72\x5F\x31\x38\x2C\x23\x66\x69\x76\x65","\x23\x70\x72\x5F\x31\x37\x2C\x23\x70\x72\x5F\x31\x39\x2C\x23\x70\x72\x5F\x32\x30","\x23\x6B\x61","\x23\x70\x72\x5F\x31\x39\x2C\x23\x66\x69\x76\x65","\x23\x70\x72\x5F\x31\x37\x2C\x23\x70\x72\x5F\x31\x38\x2C\x23\x70\x72\x5F\x32\x30","\x23\x63\x73","\x23\x70\x72\x5F\x32\x30\x2C\x23\x66\x69\x76\x65","\x23\x70\x72\x5F\x31\x37\x2C\x23\x70\x72\x5F\x31\x38\x2C\x23\x70\x72\x5F\x31\x39","\x23\x70\x66","\x23\x70\x72\x5F\x32\x31\x2C\x23\x73\x69\x78","\x23\x70\x72\x5F\x32\x32\x2C\x23\x70\x72\x5F\x32\x33\x2C\x23\x70\x72\x5F\x32\x34","\x23\x73\x6F\x66\x61\x73","\x23\x70\x72\x5F\x32\x32\x2C\x23\x73\x69\x78","\x23\x70\x72\x5F\x32\x31\x2C\x23\x70\x72\x5F\x32\x33\x2C\x23\x70\x72\x5F\x32\x34","\x23\x64\x74","\x23\x70\x72\x5F\x32\x33\x2C\x23\x73\x69\x78","\x23\x70\x72\x5F\x32\x31\x2C\x23\x70\x72\x5F\x32\x32\x2C\x23\x70\x72\x5F\x32\x34","\x23\x74\x61\x62\x6C\x65\x73","\x23\x70\x72\x5F\x32\x34\x2C\x23\x73\x69\x78","\x23\x70\x72\x5F\x32\x31\x2C\x23\x70\x72\x5F\x32\x32\x2C\x23\x70\x72\x5F\x32\x33","\x23\x61\x63","\x23\x70\x72\x5F\x32\x35\x2C\x23\x73\x65\x76\x65\x6E","\x23\x70\x72\x5F\x32\x36","\x23\x6B\x77","\x23\x70\x72\x5F\x32\x36\x2C\x23\x73\x65\x76\x65\x6E","\x23\x70\x72\x5F\x32\x35","\x23\x74\x6F\x79\x73","\x72\x65\x61\x64\x79"];$(document)[_0x2739[103]](function(){$(_0x2739[1])[_0x2739[0]]();$(_0x2739[6])[_0x2739[5]](function(){$(_0x2739[3])[_0x2739[2]]();$(_0x2739[4])[_0x2739[0]]()});$(_0x2739[9])[_0x2739[5]](function(){$(_0x2739[7])[_0x2739[0]]();$(_0x2739[8])[_0x2739[2]]()});$(_0x2739[12])[_0x2739[5]](function(){$(_0x2739[10])[_0x2739[0]]();$(_0x2739[11])[_0x2739[2]]()});$(_0x2739[15])[_0x2739[5]](function(){$(_0x2739[13])[_0x2739[0]]();$(_0x2739[14])[_0x2739[2]]()});$(_0x2739[18])[_0x2739[5]](function(){$(_0x2739[16])[_0x2739[0]]();$(_0x2739[17])[_0x2739[2]]()});$(_0x2739[21])[_0x2739[5]](function(){$(_0x2739[19])[_0x2739[0]]();$(_0x2739[20])[_0x2739[2]]()});$(_0x2739[24])[_0x2739[5]](function(){$(_0x2739[22])[_0x2739[0]]();$(_0x2739[23])[_0x2739[2]]()});$(_0x2739[27])[_0x2739[5]](function(){$(_0x2739[25])[_0x2739[2]]();$(_0x2739[26])[_0x2739[0]]()});$(_0x2739[30])[_0x2739[5]](function(){$(_0x2739[28])[_0x2739[2]]();$(_0x2739[29])[_0x2739[0]]()});$(_0x2739[33])[_0x2739[5]](function(){$(_0x2739[31])[_0x2739[2]]();$(_0x2739[32])[_0x2739[0]]()});$(_0x2739[36])[_0x2739[5]](function(){$(_0x2739[34])[_0x2739[2]]();$(_0x2739[35])[_0x2739[0]]()});$(_0x2739[39])[_0x2739[5]](function(){$(_0x2739[37])[_0x2739[2]]();$(_0x2739[38])[_0x2739[0]]()});$(_0x2739[42])[_0x2739[5]](function(){$(_0x2739[40])[_0x2739[2]]();$(_0x2739[41])[_0x2739[0]]()});$(_0x2739[45])[_0x2739[5]](function(){$(_0x2739[43])[_0x2739[2]]();$(_0x2739[44])[_0x2739[0]]()});$(_0x2739[48])[_0x2739[5]](function(){$(_0x2739[46])[_0x2739[2]]();$(_0x2739[47])[_0x2739[0]]()});$(_0x2739[51])[_0x2739[5]](function(){$(_0x2739[49])[_0x2739[2]]();$(_0x2739[50])[_0x2739[0]]()});$(_0x2739[54])[_0x2739[5]](function(){$(_0x2739[52])[_0x2739[2]]();$(_0x2739[53])[_0x2739[0]]()});$(_0x2739[57])[_0x2739[5]](function(){$(_0x2739[55])[_0x2739[2]]();$(_0x2739[56])[_0x2739[0]]()});$(_0x2739[60])[_0x2739[5]](function(){$(_0x2739[58])[_0x2739[2]]();$(_0x2739[59])[_0x2739[0]]()});$(_0x2739[63])[_0x2739[5]](function(){$(_0x2739[61])[_0x2739[2]]();$(_0x2739[62])[_0x2739[0]]()});$(_0x2739[66])[_0x2739[5]](function(){$(_0x2739[64])[_0x2739[2]]();$(_0x2739[65])[_0x2739[0]]()});$(_0x2739[69])[_0x2739[5]](function(){$(_0x2739[67])[_0x2739[2]]();$(_0x2739[68])[_0x2739[0]]()});$(_0x2739[72])[_0x2739[5]](function(){$(_0x2739[70])[_0x2739[2]]();$(_0x2739[71])[_0x2739[0]]()});$(_0x2739[75])[_0x2739[5]](function(){$(_0x2739[73])[_0x2739[2]]();$(_0x2739[74])[_0x2739[0]]()});$(_0x2739[78])[_0x2739[5]](function(){$(_0x2739[76])[_0x2739[2]]();$(_0x2739[77])[_0x2739[0]]()});$(_0x2739[81])[_0x2739[5]](function(){$(_0x2739[79])[_0x2739[2]]();$(_0x2739[80])[_0x2739[0]]()});$(_0x2739[84])[_0x2739[5]](function(){$(_0x2739[82])[_0x2739[2]]();$(_0x2739[83])[_0x2739[0]]()});$(_0x2739[87])[_0x2739[5]](function(){$(_0x2739[85])[_0x2739[2]]();$(_0x2739[86])[_0x2739[0]]()});$(_0x2739[90])[_0x2739[5]](function(){$(_0x2739[88])[_0x2739[2]]();$(_0x2739[89])[_0x2739[0]]()});$(_0x2739[93])[_0x2739[5]](function(){$(_0x2739[91])[_0x2739[2]]();$(_0x2739[92])[_0x2739[0]]()});$(_0x2739[96])[_0x2739[5]](function(){$(_0x2739[94])[_0x2739[2]]();$(_0x2739[95])[_0x2739[0]]()});$(_0x2739[99])[_0x2739[5]](function(){$(_0x2739[97])[_0x2739[2]]();$(_0x2739[98])[_0x2739[0]]()});$(_0x2739[102])[_0x2739[5]](function(){$(_0x2739[100])[_0x2739[2]]();$(_0x2739[101])[_0x2739[0]]()})})
+
+var _0xd433=["\x6E\x61\x76\x2D\x6C\x69\x6E\x6B\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6C\x65\x66\x74","\x73\x74\x79\x6C\x65","\x2D\x32\x32\x30\x70\x78","\x30"];var sh=document[_0xd433[1]](_0xd433[0]);function closeNav(){sh[_0xd433[3]][_0xd433[2]]= _0xd433[4]}function show(){sh[_0xd433[3]][_0xd433[2]]= _0xd433[5]}
+var _0x51dc=["\x6C\x6F\x61\x64","\x68\x69\x64\x65","\x2E\x6C\x6F\x61\x64\x65\x72","\x6F\x6E"];$(window)[_0x51dc[3]](_0x51dc[0],function(){$(_0x51dc[2])[_0x51dc[1]]()})
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

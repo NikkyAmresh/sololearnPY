@@ -1,0 +1,14 @@
+
+/* Special thanks to http://rembound.com/
+ * @Dayve
+ * This code is Freeware, You can redistribute/share it under the GNU license */
+
+body {
+    background-color: #ffffff;
+    display: block;}
+canvas{
+    margin-right: 10px;
+    border: 4px solid #222;
+    border-radius: 4px;
+    box-shadow: 4px 4px 3px #444;}
+@media screen and (max-device-width: 480px) { body { background-color: #e2b39a } }

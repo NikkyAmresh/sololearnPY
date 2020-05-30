@@ -1,0 +1,21 @@
+/* Created by Алексей Васильев */
+
+body {
+ margin:0;
+ color:white;
+ background-color:black;
+}
+
+.button {
+position:absolute ;
+right:0;top:0;
+width:70px;
+height:70px;
+border-radius:35px;
+margin-top:8px;
+padding:8px; }
+
+.rang {
+width:70%; 
+float: left;
+margin-top:15px; }

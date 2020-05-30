@@ -1,0 +1,53 @@
+<!-- Created by Prashanth Kumar-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <canvas id="c"></canvas>
+        <div id="hidden"></div>
+     <script>
+      var x=10,y=10;
+      var rad=0;
+      c.height=innerHeight
+      c.width=innerWidth
+      var h=0;
+      var ab=Math.random()*innerWidth/2;
+      var bc=Math.random()*innerHeight/2;
+         var ctx=c.getContext("2d")
+        ctx.fillStyle="#333"; ctx.fillRect(0,0,innerWidth,innerHeight);
+        
+        var intrvl= setInterval(pk,0.5)
+        
+         function pk(){
+         //ctx.clearRect
+         ctx.strokeStyle="rgba(250,50,50,0.3)"
+         h+=Math.random();
+        ctx.save();
+         ctx.translate(ab,bc)
+         var rand=Math.random()*100
+         rad++;
+         ctx.rotate(h/2)
+         x=c.width/2+Math.sin(rad)*h;
+         y=c.height/2+Math.cos(rad)*h;
+         ctx.beginPath();
+         ctx.moveTo(c.width/2,c.height/2)
+         ctx.lineTo(x,y)
+         ctx.stroke()
+         x++;y++
+         ctx.restore();
+         if(h>=(innerWidth+innerWidth)*2){
+             clearInterval(intrvl);
+      var url=c.toDataURL();
+        hidden.innerHTML="<a href="+url+" target='_blank'>download as image</a>"
+         }
+         }
+        
+         
+     </script>   
+        
+        
+    </body>
+</html>

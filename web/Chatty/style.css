@@ -1,0 +1,32 @@
+body {
+  animation:bg 5s infinite linear;
+}
+
+@-webkit-keyframes bg {
+   0%{background-color:#66ccff;} 
+   10%{background-color:#1ab2ff;}
+   20%{background-color:#0099e6;}
+   30%{background-color:#006699;}
+   40%{background-color:#00334d;}
+   50%{background-color:#00334d;}
+   60%{background-color:#006699;}
+   70%{background-color:#0099e6;}
+   80%{background-color:#1ab2ff;}
+   90%{background-color:#66ccff;}
+   100%{background-color:#66ccff;}
+}
+div{
+    background-color:#09a9ec;
+    height:auto;
+    border-radius:20px;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    top:30%;
+}
+#head{
+   text-align:center;
+   font-size:40px;
+  font-family:Times Roman new;
+  text-decoration:none;
+}

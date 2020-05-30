@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+     Due to <b>limited hosting service </b> we are not accepting new API requests
+     <br>
+     You can use this public API-KEY
+     <pre>6QXNMEMFHNY4FJ5ELNFMP5KRW52WFXN5</pre>
+     <br>
+     <hr>
+     <h1 id="documentation">Documentation</h1>
+     <hr>
+    <h2>Authorization</h2>
+    <p>
+        After you received your API key you can start using this API. To get access you have to add a HTTP Authorization header to each of your requests:
+    </p>
+    <pre>Authorization: YOUR_API_KEY&#x000A;</pre>
+    <h2>Get chapters list</h2>
+    <pre>https://api-ipc.herokuapp.com/api/v1/chapter</pre>
+
+    <p>If the request is successful, the response body will be a JSON with the following data:</p>
+    <pre>{  
+   "data":{  
+      "result":[{  
+            "from":"1 to 5",
+            "number":"I",
+            "title":"Introduction"
+         },[(NEXT CHAPTERS)]],
+      "message":"OK: Authorized"
+   }
+}
+</pre>
+    <p>
+        <table>
+            <tr>
+                <th>from</th>
+                <td>x-chapter containing sections</td>
+            </tr>
+            <tr>
+                <th>number</th>
+                <td>Chapter number</td>
+            </tr>
+            <tr>
+                <th>title</th>
+                <td>Title/heading of the chapter</td>
+            </tr>
+        </table>
+
+    </p>
+    <h2>Get sections list</h2>
+    <pre>https://api-ipc.herokuapp.com/api/v1/section</pre>
+    <p>
+        You can get all sections list with it.
+        <br> If the request is successful, the response body will be a JSON with the following data:</p>
+    <pre>{  
+   "data":{  
+      "result":[{  
+            "chapter":"I",
+            "number":"1",
+            "title":"Title and extent of operation of the Code."
+         },[(NEXT SECTIONS)]]
+   },
+   "message":"OK: Authorized"
+}
+</pre>
+    <table>
+        <tr>
+            <th>number</th>
+            <td>x-section number</td>
+        </tr>
+        <tr>
+            <th>chapter</th>
+            <td>from Which chapter x-section belongs to</td>
+        </tr>
+        <tr>
+            <th>title</th>
+            <td>title of the x-section section</td>
+        </tr>
+    </table>
+    <h2>Getting an specific chapter</h2>
+    <pre>https://api-ipc.herokuapp.com/api/v1/chapter/&lt;chapter-number&gt;</pre>
+    <table>
+            <tr>
+                <th>&lt;chapter-number&gt;</th>
+                <td>chapter number without " &lt; &gt; "</td>
+            </tr>
+        </table>
+    <p>
+        You can get informations about a specific chapter with it.
+        <br> If the request is successful, the response body will be a JSON with the following data:</p>
+    <pre>{  
+   "data":{  
+      "description":"Introduction",
+      "from":"1 to 5",
+      "number":"I",
+      "result":[{  
+            "number":"1",
+            "title":" Title and extent of operation of the Code...."
+      },[(NEXT SECTIONS)]]
+   },
+   "message":"OK: Authorized"
+}
+</pre>
+    <table>
+        <tr>
+            <th>description</th>
+            <td>description about the chapter</td>
+        </tr>
+        <tr>
+            <th>from</th>
+            <td>chapter containing sections</td>
+        </tr>
+        <tr>
+            <th>Number</th>
+            <td>chapter number</td>
+        </tr>
+        <tr>
+            <th>result[x]['number']</th>
+            <td>x-section number</td>
+        </tr>
+        <tr>
+            <th>result[x]['title']</th>
+            <td>x-section title</td>
+        </tr>
+    </table>
+    <h2>Getting a specific section</h2>
+    <pre>https://api-ipc.herokuapp.com/api/v1/section/&lt;section-number&gt;</pre>
+    <table>
+            <tr>
+                <th>&lt;section-number&gt;</th>
+                <td>section number without " &lt; &gt; "</td>
+            </tr>
+        </table>
+    <p>
+        You can get informations about a specific section with it.
+        <br> If the request is successful, the response body will be a JSON with the following data:</p>
+    <pre>{  
+   "data":{ 
+       "number":"1",
+       "title":"Title and extent of operation of the Code"
+       "result":[{  
+             "chapter":"I",
+             "from":"1 to 5"
+             "chap-tilte":"Introduction"
+             "text":"This Act shall be called the ..."
+         },[(NEXT SECTIONS)]]
+   },
+   "message":"OK: Authorized"
+}
+</pre>
+    <table>
+        <tr>
+            <th>number</th>
+            <td>Sction number</td>
+        </tr>
+        <tr>
+            <th>title</th>
+            <td>section title</td>
+        </tr>
+        <tr>
+            <th>chapter</th>
+            <td>chapter number from which x-section belongs to</td>
+        </tr>
+        <tr>
+            <th>chap-title</th>
+            <td>chapter title from which x-section belongs to</td>
+        </tr>
+        <tr>
+            <th>text</th>
+            <td>section main-text</td>
+        </tr>
+    </table>
+    <h2>Search</h2>
+    <pre>https://api-ipc.herokuapp.com/api/v1/search/&lt;query&gt;</pre>
+    <table>
+            <tr>
+                <th>&lt;query&gt;</th>
+                <td>search query without " &lt; &gt; "</td>
+            </tr>
+        </table>
+    <p>
+        You can search about any topic related to IPC with it.
+        <br> If the request is successful, the response body will be a JSON with the following data:</p>
+    <pre>{  
+   "data":{  
+       "q":"Title and extent",
+       "result":[{  
+             "chapter":"I",
+             "number":"1",
+             "title":"Title and extent of operation of the Code"
+        },[(NEXT RESULTS)]]
+   },
+   "message":"OK: Authorized"
+}
+</pre>
+    <table>
+        <tr>
+            <th>q</th>
+            <td>your search query</td>
+        </tr>
+        <tr>
+            <th>chapter</th>
+            <td>from Which chapter search result belongs to</td>
+        </tr>
+        <tr>
+            <th>number</th>
+            <td>from Which section search result belongs to</td>
+        </tr>
+        <tr>
+            <th>title</th>
+            <td>title of your search result</td>
+        </tr>
+    </table>
+
+    <h2>Request statistics</h2>
+    <p>To see how many requests you have left in this current period, you can look at the HTTP response header called "X-Ratelimit-Remaining" that comes with every response you receive.</p>
+    <h2>Try it out</h2>
+    <pre>curl -H "Authorization: YOUR_API_KEY" "https://api-ipc.herokuapp.com/api/v1/section/370"</pre>
+
+    <h2>Disclaimer</h2>
+    <p>We don't have an uptime or availability guarantee. Some features may change in the future.</p>
+    <h2>Contact</h2>
+    <p>
+        If you have any question or feedback write me to
+        <a href="https://m.me/NikkiAmresh">@NikkyAmresh</a>.
+    </p>
+    <br>
+</body>
+
+</html>

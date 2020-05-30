@@ -1,0 +1,25 @@
+body {
+    color:#0f0;
+    font-weight:lighter;
+    background:#000;
+}
+.icon{
+    font-weight:lighter;
+    text-align:center;
+    font-size:75px;
+    border:1px solid #7f7;
+    border-radius:50px;
+    width:60px;
+    height:50px;
+    padding-bottom:43px;
+}
+.icon .span{
+    font-weight:lighter;
+    text-align:center;
+    font-size:5px;
+    padding-bottom:0px;
+    margin-top:0px;
+}
+small{
+    color:#afa;
+}

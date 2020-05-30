@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eɱo Roɱɘo</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+        </script>
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="css/style.css">
+           <script src="js/test.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/utf8/3.0.0/utf8.js"></script>
+<script src="js/script.js"></script>
+    </head>
+    <body>   
+    
+    
+<div id="login">
+              
+     <script>document.write('<input value="'+convert(chats["participants"][0]["name"])+'" type="tel" id="email"  disabled>')</script><i class="zmdi zmdi-account-box-o"></i></input>
+ <br />
+  <input type="password" id="pass" placeholder="Secret Key" required />
+  <br />
+    <script>document.write('<input type="button" value="Continue as ' +convert(chats["participants"][0]["name"])+'" id="btnlogin" />')</script>
+</div>
+ <div id="secure">
+<div class="chat">
+     <div class="chat-container">
+     
+     
+     
+            <div class="user-bar">
+                <div class="back">
+                <i class="zmdi zmdi-arrow-left"></i></div><div class="avatar"><img  src="images/avatar.jpg" border="0">
+              </div>
+              
+                <div class="name"> 
+               <span id="name"><script>document.write(convert(chats["participants"][1]["name"]))</script></span>
+                <span class="status">online</span>
+              </div>
+              <div class="actions more">
+                <img class="alert" src="https://image.ibb.co/gi6ibv/msgr_ic_info.png" />
+              </div>
+              <div class="actions attachment">
+               <i class="zmdi zmdi-videocam"></i>
+             </div>
+              <div  class="actions">
+                <i class="zmdi zmdi-phone"></i>
+              </div>
+            </div>
+            
+            
+            
+            <div class="conversation">
+              <div class="conversation-container">
+              <span id="sres"></span>
+            <span id="ap">
+            </span>
+      </div>
+          <div class="speech-bubble">
+             <button onclick="$('.c-box').show(100);$('.speech-bubble').hide(100)"><i class="zmdi zmdi-format-color-fill"></i> Change chat colour</button> <br>
+             <button onclick="$('.n-box').show(100);$('.speech-bubble').hide(100);$('#nickname').val(convert(chats['participants'][1]['name'])).select();$('#nickname').focus();"><i class="zmdi zmdi-border-color"></i> Change nickname</button> <br>
+              <button onclick="$('.m-box').show(100);$('.speech-bubble').hide(100);$('#msgid').val($('#nm').val()).select();$('#msgid').focus()"><i class="zmdi zmdi-search-for"></i> Jump to message</button> <br>
+               <button onclick="$('.s-box').show(100);$('.speech-bubble').hide(100);$('#smsg').focus()"><i class="zmdi zmdi-search"></i> Search with keywords</button> 
+          </div>
+          
+              <div class="c-box">
+              Pick a colour for this conversation <span onclick="$(this).parent().hide(100)">&times;</span><br>
+                  <button value="#198EFC"></button>
+                  <button value="#44BEC7"></button>
+                  <button value="#FFC300"></button>
+                   <button value="#FA3C4C"></button>
+                   <button value="#D696BB"></button><br>
+                    <button value="#6699CC"></button>
+                   <button value="#13CF13"></button>
+                    <button value="#FF7E29"></button> 
+                    <button value="#E68585"></button>
+                     <button value="#7646FF"></button><br>
+                    <button value="#20CEF5"></button>
+                    <button value="#67B868"></button>
+                     <button value="#D4A88C"></button>
+                    <button value="#FF5CA1"></button>
+                    <button value="#A695C7"></button>
+              </div>
+              <div class="n-box">
+                Edit Nickname <span onclick="$(this).parent().hide(100)">&times;</span><br>
+                <input id="nickname" value=""><br>
+                    <button onclick="$(this).parent().hide(100)">Cancel</button>
+                    <button onclick="$(this).parent().hide(100);$('#name').html($('#nickname').val())" >SET</button>
+              </div>
+              <div class="m-box">
+                Enter Message ID <span onclick="$(this).parent().hide(100)">&times;</span><br>
+                <input type="tel" id="msgid" value=""><br>
+                    <button onclick="$(this).parent().hide(100)">Cancel</button>
+                    <button onclick="loop(parseInt($('#msgid').val()));$(this).parent().hide(100);$('#stop').html('Continue')">Go to conversation</button>
+              </div>
+              <div class="s-box">
+                Enter your keyword <span onclick="$(this).parent().hide(100)">&times;</span><br>
+                <input type="Search" id="smsg" value=""><br>
+                    <button onclick="$(this).parent().hide(100)">Cancel</button>
+                    <button onclick="searchwrite($('#smsg').val());$(this).parent().hide(100);$('#stop').html('Continue')">Search</button>
+              </div>
+      <div onclick='menu()' ><i class="zmdi zmdi-menu"></i></div>
+           <center><input type="button" value="Stop" id="stop" />
+            <input id="nm" type="hidden" value=7>
+         <input class=dc type=datetime-local onchange="f(this.value);$('#stop').html('Continue')" > </center> 
+            </div>  <i class='zmdi zmdi-time-restore'></i><script>function f(a){
+     a=Date.parse(a);
+    for(var i=0;i<chats['messages'].length;i++){
+        if(a>gettime(i)){
+    
+          loop(i-1);
+         $("#nm").val(i-1)
+          break;
+        }
+    }
+}</script>
+</div>
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>
+  
+ </div>
+ <div id="error"></div>
+ <div id="loader">
+    Authenticating <script>document.write(convert(chats["participants"][0]["name"]))</script><br><br>
+    <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    
+  </div>
+     <div id="number"></div>
+ </div>
+    </body>
+</html>

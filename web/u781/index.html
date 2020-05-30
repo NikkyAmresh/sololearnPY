@@ -1,0 +1,88 @@
+<!-- Created by @n0nym0u§-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>audio player(updated)</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>        
+         <meta charset="UTF-8">
+   <meta name="author " content="@n0nym0u§">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0"> 
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+<script src="https://cdn.rawgit.com/bureyburey/Scoreboard-Module/master/scoreboard.js"></script> 
+<!-- NOT REQUIRED, JUST A COOL FONT --> <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">       
+    </head>
+    <body>
+   
+        
+   <div id="temp">Add Songs?</div>   
+
+    <form id="form"><hr>
+    <input class="input" id ="surl" type="url"placeholder ="song url" required>
+    <input class="input" id="iurl" type="url" placeholder ="image url" required>
+    <input class="input" id="sname" type="text" placeholder ="song name" required>
+    <input id="reset" type ="reset" value ="Add"onclick ="addsong()"><hr><br /></form>
+      
+    
+    <div id="page">
+       <div class='share_drop'>
+       <a onclick = wa()><img src='https://gymchef.com.br/assets/images/whatsapp.png'height='50px'></a>
+      <a onclick = fb()><img src='https://cdn2.iconfinder.com/data/icons/micon-social-pack/512/facebook-512.png'height='50px'></a>
+       <a onclick = cb()><img src='http://cdn.mysitemyway.com/icons-watermarks/flat-circle-white-on-ios-orange-gradient/bfa/bfa_copy/bfa_copy_flat-circle-white-on-ios-orange-gradient_512x512.png'height='50px'></a>
+       <a onclick = gm()><img src='https://trollweb.no/wp-content/uploads/2016/05/gmail.png' height ='50px'></a>
+       <a onclick = tw() onerror=alert("hi")><img src='http://www.wika.co.id/po-content/wika/assets/images/twitter.ico'height ='50px'></a>
+       <a onclick = sl()><img src='https://www.sololearn.com/Icons/Courses/0.png'height='50px'></a>
+       <a onclick = msg()><img src='https://cdn0.iconfinder.com/data/icons/Android-R2-png/512/Messages-Android-R.png'height='50px'></a>
+       <a onclick = bt()><img src='https://lh4.ggpht.com/HMLFuX_iiBXLiiMPyPVHha5eoCK3yF4WTJYiMLjJKf31FrkgnzyNUExvBVLKnJRf33E=w300'height='50px'></a>
+   </div>    
+           <div id="music"> 
+         <p align ="center "> <img name="abc" id="slider1" src="https://i.ytimg.com/vi/Rmtx9slmodw/maxresdefault.jpg" width="190px" height="190px" />
+        
+            </p>
+            <audio name="xyz" id ="slider2" src="http://drive.funados-radio.fr/playlist/HITS%20DU%20MOMENT/Alan%20Walker%20-%20Faded.mp3" onended = "myFunction()">
+    Audio element not supported by your browser
+</audio></div>
+<hr>
+<div id = "btns">
+<span class="buttons" id="prev" onclick="prev()"> << </span>
+<span class="buttons" id="play" onclick ="audio()">play</span>
+ <span class="buttons" id="next" onclick="next()"> >> </span>
+   </div>
+
+<div id ="container">  
+ <div class="pl"><img src="https://i.ytimg.com/vi/Rmtx9slmodw/maxresdefault.jpg"height="40px" width="50px"> Faded</div>
+  <div class="pl"><img src="https://2.bp.blogspot.com/-GyekGPtvKIs/WPn_wp3KVSI/AAAAAAAADNs/I2_pos2EloAcu4tTPqVfdMMwY3y1uy7xQCLcB/s400/Charlie%2BPuth.jpg"height="40px"width="50px">  Attention </div>
+  <div class="pl"><img src="https://upload.wikimedia.org/wikipedia/en/f/fc/Sia_Cheap_Thrills.png"height="40px"width="50px">Cheap Thrills</div>
+  <div class ="pl"><img src="https://www.directlyrics.com/img/upload/0ae20266.jpg"height="40px"width="50px"> Closer</div>
+  <div class ="pl"><img src="https://upload.wikimedia.org/wikipedia/en/1/17/Ellie_Goulding_-_Love_Me_Like_You_Do.png"height="40px"width="50px"> Love me like you do</div>
+  <div class="pl"><img src="https://images.genius.com/ccc87d4afb4e2d957a8c3c2700390bc1.1000x1000x1.jpg"height="40px"width="50px">I'm the one</div>
+  <div class="pl"><img src="https://images.genius.com/b987a0d3e07d6f10d3c434bfb69a651f.1000x1000x1.jpg"height="40px"width="50px">Shape of you</div>
+  <div class="pl"><img src="https://upload.wikimedia.org/wikipedia/en/7/76/Major_Lazer_-_Cold_Water.png"height="40px"width="50px">Cold water</div>
+  <div class ="pl"><img src="https://www.directlyrics.com/img/upload/0c8c0264.jpg"height="40px"width="50px">Sorry</div>
+  <div class="pl"><img src="https://upload.wikimedia.org/wikipedia/en/6/69/Clean_Bandit_-_Rockabye_%28feat._Sean_Paul_%26_Anne-Marie%29.png"height="40px"width="50px">Rockabye</div>
+  <div class="pl"><img src="https://i.scdn.co/image/1d96f6fbc5a4eaa9640d4ae41db0e4dc4fa91baa"height="40px"width="50px">Let me love you</div>
+  <div class="pl"><img src="https://images.genius.com/0ae965f321d9c298ebc9cf56260cc7eb.1000x1000x1.jpg"height="40px"width="50px">We don't talk anymore</div>
+        
+  <div class="pl"><img src="http://img08.deviantart.net/0b3e/a/large/indyart/indymisc/meteora_wp_by_neographixx.jpg"height="40px"width="50px">Numb - Linkin park</div></div>
+        </div>         
+     
+     </div>
+ <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBBtDiVEw_74L5SecwDlgSodZaLgiS9B_w",
+    authDomain: "my-first-project-32413.firebaseapp.com",
+    databaseURL: "https://my-first-project-32413.firebaseio.com",
+    projectId: "my-first-project-32413",
+    storageBucket: "my-first-project-32413.appspot.com",
+    messagingSenderId: "460304501813"
+  };
+  firebase.initializeApp(config);
+</script>     
+    </body>
+</html>

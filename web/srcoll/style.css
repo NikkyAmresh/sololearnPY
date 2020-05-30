@@ -1,0 +1,85 @@
+/* Created by visph */
+
+body {
+    font-family:sans-serif;
+    font-size:4vmin;
+}
+header, footer {
+    box-sizing:border-box;
+}
+header {
+    background:whitesmoke;
+    padding:0.5ex;
+}
+footer {
+    position:absolute;
+    left:0;
+    width:100%;
+    background:dimgray;
+    color:white;
+    padding:1ex;
+    text-align:center;
+}
+h1 {
+    background:gainsboro;
+    padding:1ex;
+}
+h1, h2 {
+    padding-right:15vmin;
+}
+p {
+    text-align:justify;
+    margin-right:15vmin;
+}
+nav {
+    position:absolute;
+    /* needed for no space taken */
+    display:none;
+    /* display activated by JS, so visible only if JS available */
+}
+#viewport { /* JS trick to get viewport size */
+    position:fixed;
+    top:-100vh;
+    width:100vw;
+    height:100vh;
+}
+
+.scroll-cmd {
+    font-size:3vmin;
+    font-weight:bold;
+    position:fixed;
+    right:1em;
+    background:silver;
+    border-radius:50%;
+    width:4em;
+    line-height:4em;
+    opacity:0.6;
+    text-align:center;
+    overflow:visible;
+    z-index:1;
+}
+.scroll-cmd:hover {
+    opacity:1;
+}
+.scroll-cmd.page-up,
+.scroll-cmd.page-down {
+    line-height:1em;
+}
+.scroll-cmd.top {
+    top:1em;
+}
+.scroll-cmd.page-up {
+    top:6em;
+}
+.scroll-cmd.up {
+    top:11em;
+}
+.scroll-cmd.down {
+    bottom:11em;
+}
+.scroll-cmd.page-down {
+    bottom:6em;
+}
+.scroll-cmd.bottom {
+    bottom:1em;
+}

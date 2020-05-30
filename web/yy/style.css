@@ -1,0 +1,23 @@
+input
+{
+   width:80%;
+   margin:10% 10% 0 10%;
+   text-align:center;
+}
+
+node {
+    position:fixed;
+    text-align:center;
+    top:50%;
+    color:%%rnd()%%;
+}
+
+div {
+    border-radius:50%;
+    width:2vw;
+    height:2vw;
+    &&&user-select:none;
+    &touch-callout:none;&&
+    background:%%rnd()%%;
+    position:fixed;
+}

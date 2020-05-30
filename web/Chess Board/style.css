@@ -1,0 +1,46 @@
+/* Modified by Nikky Amresh */
+
+/* Created by ThreeG */
+table{
+    margin:auto;
+    height:340px;
+    width:340px;
+    border-spacing:0;
+    background:#eee;
+    text-transform:uppercase;
+    font-family:arial;
+}
+td{
+    text-align:center;
+}
+tr{
+    height:10%;
+}
+th{
+    color:#000;
+}
+.white td{
+    color:white;
+    text-shadow:0px 0px 5px #000;
+}
+.white:nth-child(1),
+.white:nth-child(10){
+    color:#000;
+}
+.fp th, .flip{
+    transform:rotate(180deg);
+}
+.w, .b{
+    width:10%;
+    height:10%;
+    font-size:22px;
+}
+.b{
+    background:linear-gradient(#D18B47 0%, #9B6938 100%);
+}
+.w{
+    background:linear-gradient(#FFCE9E 0%, #EEBD8C 100%);
+}
+a{
+    text-decoration:none;
+}

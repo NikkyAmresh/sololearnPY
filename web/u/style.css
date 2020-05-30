@@ -1,0 +1,22 @@
+/* Created by Anna Ranguin */
+
+body{
+    background-color:black;
+}
+
+header{
+    color:white;
+    font-family:cursive;
+}
+
+#bnwtiles,  {
+    transform:translate(40px);
+}
+
+.drag{
+    position:absolute;
+}
+
+#trialzone{
+    fill:white;
+}

@@ -1,0 +1,1 @@
+alert("https://api.sololearn.com/Uploads/Avatars/"+prompt("Enter profile link").split("/")[4]+".jpg")

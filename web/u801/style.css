@@ -1,0 +1,24 @@
+/* Created by Bella Pstrąg */
+
+body {
+    color:#fff;
+    font-size:20px;
+    background-color:#3dc1e2;
+}
+p{
+    font-style:oblique;
+    font-weight:lighter;
+}
+a{
+    color:#fff;
+    font-size:24px;
+    text-decoration:none;
+    font-weight:normal;
+    font-style:normal;
+}
+h3{
+    color:#fec;
+}
+h2{
+    Text-decoration:underline;
+}

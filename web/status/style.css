@@ -1,0 +1,18 @@
+body {
+    
+}
+p{
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    margin-top:-50px;
+    text-align:center;
+    font-weight:lighter;
+    color:#42f471;
+    padding-bottom:100px;
+    padding-top:60px;
+    background-color:#000;
+    font-size:38px;
+    font-family:Consolas;
+}

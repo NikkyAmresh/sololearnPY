@@ -1,0 +1,191 @@
+
+body{
+  background-color:#000; 
+}
+.lockscreen{
+    width:99%;
+    z-index:16;
+    position:absolute;
+    left:1px;
+    top:101px;
+}
+ @-webkit-keyframes open {
+    0%{ top:100px; }
+   100%{ top:-200px;}
+}
+ @-webkit-keyframes close {
+    100%{ top:100px; }
+   0%{ top:-200px;}
+}
+.screen{
+    width:99%;
+    position:absolute;
+    height:200px;
+    top:100px;
+    border:1px solid #d3d3d3;
+    left:0px;
+    z-index:1;
+}
+img.locks{
+    width:100%;
+}
+.header{
+    position:absolute;
+    top:0px;
+    height:99px;
+    width:100%;
+    left:0px;
+    z-index:18;
+    background-color:#000;
+}
+.footer{
+    position:fixed;
+    top:305px;
+    height:300px;
+    width:100%;
+    left:0px;
+    z-index:18;
+    background-color:#000;
+}
+.time{
+    position:relative;
+    bottom:60px;
+    left:15px;
+    font-size:30px;
+    color:#fff;
+}
+.day{
+    position:relative;
+    bottom:40px;
+    left:-50px;
+    font-size:10px;
+    color:#fff;
+}
+.date{
+    position:relative;
+    bottom:40px;
+    left:-50px;
+    font-size:10px;
+    color:#fff;
+}
+.login{
+    background-image:url("https://preview.ibb.co/evnW45/5884ff42e79aa.jpg");
+    position:absolute;
+    width:99%;
+    z-index:15;
+    color:#fff;
+    height:200px;
+    text-align:center;
+    top:101px;;
+    left:1px;
+}
+.desktop{ 
+    position:absolute;
+    width:99%;
+    z-index:12;
+    color:#fff;
+    height:200px;
+    text-align:center;
+    top:101px;;
+    left:1px;  
+}
+img.login_pic{
+    width:50px;
+    top:50px;
+    position:absolute;
+    left:45%;
+    border-radius:50%;
+}
+.login_name{
+    top:100px;
+    position:absolute;
+    font-size:20px;
+    left:35%;
+    
+}
+.login_pass{
+    background-color:rgba(0,0,0,0);
+    border:0.1px solid #d3d3d3;
+    position:absolute;
+    top:120px;
+    height:10px;
+    font-size:8px;
+    width:110px;
+    outline:none;
+    color:#000;
+    left:35%;
+}
+.login_pass:hover{
+    background-color:#fff;
+}
+.sign_in{
+    background-color:#111;
+    padding-left:5px;
+    padding-right:5px;
+    position:absolute;
+    top:140px;
+    font-size:8px;
+    height:10px;
+    left:45%;
+}
+img.desk{
+    width:99%;
+    position:absolute;
+    left:1px;
+    top:101px;
+}
+#mouse{
+    position:fixed;
+    top:150px;
+    z-index:17;
+    color:#fff;
+    width:20px;
+    left:48%;
+}
+img.stand{
+    position:absolute;
+    z-index:19;
+    top:290px;
+    left:30%;
+    width:40%;
+}
+img.start{
+    position:absolute;
+    top:285px;
+    left:0px;
+    z-index:13;
+    width:20px;
+}
+img.cortana{
+    position:absolute;
+    top:286px;
+    left:20px;
+    vertical-align:center;
+    z-index:14;
+    width:13px;
+}
+input.cin{
+    background-color:rgba(0,0,0,0);
+    border:0.1px solid #000;
+    position:absolute;
+    top:287px;
+    height:10px;
+    padding-left:15px;
+    font-size:8px;
+    width:110px;
+    color:#fff;
+    z-index:13;
+    outline:none;
+    background-color:#003D73;
+    color:#fff;
+    left:20px;
+}
+.s_bar{
+    position:absolute;
+    top:289px;
+    left:150px;   
+    z-index:13;
+    height:12px;
+    background-color:rgba(0,0,0,0.3);
+    width:40%;
+}

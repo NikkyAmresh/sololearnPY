@@ -1,0 +1,128 @@
+/* Created by Martin */
+
+    body {background-color:black;}
+                    
+    #plus {
+        right: 15%;
+        position:absolute;
+    }
+
+    #minus {
+        position:absolute;
+        left: 15%;
+    }
+
+    button {
+        font-size:30px;
+        background-color:black;
+        color:white;
+        border:1px solid black;
+        position:absolute;
+        box-shadow:0px 0px 5px 5px blue;
+        outline: none;
+    }
+
+    #right {
+        left:62.5%;
+        top:25%;
+        width:25%;
+        height:50%;
+        border-radius:5% 50% 50% 5%;
+    }
+
+    #left {
+        right:62.5%;
+        top:25%;
+        width:25%;
+        height:50%;
+        border-radius:50% 5% 5% 50%;
+    }
+
+    #up {
+        right:37.5%;
+        width:25%;
+        height:50%;
+        border-radius:50% 50% 5% 5%;
+    }
+
+    #down {
+        left:37.5%;
+        top: 50%;
+        width:25%;
+        height:50%;
+        border-radius:5% 5% 50% 50%;
+    }
+
+    #speedUp {
+        left:50%;
+        width:50%;
+        height:100%;
+        border-radius:0% 5% 5% 0%;
+    }
+
+    #speedDown {
+        right:50%;
+        width:50%;
+        height:100%;
+        border-radius:5% 0% 0% 5%;
+    }
+
+    #pause {
+        left:1%;
+        width:10%;
+        height:10%;
+        border-radius:5% 5% 5% 5%;
+        font-size: 4vmax;
+        color: blue;
+        letter-spacing: -3;
+    }
+    
+
+@media screen and (orientation: portrait) {
+    p{color:white;font-size: .95em;}
+    #board {
+        border:1px solid black;
+        position:absolute;
+        right:12%;
+        box-shadow:0px 0px 8px 8px blue;
+        background-color: black;
+    }
+    #con {
+        position: absolute;
+        right:12%;
+        top:70%;
+        width:75%;
+        height:29%;
+    }
+    
+    #ps {
+        position: absolute;
+        top: 62%;
+        left: 36%;
+    }
+}
+
+
+@media screen and (orientation: landscape) {
+    p{color:white;font-size: .95em;}
+    #board {
+        border:1px solid black;
+        position:absolute;
+        left:10%;
+        box-shadow:0px 0px 8px 8px blue;
+        background-color: black;
+    }
+    #con {
+        position: absolute;
+        left:52%;
+        top:20%;
+        width:45%;
+        height:60%;
+    }
+    
+    #ps {
+        position: absolute;
+        top: 5%;
+        right: 17.5%;
+    }
+}

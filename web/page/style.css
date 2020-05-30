@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Dancing+Script|Handlee|Raleway');
+
+*,html{
+   margin:0; 
+   padding:0;
+}
+body{
+    padding:0 10px;
+    background-color:#D5E5ED;
+}
+hr{
+   border-color:#D5E5ED; 
+}
+
+.service img{
+   display:block;
+   margin:auto;
+   width:150px; 
+   height:150px;
+   border-radius:120%;
+   box-shadow:2px 2px 2px grey;
+}
+h3{
+    margin:20px auto;
+   text-align:center;
+}
+
+.service pre{
+    margin:10px -15px;
+    padding:5px;
+    background-color:#dfdfdf;
+    font-size:24px;
+    font-family:"Dancing script"; 
+}
+
+header{
+   background-color:#23506b; 
+   padding: 10px;
+   border-bottom:2px solid orange;
+   border-radius:0 0px 10px 10px;
+   color:#fff;
+   }
+   
+h1 span{
+   color:rgb(192,97,0); 
+}
+
+.menu{
+   position:fixed;
+   right:30px;
+   top: 10px;
+   padding:5px 4px;
+   transition:border .2s linear;
+}
+
+ .menu > div{
+   width:25px;
+   height:4px;
+   background-color:#333; 
+   margin:5px 0px;
+   box-shadow:1px 1px 1px grey;
+   border-radius:4px 0px 4px 0px;
+} 
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+nav{
+   position:fixed;
+   top:0px;
+   left:-10px;
+   background-color:rgba(2,2,2,0.9);
+   width:50%;
+   height:100%;
+   box-shadow:1px 1px 1px 2px #222;
+   text-align:center;
+   transform:translateX(-100%);
+   transition:transform .6s ease;
+}
+
+.nav1.open{
+   transform:translateX(0); 
+}
+
+nav ul{
+   display:block; 
+   list-style:none;
+   margin:15px 0;
+}
+nav ul li{
+   text-transform:uppercase; 
+   padding:15px 0;
+   border-bottom:1px solid rgb(165,97,0);
+  
+}
+
+nav ul li a{
+    font-weight:bold;
+   text-decoration:none;
+   color:#fff;
+}
+.about{
+    margin-top:5px;
+    background:url('https://static.pexels.com/photos/30732/pexels-photo-30732.jpg') no-repeat ;
+    background-size:100% 170px;
+    border-radius:10px 10px 0 0;
+   
+}
+.qoute{
+    background-color:#efefef;
+   font-family:handlee; 
+   font-size:24px;
+   text-align:justify;
+}
+#container2{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 0px;
+    border-bottom:1px solid;
+    border-radius:0 0 10px 10px;
+    text-align:justify;
+    font-family:'Raleway';
+}
+.about  h1, .service h1{
+   font-family:'comfortaa','sans-serif';
+   font-size:60px;
+   text-align:center;
+   padding:50px 0;
+   color:rgba(255,255,255,0.9);
+}
+.contact h1{
+   font-family:'comfortaa','sans-serif';
+   font-size:60px;
+   text-align:center;
+   padding:20px 0;
+   color:rgba(255,255,255,0.9);
+}
+
+.follow h1{
+   font-family:'comfortaa','sans-serif';
+   text-align:center;
+   padding:20px 0;
+   color:rgba(255,255,255,0.9); 
+}
+
+.service{
+    margin-top:8px;
+   background:url('https://s-media-cache-ak0.pinimg.com/originals/0b/60/2d/0b602dc7b47a45ee607bbefbfc1ed281.jpg') no-repeat ;
+   background-size:100% 170px; border-radius:10px 10px 0 0;
+}
+#box{
+    margin:15px auto;
+}
+.contact{
+    margin-top:8px;
+    background:url('https://static1.squarespace.com/static/55fca201e4b04067a6bb72a7/t/560c6fa7e4b018278c85a9a0/1443655597100/london-phone-booth-awesome-full-hd-wallpaper-f56p35.jpg') no-repeat;
+    background-size:100% 175px;
+    border-radius:10px 10px 0 0;
+}
+
+.contact > #container2 input[type="text"],[type="email"],[type="tel"]{
+  width: 300px;
+  height: 20px;
+}
+
+.contact > #container2 input[type="textarea"]{
+  height: 100px;
+  width: 300px;
+}
+.contact input{
+  border:1px solid;
+  border-radius:4px;
+  padding: 15px 5px;:;
+  margin-bottom:10px;
+
+}  
+.contact label{
+  font-weight:200;
+  display: inline-block;
+  font-size: 20px;
+  color: #000;
+  padding:20 0 10 0;
+}
+
+.contact > #container2 > button{
+  padding:15px;
+  width:200px;
+  margin:10px 18%;
+  font-weight: 800;
+  letter-spacing:5px;
+  color:#ffffff;
+  box-shadow: 2px 2px 2px grey;
+  text-transform: uppercase;
+  background:#35424a;
+  border-radius: 4px;
+  border:1px;
+}
+
+.follow{
+   background:url('http://wallpapercave.com/wp/wp1838899.jpg') no-repeat; 
+    background-size:100% 75px;
+    border-radius:10px 10px 0 0;
+    margin-top:4px;
+   
+}
+.follow > #container2 img{
+   width:70px;
+   height:70px; 
+}
+
+footer{
+font-family:'Georgia';
+    margin-top:10px;
+    padding:20px;
+    text-align: center;
+    color:#ffffff;
+    background: #35424a;
+    border-radius:10px 10px 0 0;
+}

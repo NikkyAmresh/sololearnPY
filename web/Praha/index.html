@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Happy birthday Praha di</title>
+        <script src="jquery.js">
+        </script>
+        <script>
+window.onload=function() {
+(function() {
+  var openComment, styles, time, writeStyleChar, writeStyles;
+
+  styles = "/* \n * \"Myself v1.0.\"\n * Authored by Nikky Amresh\n */\n\nbody {\n  background-color: #1a1c24; color: #fff;\n  font-size: 11px; line-height: 1.4;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n\n/* ...\n *\n * Oh, hey! Didn't see you there!\n *\n * I was just about to  show you something\n * Sure, you can watch.\n *\n * I like to keep it simple ...\n */\n\n pre { \n  position: fixed; width: 80%;\n  top: 300px; bottom: 20px; left: 30%;\n  transition: left 500ms;\n  overflow: auto;\n  background-color: #313744; color: #a6c3d4;\n  border: 1px solid rgba(0,0,0,0.2);\n  padding: 24px 12px;\n  box-sizing: border-box;\n  border-radius: 3px;\n  box-shadow: 0px 4px 0px 2px\n  rgba(0,0,0,0.1);\n}\n\n\n/* \n * Syntax highlighting \n * Colors based on Base16 Ocean Dark\n */\n\npre em:not(.comment) { font-style: normal; }\n\n.comment       { color: #707e84; }\n.selector      { color: #c66c75; }\n.selector .key { color: #c66c75; }\n.key           { color: #c7ccd4; }\n.value         { color: #d5927b; }\n\n\n/* \n *\n/* Hang on, let me just move\n  this s*** over a bit*/\n\n pre { left: 10%; }\n\n\n/*\n * Much better!\n */\n@-webkit-keyframes flames {\n  0% {\n    height: 2.2em;\n    -webkit-transform: rotate(0.5deg);\n            transform: rotate(0.5deg);\n    opacity: 0.8;\n  }\n  100% {\n    height: 2.5em;\n    -webkit-transform: rotate(-0.5deg);\n            transform: rotate(-0.5deg);\n    border-radius: 50% / 30%;\n    border-top-right-radius: 50% 60%;\n    border-top-left-radius: 50% 60%;\n    opacity: 1;\n  }\n}\n@keyframes flames {\n  0% {\n    height: 2.2em;\n    -webkit-transform: rotate(0.5deg);\n            transform: rotate(0.5deg);\n    opacity: 0.8;\n  }\n  100% {\n    height: 2.5em;\n    -webkit-transform: rotate(-0.5deg);\n            transform: rotate(-0.5deg);\n    border-radius: 50% / 30%;\n    border-top-right-radius: 50% 60%;\n    border-top-left-radius: 50% 60%;\n    opacity: 1;\n  }\n}\n@-webkit-keyframes candles {\n  0% {\n    height: 10em;\n    border-radius: 50% / 5%;\n  }\n  100% {\n    height: 2em;\n    border-radius: 50% / 25%;\n  }\n}\n@keyframes candles {\n  0% {\n    height: 10em;\n    border-radius: 50% / 5%;\n  }\n  100% {\n    height: 2em;\n    border-radius: 50% / 25%;\n  }\n}\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nbody {\n  background: #ffe0e5;\n  color: #864313;\n  font-size: 12px;\n}\n\n.cake {\n  height: 30em;\n  width: 30em;\n  margin: 10em auto 0;\n  position: relative;\n  border-radius: 100% / 50%;\n  background: #7b3d11;\n  border-bottom: 0.25em solid #2d1606;\n}\n.cake::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 15em;\n  border-radius: 50%;\n  background: #7b3d11;\n  border-bottom: 0.5em solid #221105;\n  z-index: 10;\n}\n.cake::after {\n  content: '';\n  position: absolute;\n  top: 5em;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 15em;\n  border-radius: 50%;\n  border-top-right-radius: 25%;\n  border-top-left-radius: 25%;\n  background: #864313;\n  box-shadow: 0 5em 0 #ffffcc, 0 10em 0 #864313;\n}\n\n.candles {\n  z-index: 20;\n  position: absolute;\n  padding: 0;\n  margin: 0;\n  height: 10em;\n  width: 2.5em;\n  position: absolute;\n  bottom: 22.5em;\n  left: 0;\n  right: 0;\n  margin: 0 auto;\n  border-radius: 50% / 5%;\n  -webkit-animation: candles 10s 2s 2 infinite alternate;\n          animation: candles 10s 2s 2 infinite  alternate;\n  background: #ffcc00;\n  box-shadow: -3.5em 5em 0 0 #77DD77, 3.5em 5em 0 0 #FF6961, -7em -2.5em 0 -3px #FFB347, 7em -2.5em 0 -3px #779ECB, -10.5em 2em 0 -1px #B19CD9, 10.5em 2em 0 -1px #A5D3CA;\n}\n.candles::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 10px;\n  border-radius: 50%;\n  background: #cca300;\n  box-shadow: -3.5em 5em 0 0 #4ed34e, 3.5em 5em 0 0 #ff392e, -7em -2.5em 0 -3px #ff9e14, 7em -2.5em 0 -3px #5284bd, -10.5em 2em 0 -1px #9477cb, 10.5em 2em 0 -1px #83c2b6;\n}\n.candles::after {\n  content: '';\n  position: absolute;\n  top: -2em;\n  right: 0;\n  left: 0;\n  margin: auto;\n  border-radius: 50% / 40%;\n  border-top-right-radius: 50% 60%;\n  border-top-left-radius: 50% 60%;\n  background: #E29822;\n  height: 2.5em;\n  width: 1.5em;\n  -webkit-animation: flames 0.75s infinite alternate;\n          animation: flames 0.75s infinite alternate;\n  box-shadow: 0 0 0 1px #e8ad4f, -3.5em 5em 1px 0 #E29822, 3.5em 5em 1px 0 #E29822, -7em -2.5em 1px 0 #E29822, 7em -2.5em 1px 0 #E29822, -10.5em 2em 1px 0 #E29822, 10.5em 2em 1px 0 #E29822;\n}\n/*\nNow I'm just hiding this s***...\n.\n.\nonce Again happy Birthday Prabha di 😇\n*/\n.title {\n  display:block;\n  text-align: center;\n  font-size: 3em;\n}\n #style-text{\n    display:none;\n}";
+
+  openComment = false;
+
+  writeStyleChar = function(which) {
+    if (which === '/' && openComment === false) {
+      openComment = true;
+      styles = $('#style-text').html() + which;
+    } else if (which === '/' && openComment === true) {
+      openComment = false;
+      styles = $('#style-text').html().replace(/(\/[^\/]*\*)$/, '<em class="comment">$1/</em>');
+    } else if (which === ':') {
+      styles = $('#style-text').html().replace(/([a-zA-Z- ^\n]*)$/, '<em class="key">$1</em>:');
+    } else if (which === ';') {
+      styles = $('#style-text').html().replace(/([^:]*)$/, '<em class="value">$1</em>;');
+    } else if (which === '{') {
+      styles = $('#style-text').html().replace(/(.*)$/, '<em class="selector">$1</em>{');
+    } else {
+      styles = $('#style-text').html() + which;
+    }
+    $('#style-text').html(styles);
+    return $('#style-tag').append(which);
+  };
+
+  writeStyles = function(message, index, interval) {
+    var pre;
+    if (index < message.length) {
+      pre = document.getElementById('style-text');
+      pre.scrollTop = pre.scrollHeight;
+      writeStyleChar(message[index++]);
+      return setTimeout((function() {
+        return writeStyles(message, index, interval);
+      }), interval);
+    }
+  };
+
+  $('body').append("  <style id=\"style-tag\"></style>\n<span id=\"echo\"></span>\n<span id=\"heart\"><i></i></span>\n<pre id=\"style-text\"></pre>");
+
+  time = window.innerWidth <= 578? 64 : 64;
+
+  writeStyles(styles, 0, time);
+
+}).call(this);
+};</script>
+    </head>
+    <body>
+    <h1 class='title'>HBD Praha di</h1>
+<div class='cake'>
+  <div class='candles'></div>
+</div>
+    </body>
+</html>

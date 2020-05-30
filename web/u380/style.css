@@ -1,0 +1,129 @@
+/* Created by Ranjan */
+
+*{
+    position:absolute ;
+    overflow:hidden;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.wing{
+    height:80px;
+    width:180px;
+    background-color:#000;
+    z-index:0;
+}
+.left{
+    transform:rotate(25deg);
+    left:-130px;
+}
+.right{
+    transform:rotate(-25deg);
+    left:130px;
+}
+.circle{
+    height:295px;
+    width:295px;
+    background-color:#fff;
+    border-radius:50%;
+    top:-290px;
+    z-index:1;
+    
+}
+.head{
+    height:45px;
+    width:45px;
+    background-color:#000;
+    border-radius:3px;
+    transform:rotate(45deg) skew(0deg);
+    z-index:3;
+}
+.ears{
+    content:'';
+    display:block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 30px 0 0 #000;
+    top:-100px;
+    z-index:4;
+    }
+
+.wc{
+    content:'';
+    display:block;
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    background-color:#fff;
+    z-index:2;
+}
+.l{
+    top:-125px;
+    left:-410px;
+}
+.r{
+    top:-125px;
+    left:310px;
+}
+.c{
+    content:'';
+    display:block;
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    background-color:#fff;
+    z-index:2;
+}
+.lb{
+    top:170px;
+    left:82px;
+}
+.l1{
+    transform:translate(0px,0px);
+}
+.l2{
+    transform:translate(55px,-25px);
+}
+.l3{
+    transform:translate(105px,-65px);
+}
+.rb{
+    top:170px;
+    left:-82px;
+}
+.r1{
+    transform:translate(0px,0px);
+}
+.r2{
+    transform:translate(-55px,-25px);
+}
+.r3{
+   transform:translate(-105px,-65px);
+}
+.eyes{
+    width: 0; 
+    height: 0;
+    border-bottom: 10px solid red;
+    z-index:5;
+}
+.L{
+    border-right: 10px solid transparent;
+    left:-15px;
+    top:-20px;
+    transform:rotate(20deg);
+}
+.R{
+    border-left: 10px solid transparent;
+    left:15px;
+    top:-20px;
+    transform:rotate(-20deg);
+}
+body,.circle,.wc,.c{
+    background-color:#dfdfdf;
+}

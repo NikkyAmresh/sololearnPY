@@ -1,0 +1,33 @@
+body {
+
+}
+.pic{
+    border-radius:50%;
+}
+.container,.load{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    font-size:30px;
+    background-color:#dcdcff;
+    text-align:center;
+    font-weight:lighter;
+    padding-bottom:800px;
+    display: inline-block;
+    vertical-align:center;
+  color: #fff;
+  vertical-align: middle;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.load{
+    z-index:2;
+    padding-top:100px;
+}
+.container{
+    z-index:1;
+    font-size:15px;
+}

@@ -1,0 +1,17 @@
+body {
+    background-color:#000;
+    font-size:10.8px;
+    font-style:monospace;
+}
+div{
+    margin-top::10px;
+    margin-right:10px;
+    float:right;
+    text-align:center;
+    color:#ff0;
+    font-size:20px;
+    background-color:#000;
+    font-weight:bold;
+    opacity:0.3;
+}
+

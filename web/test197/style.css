@@ -1,0 +1,34 @@
+/* Created by meet khurana */
+
+body {
+    background-color:white;
+}
+.runner{
+    background-image:url(" https://image.ibb.co/ded4z8/images_1.png");
+    width:55.875px; 
+    margin-left:-2px;
+    height:113px;
+    animation : walk 0.7s steps(8) infinite,
+    forward 3s linear infinite;
+    
+}
+@keyframes walk{
+    0%{
+        background-position:1px;
+    
+    }
+    100%{
+        background-position:447px;
+    }
+}
+
+
+@keyframes forward{
+0%{
+    transform:translateX(400px) ;
+    
+  }
+    100%{
+        transform:translateX(-100px);
+    }
+}

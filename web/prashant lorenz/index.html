@@ -1,0 +1,240 @@
+<!-- Created by Prashanth Kumar-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+        }
+
+        #cnvs {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id='cnvs'></canvas>
+
+    <script>
+        var ctx = cnvs.getContext('2d');
+        var aud=new Audio();
+        aud.src="https://pkwebgroup.000webhostapp.com/asset/Grease%20Monkey.mp3";
+    //    aud.controls=1;
+        aud.autoplay=1;
+     //   document.body.appendChild(aud);
+        
+       // aud.
+        onload=function(){
+           console.log("Seems cool on desktops \n edit line 72 and set S=10 if om desktop");
+           alert("tap on screen");
+            cnvs.onclick=function(){
+                
+                aud.play();
+            }
+        }
+
+        //this will hold all the points
+        var pts = [];
+        //maximum points limit
+        const maxPts = 1000;
+        //extract math function;
+        const { sin, cos, PI } = Math;
+
+        var w = cnvs.width = innerWidth;
+        var h = cnvs.height = innerHeight;
+
+
+        //experimenting this values yields interesting results
+        //lorenz system constants
+        
+        
+        var a = 10;
+        var b = 28;
+        var c = 8 / 3;
+
+        
+
+        //initially x,y,z is 1;
+        var x = y = z = 0.01;
+        //timestep smaler value for better quality and slower speed
+        var dt = 0.01;
+
+
+        //a scaling factor for equation
+        //10 works fine for desktop
+        //but idk how to choose a value for it
+        //after trial and err i came with this
+        const S = w/60;
+
+        //some angle to rotate the system
+        var angle = 0;
+  
+        function looper() {
+
+            
+            //differential formula for lorenz system
+            var _dx = a * (y - x) * dt;
+            var _dy = (x * (b - z) - y) * dt;
+            var _dz = (x * y - (c * z)) * dt;
+            //move forward with dx,dy,dz 
+            x += _dx;
+            y += _dy;
+            z += _dz;
+
+            pts.push([x, y, z]);
+
+
+            ctx.clearRect(0, 0, w, h);
+            //save canvas transformations
+            ctx.save();
+            //move to the center of the screen
+            ctx.translate(w / 2, h / 2);
+
+            //finally draw all
+            drawAll();
+
+            //a tracker
+            //restore to initial transformations
+            ctx.restore();
+
+
+            //if maximum reached 
+            // pop out first vertex
+            if (pts.length > maxPts) {
+                pts.splice(0, 1);
+            }
+        }
+
+        // looper();
+        //24 fps
+        setInterval(looper, 24 / 1000);
+
+
+
+
+        //main draw function
+
+        function drawAll() {
+            var _ppt = pts[0];
+            //previous point
+            ctx.strokeStyle = "#fff";
+            if(!_ppt){
+                //nopoints makes undefined
+                return;
+            }
+
+            //z vise sort
+            // pts.sort(function(el,eln){ return eln[2]-el[2]   });
+
+            pts.forEach((pt, i) => {
+                ctx.lineWidth=Math.abs((pt[2])/8);
+                var _p = project2D(
+                    
+                        rotateY(pt, angle)
+                    
+                );
+                
+                
+                //not to draw a line from start to current point
+                
+                ctx.strokeStyle="hsl("+((maxPts - i)%360)+", 100%, 51%)";
+                
+                if(i!=0){
+                    ctx.beginPath();
+                    ctx.moveTo(_ppt[0] * S, _ppt[1] * S);
+                    ctx.lineTo(_p[0] * S, _p[1] * S);
+                    // ctx.arc(_p[0] * S, _p[1] * S,1,0,PI*2);
+                    ctx.stroke();
+                    
+                }
+                //draw a tiny tracker
+                if(i==pts.length-1){
+                    ctx.fillStyle='red';
+                    ctx.beginPath();
+                    ctx.arc(_p[0] * S, _p[1] * S,3,0,Math.PI*2);
+                    ctx.fill();                    
+                }
+
+                _ppt=_p;
+            });
+
+            angle+=0.005;
+        }
+
+          ////////////////////////////////////////////
+         //////////      3d , 2d FUNCTIONS   ////////
+        ////////////////////////////////////////////
+
+     
+        
+
+         //rotate along Y axis
+        //matrix / linear algebra involved
+        
+        function rotateY(vert, angle) {
+            var _x = vert[0];
+            var _y = vert[1];
+            var _z = vert[2];
+            var _s = sin(angle);
+            var _c = cos(angle);
+            return [
+                _c * _x - _s * _z,
+                _y,
+                _s * _y + _c * z
+            ];
+        }
+
+        
+        function project2D(vert, focus = 0) {
+            var _x = vert[0];
+            var _y = vert[1];
+            var _z = vert[2];
+
+            var _d = 100 / (100-_z) ; 
+            // / (_z-focus);
+            // divide each x , y , z by (_z-focus)
+            return [
+                _x * _d,
+                _y * _d,
+            ];
+        }
+
+  
+  
+        //////////////EVENT LISTENERS
+        onresize=function(){
+            w=cnvs.width=innerWidth;
+            h=cnvs.height=innerHeight;
+            pts=[];
+        }
+        
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- dx=a*(y-x)*dt -->
+    <!-- dy=(x*(b-z)-y)*dt -->
+    <!-- dx=(x*y-(c*z))*dt -->
+
+
+    <!-- a=10 -->
+    <!-- b=28 -->
+    <!-- c=8/3 -->
+
+
+</body>
+
+</html>

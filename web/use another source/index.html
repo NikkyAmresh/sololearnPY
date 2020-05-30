@@ -1,0 +1,64 @@
+<!-- Created by Prashanth Kumar {Intermediate}-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <audio id="aud" src="http://mobimp3.in/siteuploads/files/sfd23/11098/Aashiq%20Banaya%20Aapne%20(Hate%20Story%204)%20by%20Himesh%20Reshammiya%20n%20Neha%20Kakkar%20320kbps-(MobiMp3.In).mp3" controls >
+        </audio>
+        <canvas id="cnvs" style="border:1px solid"></canvas>
+        
+        
+        
+        <script>
+     
+        var aud=document.querySelector("#aud");
+        var cnvs=document.querySelector("#cnvs");
+        var c=cnvs.getContext("2d");
+            
+      var analyser;
+      cnvs.onclick=()=>{
+      aud.play();
+      alert("play");
+      }
+      window.addEventListener("load", init, false);
+/*
+      window.onload=()=>{
+      init();
+      }
+  */    
+  cnvs.width=330;
+  cnvs.height=200;
+      
+      
+     function init(){ 
+     alert("play the audio")     
+            var ctx=new AudioContext();
+            analyser=ctx.createAnalyser();
+            var source=ctx.createMediaElementSource(aud);    
+       source.connect(analyser);
+       analyser.connect(ctx.destination);
+       
+       draw();
+       
+       }
+       function draw(){
+      window.requestAnimationFrame(draw);
+      //c.fillRect(0,0,cnvs.width,cnvs.height);
+        var arr=new Uint8Array(analyser.frequencyBinCount);
+         analyser.getByteFrequencyData(arr);
+         
+         c.fillStyle="#eee";
+         c.clearRect(0,0,cnvs.width,cnvs.height);
+ c.fillRect(0,0,cnvs.width,cnvs.height);
+        c.fillStyle="#eaa";
+     for (var i=0;i<330;i++){
+     c.fillRect(1*i,cnvs.height,1,-(arr[i]/2));
+      }
+       }
+        
+        </script>
+    </body>
+</html>

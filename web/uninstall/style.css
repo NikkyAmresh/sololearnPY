@@ -1,0 +1,35 @@
+body {
+    background-color:rgba(200,200,200,5);
+}
+#box{
+    position:fixed;
+    padding:20px;
+    top:180px;
+    left:10%;
+    width:70%;
+    background-color:#eee;
+    height:95px;
+    border-radius:4px;
+}
+#title{
+    font-size:20px;
+    font-weight:bold;
+}
+#ask{
+    margin-top:20px;
+    margin-left:55%;
+    color:#60C0B2;
+    font-weight:bold;
+}
+.yes{
+    margin-left:20px;
+}
+img{
+    width:25px;
+    vertical-align:middle;
+}
+.main{
+    position:absolute;
+    top:25px;
+    left:50px;
+}

@@ -1,0 +1,23 @@
+/* Created by JAMS */
+
+body {
+    margin:0;
+    background-color:#1b8133;
+}
+#racetrack {
+    position:relative;
+    margin:auto;
+    width:360px;
+    height:460px;
+}
+.mover {
+    motion-path: path('M41 319c1,95 183,128 228,72 45,-56 89,-114 11,-143 -77,-29 -86,84 -145,60 -58,-24 -48,-76 0,-122 47,-46 180,14 136,-88 -45,-102 -176,-43 -210,0 -34,43 -22,126 -20,221z');
+    offset-path: path('M41 319c1,95 183,128 228,72 45,-56 89,-114 11,-143 -77,-29 -86,84 -145,60 -58,-24 -48,-76 0,-122 47,-46 180,14 136,-88 -45,-102 -176,-43 -210,0 -34,43 -22,126 -20,221z');
+    animation: move 8s linear infinite;
+}
+@keyframes move {
+    100% { 
+        motion-offset: 100%;
+        offset-distance: 100%;
+    }
+}

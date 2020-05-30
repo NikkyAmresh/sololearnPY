@@ -1,0 +1,30 @@
+body {
+   background-color:#37474F; 
+   color:#fff;
+}
+div h1{
+    font-weight:lighter;
+    position:fixed;
+    top:0px;
+    width:100%;
+    text-align:center;
+    height:20px;
+}
+ol{
+    position:fixed;
+    top:70px;
+    left:5%;
+    color:#7CB342;
+    font-size:20px;
+    text-decoration:none;
+    font-weight:normal;
+}
+li{
+    padding:5px;
+}
+a{
+    color:#7CB342;
+    font-size:20px;
+    text-decoration:none;
+    font-weight:normal  
+}

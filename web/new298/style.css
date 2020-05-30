@@ -1,0 +1,46 @@
+
+body {
+    background-color:#242B33;
+}
+div{
+    background-color:#36474F;
+    width:320px;
+    height:45px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    padding:30px;
+}
+.html{
+    color:#fff;
+    font-size:13.5px;
+    font-weight:bold;
+    filter:invert(20%);
+}
+.css{
+    color:#fff;
+    font-size:13.5px;
+    font-weight:bold;
+}
+.js{
+    color:#fff;
+    font-size:13.5px;
+    font-weight:bold;
+}
+.output{
+    color:#fff;
+    font-size:13.5px;
+    font-weight:bold;
+}
+
+
+
+.selected{
+    background-color:#7DB343;
+    position:absolute;
+    top:123px;
+    height:-28px;
+    left:140px;
+    width:85px;
+    z-index:3px;
+}

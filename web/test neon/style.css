@@ -1,0 +1,53 @@
+/* Created by Gobi Noo */
+
+/* Created by Gobi Noo */
+
+body {
+    background:black;
+}
+
+h1{
+    font-family:'Indie Flower';
+    color:white;
+    text-align:center;
+    text-transform:uppercase;
+    font-size:1cm;
+    letter-spacing:.2cm;
+}
+
+.red{
+    text-shadow:
+    0 0 5px crimson,
+    0 0 10px lime,
+    0 0 40px lime,
+    0 0 50px lime,
+    0 0 80px lime,
+    0 0 150px lime,
+    0 0 180px lime
+    ;
+}
+
+.blue{
+    text-shadow:
+    0 0 5px crimson,
+    0 0 10px lime,
+    0 0 40px lime,
+    0 0 50px lime,
+    0 0 80px lime,
+    0 0 150px lime,
+    0 0 180px lime
+    ;
+}
+
+.green{
+    text-shadow:
+    0 0 5px crimson,
+    0 0 10px lime,
+    0 0 40px lime,
+    0 0 50px lime,
+    0 0 80px lime,
+    0 0 150px lime,
+    0 0 180px lime
+    ;
+}
+

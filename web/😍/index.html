@@ -1,0 +1,163 @@
+<!-- Created by Алексей Васильев-->
+
+<!DOCTYPE html>
+<body>
+<script>    
+ W=window.innerWidth;
+ H=Math.floor(window.innerHeight/2); 
+
+ var canvas1 = document.createElement('canvas'),
+ ctx1 = canvas1.getContext('2d');
+ document.body.appendChild(canvas1);
+ canvas1.width=W;
+ canvas1.height=H;
+
+ var canvas2 = document.createElement('canvas'),
+ ctx2 = canvas2.getContext('2d');
+ document.body.appendChild(canvas2);
+ canvas2.width=W;
+ canvas2.height=H;
+
+ var ship=function(x,y,l,h){
+  this.x=x;
+  this.y=y;
+  this.l=l;
+  this.h=h;
+
+  this.draw=function(ctx,sun){
+   var o=Math.abs(this.x-sun)/W;
+   ctx.fillStyle='hsla(0,100%,0%,'+o+')';
+   ctx.beginPath();
+   ctx.moveTo(this.x,this.y);
+   ctx.lineTo(this.x+this.l*o,this.y);
+   ctx.lineTo(this.x+this.l*o+this.h*o,this.y-this.h*o);
+   ctx.lineTo(this.x+this.l*o/2+1,this.y-this.h*o);
+   ctx.lineTo(this.x+this.l*o/2+1,this.y-this.h*o-50*o);
+   ctx.lineTo(this.x+this.l*o/2-1,this.y-this.h*o-50*o);
+   ctx.lineTo(this.x+this.l*o/2-1,this.y-this.h*o);
+   ctx.lineTo(this.x-this.h*o,this.y-this.h*o);
+   ctx.lineTo(this.x,this.y);
+   ctx.fill();
+  }
+
+  this.move=function(){
+   this.x-=5;
+   if (this.x<0) 
+    this.x=W; 
+  
+  }
+
+ }
+ 
+ var sinus=function(a,fi,c,o){
+  this.a=a;
+  this.fi=fi;             
+  this.c=c;
+  this.o=o;
+
+  this.draw=function(xx,yy,ctx){    //!!!
+   ctx.beginPath();
+   ctx.lineWidth=3;
+   
+   ctx.moveTo(xx,this.a*Math.sin(fi)+yy);
+   for(var i=0;i<W;i++){
+    ctx.strokeStyle='hsl('+this.c+','+o+'%,50%)';
+    ctx.lineTo(i+xx,this.a*Math.sin((i+this.fi)*3.14/180)+yy)
+   }
+   ctx.stroke();  
+  }
+ }
+
+ var sea=function(n){
+  this.n=n;
+  this.F=[];
+  for(var i=0;i<n;i++)
+   this.F.push(new sinus(i*0.1,i*1,200,i));
+
+  this.draw=function(ctx){
+   canvas2.width=canvas2.width;
+
+  gradient = ctx.createLinearGradient(200, 300, W, H);
+  gradient.addColorStop(0, "white");
+  gradient.addColorStop(1, "orange");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, W, H);
+  for(var i=0;i<this.n;i++)
+   this.F[i].draw(0,3*i,ctx);
+  }
+
+  this.move=function(){
+   for(var i=0;i<this.n;i++)
+    this.F[i].fi+=5*Math.sin(i*5);
+  }
+ }
+
+ var ray=function(x,y,r,rmax){
+  this.r=r;
+  this.x=x;
+  this.y=y;
+  this.rmax=rmax;
+  this.dir=[-1,1][Math.floor(Math.random()*2)];
+   
+  this.draw=function(ctx){
+   ctx.beginPath();
+   var o=Math.floor(this.r*100/this.rmax+50);
+   ctx.strokeStyle='hsl(40,100%,'+o+'%)';
+   //ctx.moveTo(this.x,this.y);
+   ctx.arc(this.x,this.y,this.r,0,2*Math.PI);
+   ctx.stroke();
+  }
+
+  this.move=function(){
+   if (this.r+this.dir<0 || this.r+this.dir>this.rmax )
+    this.dir=-this.dir
+   else
+    this.r+=this.dir;
+  }
+
+ }
+
+ var sun=function(xx,yy,n,rmax){
+  this.n=n;
+  this.S=[];
+  for(var i=0;i<this.n;i++)
+   this.S.push(new ray(xx,yy,Math.floor(Math.random()*rmax),rmax));
+
+  this.draw=function(ctx){
+  canvas1.width=canvas1.width;
+  gradient = ctx.createLinearGradient(200, 30, W, H);
+  gradient.addColorStop(0, "white");
+  gradient.addColorStop(1, "orange");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, W, H);
+     
+  for(var i=0;i<this.n;i++)
+   this.S[i].draw(ctx);
+  }
+
+  this.move=function(){
+   for(var i=0;i<this.n;i++)
+    this.S[i].move();
+  }
+ }
+
+ var S=new sea(Math.floor(H/3));
+ var N=new sun(W/4,H/1.5,100,100);
+ var L=new ship(W,H,40,10);
+
+ function doer(){
+  S.draw(ctx2);
+  S.move();
+  N.move();
+  N.draw(ctx1);
+  L.move();
+  L.draw(ctx1,100);
+  requestAnimationFrame(doer);
+ }
+
+ doer();
+
+
+</script>
+
+</body> 

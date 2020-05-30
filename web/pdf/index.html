@@ -1,0 +1,424 @@
+question 1
+
+#include <stdio.h>
+int isInt(float);
+int oddEven(int);
+int res(float);
+int main() {
+     res(2);
+     res(4);
+     res(3);
+     res(2.5);
+     res(13);
+}
+int res(float nm){
+    int n;
+    if(isInt(nm)){
+         if(oddEven(nm)){
+             n=1;
+         }else{
+            n=2;
+         }
+     }else{
+         n=3;
+     }
+    switch(n){
+    case 1:
+        printf("Even\n");
+        break;
+    case 2:
+        printf("Odd\n");
+        break;
+    case 3:
+        printf("Re-Input as integer number\n");
+    return 0;}
+}
+int isInt(float val)
+{
+    int i = (int) val;
+    if( i != val)
+      return 0;  
+    else
+      return 1; 
+}
+int oddEven(int val){
+    if(val%2==0){
+      return 1;
+      }else{
+      return 0;
+        }
+}
+    
+Question 2
+
+#include <stdio.h>
+float clclt_bill(int);
+int main() {
+        printf("%f \n",clclt_bill(50));
+        printf("%f \n",clclt_bill(300));
+        printf("%f \n",clclt_bill(500));
+        printf("%f \n",clclt_bill(700));
+        printf("%f \n",clclt_bill(80));
+        printf("%f \n",clclt_bill(200));
+    return 0;
+}
+float clclt_bill(int unt){
+    float final_bill;
+    if(unt<=199){
+        final_bill=unt*1.2;
+    }else if(unt>=200 && unt<400){
+        final_bill=unt*1.5;
+    }else if(unt>=400 && unt<600){
+        final_bill=unt*1.8;
+    }else{
+        final_bill=unt*2;
+    }
+    if(final_bill<=100){
+        final_bill=100;
+    }else if(final_bill>400){
+        final_bill=final_bill*1.15;
+    }
+    return final_bill;
+}                
+
+Question 3
+
+#include <stdio.h>
+int series(int);
+int main() {
+    series(4);
+    series(6);
+    series(5);
+    series(7);
+    return 0;
+}
+int series(int num){
+    int i;
+   for(i=1;i<=num;i++){
+        printf("%d",i);
+    }
+    printf("\n");
+    return 0; 
+}
+
+Question 4
+
+#include <stdio.h>
+int perfect_num(int);
+int main() {
+    perfect_num(6);
+    perfect_num(28);
+    perfect_num(45);
+    perfect_num(496);
+    perfect_num(678);
+}
+int perfect_num(int num){
+    int i ,x ,ttl=0;
+    for(i=1;i<=(num-1);i++){
+        x=num%i;
+        if(x==0){
+          ttl=ttl+i ; 
+        }
+    }
+    printf((ttl==num)?"Yes":"No");
+    return 0;
+}        
+ 
+Question 5
+ 
+#include <stdio.h> 
+int is_prime(int);
+int main() { 
+    is_prime(15);
+    is_prime(17);
+    is_prime(40);
+    is_prime(2);
+    is_prime(71);
+    is_prime(60);  
+return 0; 
+}
+int is_prime(int n){
+    int i,flag=0;
+    for(i = 2; i <= n/2; ++i) {
+        if(n%i == 0) { 
+            flag = 1; 
+        break; 
+        } 
+    } 
+    printf((flag==0&&n!=1)?"Prime\n":"NotPrime \n",n);
+    return 0;
+}
+  
+Question 6   
+    
+#include <stdio.h> 
+int main() { 
+    int i, j, rows=3; 
+    int stars, spaces; 
+    stars = 1; spaces = rows - 1;
+    for(i=1; i<rows*2; i++) { 
+        for(j=1; j<=spaces; j++) 
+            printf(" ");
+            for(j=1; j<stars*2; j++) 
+                printf("*");  
+                printf("\n"); 
+          if(i<rows) { 
+                spaces--; 
+                stars++; 
+         } else { 
+                spaces++; 
+                stars--; 
+           } 
+    } 
+return 0; 
+}
+
+Question 7
+
+#include <stdio.h>
+int factorial(int);
+int main() {
+   printf("%d \n",factorial(5));
+   printf("%d \n",factorial(-10));
+   printf("%d \n",factorial(7));
+   printf("%d \n",factorial(3));
+   printf("%d \n",factorial(4));
+    return 0;
+    
+}
+int factorial(int num){
+    if(num<0){
+        printf("Invalid number");
+        return NULL;
+    }else{
+        int i=1,j=1;
+        do{
+            j=j*i;
+            i++;
+        }while(i<=num);
+        return j;
+    }
+}
+
+
+Question 8
+
+#include <stdio.h>
+int lcm(int,int,int);
+int gcf(int,int);
+int main() {
+    printf("LCM = %d\n",lcm(4,16,gcf(4,16)));
+    printf("LCM = %d \n",lcm(25,35,gcf(25,35)));
+    printf("LCM = %d \n",lcm(25,31,gcf(25,31)));
+    printf("LCM = %d \n",lcm(30,40,gcf(30,40)));
+    printf("LCM = %d \n",lcm(7,40,gcf(7,40)));
+    return 0;
+}
+int lcm(int x,int y,int gcf){
+    return (x*y)/gcf;
+}
+int gcf(int x, int y){
+    int t;
+    while(y!=0){
+        t=y;
+        y=x%y;
+        x=t;
+    }
+    return x;
+}
+
+Question 9
+
+#include <stdio.h> 
+int main() { 
+    printf("Sum of digits %d = %d\n", 1234, sotd(1234)); 
+    printf("Sum of digits %d = %d\n", 5567, sotd(5567)); 
+    printf("Sum of digits %d = %d\n", 708, sotd(708)); 
+    printf("Sum of digits %d = %d\n", 3118, sotd(3118)); 
+    printf("Sum of digits %d = %d\n", 5006, sotd(5006)); 
+    return 0; 
+}
+int sotd(int num){
+    int sum=0;
+    while(num!=0){
+        sum+=num%10;
+        num=num/10;
+    }
+    return sum;
+}
+
+Question 10
+
+#include <stdlib.h> 
+#include <stdio.h> 
+int cmp_int(const void *a, const void *b ){ 
+    return *(int*)a - *(int*)b;
+} 
+int main() { 
+    int a[] = { 1, 5, 3, 2, 0, 5, 7, 6 };     
+    const int n = sizeof(a) / sizeof(a[0]); 
+    qsort(a, n, sizeof(a[0]), cmp_int); 
+    printf("%d %d\n", a[n-1], a[n-2]);
+}
+
+
+Question 13
+
+
+#include <stdio.h>
+ int main() { 
+     count_vc("NPTEL Week 7 assignment");
+     count_vc("Indian Institute of Technology, Kharagpur");
+      return 0; 
+}
+int count_vc(char line[150]){
+    int i, vowels, consonants; 
+     vowels = consonants = 0;
+      for(i=0; line[i]!='\0'; ++i) { 
+       if(line[i]=='a' || line[i]=='e' || line[i]=='i' || line[i]=='o' || line[i]=='u' || line[i]=='A' || line[i]=='E' || line[i]=='I' || line[i]=='O' || line[i]=='U')
+        {
+             ++vowels; 
+         } else if((line[i]>='a'&& line[i]<='z') || (line[i]>='A'&& line[i]<='Z')) {
+          
+        ++consonants; 
+        } }
+        printf("Total number of vowel = %d",vowels);     
+      printf("\nTotal number of consonants = %d\n",consonants);
+      return 0;
+}    
+
+Question 14
+
+#include <stdio.h>
+int main(){
+   compare("abc","ABC");
+   compare("ABCD","ABCD");
+   compare("ABCD","abcd");
+   compare("123","123");
+    
+   return 0;
+}
+
+int compare(char str1[10],char str2[10]) {
+    
+    int i=0,ct1=0,ct2=0,flag=0;
+
+    while (str1[ct1] != '\0'){
+        ct1++;    
+    }
+    while (str2[ct2] != '\0'){
+        ct2++;    
+    }
+    while ((i < ct1) && (i < ct2)){
+        if (str1[i] == str2[i]){
+            i++;
+            continue;
+        }
+        if (str1[i] < str2[i]){
+            flag=1;
+            break;
+        }
+        if (str1[i] > str2[i]){
+            flag=-1;
+            break;
+        }
+    }
+    
+    if(flag==0){
+        printf("Strings are equal\n");
+    }else if(flag==-1){
+        printf("String 1 is greater than String 2\n");
+    }else if(flag==1){
+           printf("String 1 is less than String 2\n");
+   }        
+    return 0;
+}
+    
+
+Question 15
+
+#include <stdio.h> 
+int main() { 
+    isPrime(5);
+    isPrime(10);
+    isPrime(23);
+    isPrime(22);
+return 0; 
+}
+int isPrime(int n){
+    int i,flag=0;
+    for(i = 2; i <= n/2; ++i) {
+        if(n%i == 0) { 
+            flag = 1; 
+        break; 
+        } 
+    } 
+    printf((flag==0&&n!=1)?"%d is Prime number\n":"%d is Not Prime Number\n",n);
+    return 0;
+}    
+
+Question 16
+
+#include <stdio.h>
+
+int main() {
+    printf("%d",power(5,2));
+    printf("%d",power(3,3));
+    printf("%d",power(10,2));
+    printf("%d",power(2,5));
+    return 0;
+}
+int power(int x,int y){
+    if(y){
+        return (x*power(x,y-1));
+    }
+    return 1;
+}
+
+Question 17
+
+#include <stdio.h>
+int main() {
+    int data[100],i,n,step,temp;
+    printf("Enter the number of elements to be sorted: ");
+    scanf("%d",&n);
+    for(i=0;i<n;++i) {
+        printf("%d. Enter element: ",i+1);
+         scanf("%d",&data[i]);
+         } 
+        for(step=0;step<n-1;++step)
+         for(i=0;i<n-step-1;++i){
+          if(data[i]>data[i+1])  {
+           temp=data[i];
+           data[i]=data[i+1];
+           data[i+1]=temp;
+           }
+        }
+      printf("In ascending order: ");
+     for(i=0;i<n;++i) printf("%d ",data[i]);
+     return 0; 
+} 
+    
+Question 18 
+
+ #include <stdio.h>
+
+void swap (int *num1, int *num2);
+
+int main() {
+    int num1 = 12;
+    int num2 = 45;
+
+    swap(&num1, &num2);
+    printf("num1 = %d, y = %d\n", num1, num2); 
+
+    return 0;
+}
+ 
+void swap (int *num1, int *num2) {
+    int temp;
+    
+    temp = *num1;
+    *num1 = *num2;
+    *num2 = temp;
+}   

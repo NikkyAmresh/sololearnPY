@@ -1,0 +1,32 @@
+body {
+    Background-color:#eec9f2;
+}
+img{
+    width:98%;
+    border:1px solid;
+    border-radius:10px;
+}
+h3{
+    position:fixed;
+    top:170px;
+    left:80px;
+}
+div.name{
+    position:fixed;
+    top:230px;
+    left:120px;
+}
+p{
+    position:fixed;
+    top:250px;
+    font-weight:lighter;
+    left:180px;
+}
+a{
+    Text-decoration:none;
+}
+div.link{
+    font-size:20px;
+    margin-top:30px;
+    text-align:center;
+}

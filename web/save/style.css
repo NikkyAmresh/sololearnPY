@@ -1,0 +1,55 @@
+/* Created by Richard Myatt */
+
+/*            Author: Richard Myatt
+              Date: 1 November 2018
+
+              A solo run using anime.js
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+
+.container {
+  display: flex;
+  width: 72vw;
+  height: 8vw;
+  margin: 40vh auto; }
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8vw;
+  height: 8vw;
+  font-size: 6.4vw;
+  transform: translateY(-800px);
+  font-family: 'Archivo Black', sans-serif;
+  /*border: 2px solid yellow;*/ }
+
+.letterS {
+  color: #158e9b; }
+
+.letterO1 {
+  color: #6cb94f; }
+
+.letterL1 {
+  color: #ef7543; }
+
+.letterO2 {
+  color: #ea545e; }
+
+.letterL2 {
+  color: #eb58a0; }
+
+.letterE {
+  color: #2fb7e9; }
+
+.letterA {
+  color: #158e9b; }
+
+.letterR {
+  color: #6cb94f; }
+
+.letterN {
+  color: #ef7543; }
+
+/*# sourceMappingURL=sololearn.css.map */

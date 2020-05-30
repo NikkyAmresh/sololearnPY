@@ -1,0 +1,52 @@
+body { background-image:url("https://preview.ibb.co/mfTdVx/Screenshot_20180221_162311.png");
+    background-size:80%;
+    background-repeat:no-repeat ;
+}
+#box{
+    position:fixed;
+    padding:20px;
+    transform:scale(0.9);
+    z-index:1000;
+    top:180px;
+    left:-5px;
+    width:72%;
+    background-color:#eee;
+    height:95px;
+    border-radius:4px;
+}
+#title{
+    font-size:20px;
+    font-weight:bold;
+}
+#ask{
+    margin-top:20px;
+    margin-left:48%;
+    color:#60C0B2;
+    font-weight:bold;
+}
+.yes{
+    margin-left:20px;
+}
+img{
+    width:25px;
+    vertical-align:middle;
+}
+.main{
+    position:absolute;
+    top:20px;
+    left:50px;
+}
+.yes{
+    color:#cdcdcd;
+}
+.blur{
+    background-color:#000;
+    filter:blur(2px);
+    position:fixed;
+    top:0px;
+    opacity:0.5;
+    z-index:100;
+    height:1000px;
+    left:0px;
+    width:100%;
+}

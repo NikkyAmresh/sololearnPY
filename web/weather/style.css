@@ -1,0 +1,153 @@
+
+body {
+    background:#080808;
+    font-family: 'Stylish', sans-serif;
+    text-align:center;
+    color:#fafafa;
+}
+.location{
+    text-align:center;
+    font-size:28px;
+    position:fixed;
+    width:100%;
+    z-index:1;
+    height:60px;
+    top:0;
+    padding-top:70px;
+    background:#080808;
+}
+#icon{
+    transform:scale(2.0);
+}
+.search{
+    font-size:40px;
+    z-index:2;
+    right:30px;
+    top:10px;
+    position:fixed;
+}
+
+small{
+    color:#999999;
+}
+.temp{
+    color:#fff;
+    padding-top:120px;
+    font-size:120px;
+}
+.dif{
+    margin-top:-30px;
+    color:#cacaca;
+    font-size:20px;
+}
+.cncl{
+    color:#fafafa;
+    margin-top:-20px;
+    font-size:25px;
+}
+.box{
+    width:100%;
+    height:auto;
+    background:#252525;
+    padding-top:30px;
+    font-size:20px;
+    overflow:scroll;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:30px;
+    padding-bottom:30px;
+}
+.box2{
+    padding:10px;
+    padding-left:10px;
+    background:#252525;
+    border-radius:30px;
+    font-size:25px;
+    overflow:scroll;
+}
+td img{
+    filter:invert(100);
+    float:right;
+}
+.td{
+    padding-right:30px;
+}
+.td1{
+    padding-right:30px;
+}
+td{
+    text-align:left ;
+}
+.bar{
+   border-left:1px solid #fcfcfc;
+}
+.bar1{
+   border-left:1px solid #fcfcfc;
+}
+.box2 table td{
+    text-align:center;
+    font-size:15px;
+    padding:15px;
+    padding-top:-30px;
+}
+#form{
+    display:none;
+    background:#080808;
+    z-index:2;
+    height:150px;
+    width:100%;
+    padding:10px;
+    position:fixed;
+    top:0;
+    left:0;
+}
+#sbox{
+    background:#080808;
+    outline:none;
+    border:none;
+    height:50px;
+    padding:10px;
+    width:92%;
+    color:#fcfcfc;
+    font-family:'Stylish', sans-serif;;
+    border-radius:10px;
+    z-index:3;
+    border:5px solid #252525;
+    font-size:30px;
+    position:fixed;
+    top:10;
+    left:4%;
+}
+#sbmit,#can{
+    background:#080808;
+    outline:none;
+    height:50px;
+    padding:10px;
+    width:20%;
+    text-align:center;
+    color:#fcfcfc;
+    font-family:'Stylish', sans-serif;;
+    border-radius:10px;
+    z-index:3;
+    border:1px solid #252525;
+    font-size:25px;
+    position:fixed;
+    top:67px;
+}
+#sbmit{
+    left:25%;
+}
+#can{
+    right:25%;
+}
+#slist{
+    background:#080808;
+    height:30px;
+    padding:10px;
+    width:92%;
+    color:#fcfcfc;
+    font-family:'Stylish', sans-serif;;
+    z-index:54;
+    border:5px solid #252525;
+    font-size:25px;
+}

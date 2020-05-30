@@ -1,0 +1,87 @@
+<!-- Created by Soum@k 😎-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Audio Player</title>
+    <!--Material Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500|Roboto:300,400,500" rel="stylesheet">
+
+     <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        
+    </script>
+</head>
+
+<body>
+<input id="sn" type="hidden" value="50">
+    <section>
+        <div class="image"></div>
+        <div class="headings">
+            <h1>Titanium</h1>
+            <h2> David <span id="pn"></span></h2>
+        </div>
+        <div class="loader">
+            <div class="progressBar">
+                <div class="myBar">
+                </div>
+            </div>
+            <span id="cur">0:00</span>
+            <span id="tot">0:00</span>
+        </div>
+
+
+
+        <div class="footer">
+            <i class="material-icons fav">
+                favorite_border
+            </i>
+            <i class="material-icons skip_prev" style="font-size: 32px">
+                skip_previous
+            </i><i class="material-icons pre" style="font-size: 32px">
+                fast_rewind
+            </i>
+            <i class="material-icons but" style="font-size: 68px">
+                play_circle_filled
+            </i>
+
+            <i class="material-icons next" style="font-size: 32px">
+                fast_forward
+            </i><i class="material-icons skip_next" style="font-size: 32px">
+                skip_next
+            </i>
+            <i class="material-icons scilent">
+                volume_up
+            </i>
+        </div>
+
+    </section>
+    
+    <div class="load hide">
+        <div class="spinner">
+            <div class="load_spinner">
+                
+            </div>
+            <h2>Loading track....</h2>
+        </div>
+    </div>
+    <div class="replay hide">
+        <i class="material-icons replay-icon" style="font-size: 90px">
+                replay
+            </i>
+    </div>
+    <audio id="music">
+        <source src="https://filehosting12345.000webhostapp.com/tumblr_lpr3ppkTEO1qb6ygto1.mp3" type="audio/mp3">
+        
+        <!--<source src="https://filehosting12345.000webhostapp.com/these-days.mp3" type="audio/mp3">-->
+    </audio>
+
+   
+</body>
+
+</html>

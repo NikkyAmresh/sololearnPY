@@ -1,0 +1,16 @@
+/* Created by meet khurana */
+
+body {
+    
+}
+.right{
+    position:absolute;
+    right:20px;
+}
+li a.dropdown-item{
+
+    z-index:2;
+}
+nav.navbar.navbar-expand-sm.bg-white.navbar-dark.sticky-top.shadow.p-4.mb-4{
+    z-index:1;
+}

@@ -1,0 +1,51 @@
+<!-- Created by Anna Ranguin-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <header align="center"><h3>Drag the colored tiles to make a shape like the ones in the table below the whitespace</h3></header>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        
+        <!--img src="https://boyslifeorg.files.wordpress.com/2015/11/tangram-4.jpg?w=620&h=465"-->
+           
+<!--draggable and rotatable tiles-->             
+          
+       <div id="colortiles">   
+          <svg id="t1" class="drag" height="110">
+                 <polygon points="10 10 10 110 60 60" stroke="white" fill="#00CCDD" style="transform-origin:center;"/></svg>
+            <svg id="t2" class="drag" height="110">         
+                 <polygon points="10 10 110 10 60 60" stroke="white" fill="blue" style="transform-origin:center;"/></svg> 
+            <svg id="t3" class="drag" >
+                 <polygon points="10 110 35 85 60 110" stroke="white" fill="green" style="transform-origin:center;"/></svg>
+            <svg id="t4" class="drag">
+                 <polygon points="35 85 60 60 85 85 60 110" stroke="white" fill="#DDDD55" style="transform-origin:center;"/></svg>
+            <svg id="t5" class="drag" >
+                 <polygon points="60 60 85 35 85 85" stroke="white" fill="orange" style="transform-origin:center;"/></svg>
+            <svg id="t6" class="drag" height="90">
+                 <polygon points="85 85 85 35 110 10 110 60" stroke="white" fill="red" style="transform-origin:center;"/></svg>
+            <svg id="t7" class="drag" height="120">
+                 <polygon points="60 110 110 60 110 110" stroke="white" fill="purple" style="transform-origin:center;"/></svg>
+        </div>
+<br>
+<br>
+<br>
+
+<!--trial zone-->
+
+        <div align="center">
+            <svg height="300" width="300">
+                <polygon id="trialzone" points="0 0 280 0 280 280 0 280" stroke="black"/>
+            </svg>
+        </div>
+        <div id="angle-info">0&deg;</div>
+        <div>
+            <div align="center">
+        <img src="https://i.pinimg.com/236x/75/df/ce/75dfcea2bfaaf0166c1c3d95f913db40--tangram-kindergarten-math.jpg">
+        </div>
+<br> 
+<br>       
+
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!-- Created by bobbie-->
+
+<!-- Created by Calviղ-->
+
+<!-- Created by bobbie-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Art Cube 2</title>
+    </head>
+    <body>
+    <form name="sel">
+        <input type="radio" checked id="radio-front" name="select-face"/> 
+        <input type="radio" id="radio-left" name="select-face"/> 
+        <input type="radio" id="radio-right" name="select-face"/> 
+        <input type="radio" id="radio-top" name="select-face"/> 
+        <input type="radio" id="radio-bottom" name="select-face"/> 
+        <input type="radio" id="radio-back" name="select-face"/>
+    
+            
+        <div class="separator"></div>
+        <div class="space3d"> 
+            <div class="_3dbox"> 
+                <div class="art-img _3dface _3dface--front"></div> 
+                <div class="art-img _3dface _3dface--top"></div> 
+                <div class="art-img _3dface _3dface--bottom"></div> 
+                <div class="art-img _3dface _3dface--left"></div> 
+                <div class="art-img _3dface _3dface--right"></div> 
+                <div class="art-img _3dface _3dface--back"></div> 
+            </div> 
+        </div>
+        <div class="separator"></div><br>
+        <div>Encouragements Have Great Day</a> <br>
+            
+        <button id="next" onclick="return nextSel()">Next</button>
+        <button id="prev" onclick="return prevSel()">Prev</button><br>
+        <button id="theme" onclick="return changeTheme()">Change cube</button>
+        
+     </form>
+            
+        </div>
+        
+        <script>
+        
+        var images = [
+                [
+                    'https://i.pinimg.com/736x/46/2a/0f/462a0f5afdfda84ae955d6a32096aadf--notification-positive-motivational-quotes.jpg',
+                    'https://i.pinimg.com/736x/8c/a8/fd/8ca8fdf1b73e32a32413b75367a10d3b--free-printable-quotes-free-printables.jpg',
+                    'https://i.pinimg.com/236x/62/9a/e1/629ae1f6d9289f19d5562d12c18ad545--great-day-quotes-have-a-great-day.jpg',
+                    
+                    'https://sd.keepcalm-o-matic.co.uk/i-w600/have-an-awesome-and-spectacular-day.jpg',
+                    
+                    'https://i.pinimg.com/736x/08/f6/a5/08f6a5bd22b34d1700143fd9a1ad94e2--recovery-encouragement.jpg',
+                    
+                    'https://i.pinimg.com/736x/fa/3b/7d/fa3b7df3a4f70b3e4e579fb26c82f538--happy-wishes-true-friendships.jpg'
+                ],
+                [
+                    'https://i.pinimg.com/736x/c2/38/33/c23833611cd9cc255cc9ae12b838740f--salon-quotes-have-a-beautiful-day.jpg',
+                    'https://i.pinimg.com/736x/37/99/84/3799840c324fce9a845b92e1ef4ffef5--try-quotes-sign-quotes.jpg',
+                    'https://i.pinimg.com/736x/ac/7a/60/ac7a602ca2e7f874953f6dff60222d3d--quotes-to-live-by-quote-posters.jpg',
+                    'https://i.pinimg.com/736x/1b/9a/2c/1b9a2cc4ac456717fdd09f996077d731--quotes-of-encouragement-joy-quotes.jpg',
+                    'https://i.pinimg.com/736x/38/ef/2c/38ef2c401eaaf0ce667509b15b1a7bb0.jpg',
+                    'https://pbs.twimg.com/media/C6VVBEnUwAEerR_.jpg'               ],
+                [
+                    'https://www.hooverwebdesign.com/free-printables/greeting-cards/you-are-so-groovy-greeting-card.gif',
+                    'https://pbs.twimg.com/media/Ccjdp7SUEAAKR5V.jpg',
+                    'https://i.pinimg.com/236x/51/a7/04/51a7043e07d6751e99a8849162b8be27--you-are-amazing-amazing-people.jpg',
+                    'https://i.pinimg.com/236x/d9/dc/2e/d9dc2eacc4a90e5a08f02b791a6f7d2a--quotes-encouragement-encouraging-quotes.jpg',
+                    'https://i.pinimg.com/736x/16/9a/06/169a06a34fe3eea4dca1238586539281--quotes-of-way-to-go-quotes.jpg',
+                    'https://1.bp.blogspot.com/-GnqupGQrJWA/WS9aLwv6l2I/AAAAAAAAP5Q/wWte-hZ3dPgG8P_pM5iwNV0x8WczCTq8wCLcB/s1600/Youre-the-best-compliment-graphic.gif'
+                ]        
+            
+            ];
+        
+        var rad = 0; // set next radio
+        var theme = 0;
+        function nextSel() {
+            rad = rad==5? 0:rad+1;
+            sel[rad].checked = true;
+            
+            return false;
+        }
+        
+        function prevSel() {
+            rad = rad==0? 5:rad-1;
+            sel[rad].checked = true;
+            
+            return false;
+        }
+        
+        function changeTheme() {
+            theme = theme==images.length-1? 0:theme+1;
+            var artImgs = document.querySelectorAll('.art-img');
+            for(var i=0;i<6;i++) {
+                artImgs[i].style.backgroundImage = 'url(' + images[theme][i] + ')';
+            }
+            
+             return false;
+        }
+            
+        </script>
+    </body>
+</html>
+    

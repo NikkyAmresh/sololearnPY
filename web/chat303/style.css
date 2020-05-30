@@ -1,0 +1,16 @@
+#wmsg{
+    position:fixed;
+    bottom:10px;
+    width:60%;
+    left:5%;
+    border-radius:10px;
+    height:40px;
+}
+body {
+    background-color:#000;
+    color:#4CAF50;
+}
+div#msg{
+    height:430px;
+    position:fixed;
+}

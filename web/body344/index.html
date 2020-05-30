@@ -1,0 +1,83 @@
+<!-- Created by Ask Plays-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crazy Snake Attack</title>
+        <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+        <script>
+'use strict';
+var _0xf9aa = ["DOMContentLoaded", "AIzaSyDcRDXzHM0Ni3bhWWrg_CvwoYpJ0QCuZrs", "crazy-snake-attack-leaderboard.firebaseapp.com", "https://crazy-snake-attack-leaderboard.firebaseio.com", "crazy-snake-attack-leaderboard", "crazy-snake-attack-leaderboard.appspot.com", "759043166858", "initializeApp", "#leaderboard", "querySelector", "firestore", "settings", "limit", "score", "desc", "orderBy", "leaderboard", "collection", "innerHTML", "", "<li></li>", "innerText", "length", "children", "name", "data", 
+": ", "forEach", "onSnapshot", "submitScore", "null", "Write a name for the leaderboard(or don't)", "number", "Don't cheat :P", "&gt;", "replace", "&lt;", "round", "add", "addEventListener"];
+var privateCode = {};
+document[_0xf9aa[39]](_0xf9aa[0], () => {
+var _0xb5d6x2$jscomp$0 = {
+apiKey : _0xf9aa[1],
+authDomain : _0xf9aa[2],
+databaseURL : _0xf9aa[3],
+projectId : _0xf9aa[4],
+storageBucket : _0xf9aa[5],
+messagingSenderId : _0xf9aa[6]
+};
+firebase[_0xf9aa[7]](_0xb5d6x2$jscomp$0);
+var _0xb5d6x3$jscomp$0 = document[_0xf9aa[9]](_0xf9aa[8]);
+(function() {
+var _0xb5d6x4$jscomp$0 = firebase[_0xf9aa[10]]();
+var _0xb5d6x5$jscomp$0 = {
+timestampsInSnapshots : true
+};
+_0xb5d6x4$jscomp$0[_0xf9aa[11]](_0xb5d6x5$jscomp$0);
+var _0xb5d6x6$jscomp$0 = _0xb5d6x4$jscomp$0[_0xf9aa[17]](_0xf9aa[16])[_0xf9aa[15]](_0xf9aa[13], _0xf9aa[14])[_0xf9aa[12]](10);
+_0xb5d6x6$jscomp$0[_0xf9aa[28]](function(_0xb5d6x7$jscomp$0) {
+_0xb5d6x3$jscomp$0[_0xf9aa[18]] = _0xf9aa[19];
+_0xb5d6x7$jscomp$0[_0xf9aa[27]](function(_0xb5d6x8$jscomp$0) {
+_0xb5d6x3$jscomp$0[_0xf9aa[18]] += _0xf9aa[20];
+_0xb5d6x3$jscomp$0[_0xf9aa[23]][_0xb5d6x3$jscomp$0[_0xf9aa[23]][_0xf9aa[22]] - 1][_0xf9aa[21]] = _0xb5d6x8$jscomp$0[_0xf9aa[25]]()[_0xf9aa[24]] + _0xf9aa[26] + _0xb5d6x8$jscomp$0[_0xf9aa[25]]()[_0xf9aa[13]];
+});
+});
+})();
+privateCode[_0xf9aa[29]] = function() {
+var _0xb5d6x4$jscomp$1 = firebase[_0xf9aa[10]]();
+var _0xb5d6x5$jscomp$1 = {
+timestampsInSnapshots : true
+};
+_0xb5d6x4$jscomp$1[_0xf9aa[11]](_0xb5d6x5$jscomp$1);
+var _0xb5d6x6$jscomp$1 = _0xb5d6x4$jscomp$1[_0xf9aa[17]](_0xf9aa[16]);
+if (!name || name == _0xf9aa[19] || name == _0xf9aa[30]) {
+name = prompt(_0xf9aa[31]);
+}
+if (score > highscore || highscore == 0 || typeof score != _0xf9aa[32]) {
+score = 0;
+alert(_0xf9aa[33]);
+}
+if (name && name != _0xf9aa[19] && name != _0xf9aa[30] && score != 0) {
+_0xb5d6x6$jscomp$1[_0xf9aa[38]]({
+name : name,
+score : Math[_0xf9aa[37]](score)
+});
+}
+};
+});
+
+
+            
+        </script>
+    </head>
+    <body onload="start()">
+        <canvas id="canvas"></canvas>
+        <button id="button" onclick="showBoard()">📋</button>
+        <div>
+            <h2>Leaderboard</h2>
+            <ol id="leaderboard">
+                
+            </ol>
+        </div>
+    </body>
+    <img id="snake" class="0" src="https://i.imgur.com/boFrVc4.png" width="100">
+    <img id="snake" class="1" src="https://i.imgur.com/1CtahRm.png" width="100"> 
+    <img id="obstacle" class="0" src="https://i.imgur.com/WFSJOgN.png" width="100">
+    <img id="obstacle" class="1" src="http://www.skalevag.com/askplays/JavaScript/CrazySnakeAttack2/resources/obstacle.png" width="100"> 
+    <img id="shield" class="0" src="https://i.imgur.com/jV7Hah9.png" width="100">
+    <img id="shield" class="1" src="http://www.skalevag.com/askplays/JavaScript/CrazySnakeAttack2/resources/shield.png" width="100">
+</html>

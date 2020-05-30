@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA3aakU7z5Bx0_hUH1-B1B9Mw2KZKTEWsA",
+    authDomain: "sqlpoll.firebaseapp.com",
+    databaseURL: "https://sqlpoll.firebaseio.com",
+    projectId: "sqlpoll",
+    storageBucket: "sqlpoll.appspot.com",
+    messagingSenderId: "515836006891"
+  };
+  firebase.initializeApp(config);
+</script></head>
+    <body>
+    <input type="hidden" id="uidd">
+     <input type="hidden" id="ap">
+      <input type="hidden" id="nm">
+    <button onclick="vote(0)">SQL</button>
+    <button onclick="vote(1)">NOSQL</button>
+    </body>
+</html>

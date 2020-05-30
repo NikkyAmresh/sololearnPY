@@ -1,0 +1,54 @@
+body{
+  color:#0f0;
+  background:#000;
+  font-size:20px;
+}
+textarea{
+    background-color:#0f0;
+    color:#0f0;
+    font-size:12px;
+    border:1px solid #0f0;
+    width:90%;
+    background:rgba(0,0,0,0.8);
+    padding:10px;
+    margin-left:5%;
+    border-radius:0px;
+    outline:none;
+    height:100px;
+}
+input{
+    padding:5px;
+    border-radius:0;
+    color:#0f0;
+    border:1px solid #0f0;
+    background-color:transparent;
+    outline:none;
+    font-weight:bold;
+}
+div{
+    position:relative;
+    top:0px;
+    height:auto;
+    font-weight:lighter;
+    font-size:30px;
+    text-align:center;
+    left:0px;
+    width:100%;
+}
+a{
+    color:#0f9;
+    font-weight:lighter;
+    text-decoration:none;
+}
+.copy{
+    position:absolute;
+    top:90%;
+    font-size:20px;
+    width:100%;
+    left:0;
+    z-index:-1;
+    text-align:center;
+}
+::placeholder{
+    color:#080;
+}

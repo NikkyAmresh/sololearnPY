@@ -1,0 +1,75 @@
+body {
+    background-color:black;
+}
+img {
+   margin-top:100px;
+   margin-left:30px;
+   border-radius:100%;
+   animation:smoke 3s 14s linear;
+}
+@keyframes smoke {
+   0% {
+      transform:translateY(0px);
+      opacity:1;
+      filter:blur(1px);
+   }
+   100% {
+      transform:translateY(-200px);
+      opacity:0;
+      filter:blur(50px);
+   }
+}
+
+div {
+   display:flex;
+   font-style:italic;
+ }
+   
+.hl{
+   color:brown;
+   width:70px;
+}
+.css {
+   color:green;
+   width:50px; 
+}
+.js {
+   color:blue;
+   width:150px; 
+}
+.jq {
+   color:orange;
+   width:100px;
+}
+.cpp {
+   color:yellow;
+   width:40px;
+}
+.ja {
+   color:skyblue;
+   width:80px;
+}
+.cs {
+   color:#0000ff;
+   width:40px;
+}
+.php {
+   color:white;
+   width:40px; 
+}
+.sql {
+   color:lightgreen;
+   width:40px;
+}
+.py {
+   color:gray;
+   width:90px;
+}
+.sw {
+   color:pink;
+   width:90px;
+}
+.ru {
+   color:red;
+   width:40px;
+}

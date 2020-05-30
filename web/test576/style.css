@@ -1,0 +1,22 @@
+/* Created by Prashanth Kumar {Intermediate} */
+
+div {
+    font-size:100px;
+    
+    line-height:200px;
+    
+    color:black;
+}
+body{
+    color:#444;
+    background:#fee;
+    text-align:center;
+}
+a{
+    color:transparent ;
+    
+    background:linear-gradient(to right,violet,white);
+    -webkit-background-clip:text;
+    -webkit-text-stroke:0.4px blue;
+    font-size:120%;
+}

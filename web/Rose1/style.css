@@ -1,0 +1,12 @@
+body {
+    background-color:#000;
+    font-size:10.8px;
+    font-style:monospace;
+}
+div{
+    position:fixed;
+    top:10px;
+    text-align:center;
+    color:#fff;
+}
+

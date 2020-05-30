@@ -1,0 +1,25 @@
+html,body{
+    height:100%;
+    margin:0;
+}
+.bg{
+    background-image:url("https://www.pubgmobile.com/en-US/m/images/hdm.jpg");
+    height:100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#hdr{
+    position:absolute;
+    top:30px;
+    width:80%;
+    left:10%;
+    height:auto;
+}
+.bgs{
+    position:absolute;
+    bottom:30px;
+    width:70%;
+    left:15%;
+    height:auto;
+}

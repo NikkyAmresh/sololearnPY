@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AISHA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <div id="res">
+    </div>
+    <form onsubmit="aisha(this.txt.value);this.txt.value='';return false;" >
+    
+        <div class="bottom">    <input placeholder="Enter your message" required autocomplete="off" name="txt" >
+        <button class="btn btn-lg" type="submit">
+         <a class="btn btn-lg">
+          <span class="glyphicon glyphicon-send"></span> 
+        </a></button></div>
+        </form>
+        </div>
+        <img id="p1" width="1px" src="https://aishapy.herokuapp.com/static/images/bg.jpg">
+        <div id="loader">Loading...</div>
+    </body>
+</html>

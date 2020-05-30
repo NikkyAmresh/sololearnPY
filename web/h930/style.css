@@ -1,0 +1,76 @@
+/* Created by James */
+
+/* Created by James */
+
+/* Created by James */
+
+canvas {
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+div {
+    display:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    height:auto;
+    min-width:60%;
+    border-radius:20px;
+    background-color:#ddd;
+    text-align:center;
+    box-shadow:5px 5px rgba(0,0,0,0.6);
+    padding:10px;
+}
+
+div:active {
+    display:none;
+    position:absolute;
+    top:calc(50% + 5px);
+    left:50%;
+    transform:translate(-50%, -50%);
+    height:auto;
+    min-width:60%;
+    border-radius:20px;
+    background-color:#ddd;
+    text-align:center;
+    box-shadow:5px 5px rgba(0,0,0,0);
+    padding:10px;
+}
+
+#score {
+    position:absolute;
+    font-weight:bold;
+    color:white;
+    text-shadow:2px 2px black;
+    margin:5px;
+}
+
+#go {
+    font-size:8vw;
+    margin-top:5%;
+}
+
+#fs {
+    margin-top:-8%;
+}
+
+#pause {
+    font-size:8vw;
+    position:absolute;
+    right:2%;
+    top:-4%;
+}
+
+#pt {
+    display:none;
+    position:absolute;
+    top:42%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-shadow:2px 2px black;
+    color:white;
+    font-size:10vw;
+}

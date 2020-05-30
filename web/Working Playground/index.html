@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script><script>
+        alert("Do Changes in codes and run...☺️");
+        </script>
+        
+    </head>
+    <body>
+    <script></script>
+    
+      <div class="nav"></div>
+      <span onclick="tab(this.innerHTML)" class="HTML">HTML</span>
+      <span onclick="tab(this.innerHTML)" class="CSS">CSS</span>
+      <span onclick="tab(this.innerHTML)" class="JS">JS</span>
+      <span class="OUTPUT" onclick="tab(this.innerHTML)">OUTPUT</span>
+       <textarea id="HTML">
+       <!---html--->
+  <body>
+  <div class="profile-card">
+    <div class="image">
+      <img src="https://api.sololearn.com/Uploads/Avatars/3268934.jpg" alt="profile-picture" />
+   
+    </div>
+       <div id="st" class="status"></div>
+    <div class="image-shadow"></div>
+    <div class="header">
+      <div class="title">
+        <span>Nikky Amresh</span>
+        <span id="level" class="level">Level 16</span>
+        <div class="meter">  
+        <div id="loader" class="fill">
+          
+       </div></div> <div id="text"></div> 
+     
+      </div>
+      
+    </div>
+    <div class="content">
+      <div class="tab">
+      
+
+</div>
+        </div>
+            
+        </div>
+      </div>
+   </body>
+       </textarea> 
+       <textarea id="CSS">
+ /* CSS  */
+  body {
+  margin: 0px;
+  padding: 10px;
+  overflow-x: hidden;
+  background-color:#9d9d9d;
+}
+.profile-card {
+  
+  box-shadow: 0px 0px 20px #000;
+  margin: 60px auto 10px auto;
+  max-width: 320px;
+  position: relative;
+  width: 100%;
+}
+.profile-card .image {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 110px;
+  left: 50%;
+  margin-left: -55px;
+  overflow: hidden;
+  padding: 0.2px;
+  position: absolute;
+  top: -55px;
+  width: 110px;
+}
+
+.profile-card  .status{
+  background-color: #ff0;
+  border-radius: 50%;
+  opacity:1;
+  height: 40px;
+  left: 70%;
+  margin-left: -55px;
+  overflow: hidden;
+  padding: 0.2px;
+  position: absolute;
+  top: 18px;
+  width: 40px;
+}
+.profile-card .image img {
+  border: none;
+  border-radius: 50%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.profile-card .status img {
+  border: none;
+  border-radius: 50%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.profile-card .image-shadow {
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 20px #000;
+     -moz-box-shadow: 0px 0px 20px #000;
+          box-shadow: 0px 0px 20px #000;
+  height: 110px;
+  position: absolute;
+  margin-left: -55px;
+  left: 50%;
+  margin-top: -55px;
+  top: -0%;
+  width: 110px;
+  z-index: -1;
+}
+.profile-card .header {
+  background-color: #3c6275;
+  color: #fff;
+  padding: 10px;
+}
+.profile-card .header .title {
+  margin-bottom: 10px;
+  margin-top: 45px;
+  padding: 10px;
+}
+.profile-card .header .title span {
+  display: block;
+  padding: 10px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.profile-card .header .title span:nth-child(1) {
+  font-size: 28px;
+}
+.profile-card .header .title span:nth-child(2) {
+  font-size: 14px;
+  padding-top: 0px;
+}
+.profile-card .header .social-buttons {
+  display: table;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+  width: 100%;
+}
+.profile-card .header .social-buttons .social-button {
+  display: table-cell;
+  text-align: center;
+}
+
+.profile-card .header .social-buttons .social-button i:hover {
+  opacity: 1;
+}
+.profile-card .content .tabs {
+  color: #fff;
+  display: table;
+  height: 47px;
+  width: 100%;
+}
+.profile-card .content .tabs .tab {
+  cursor: pointer;
+  display: table-cell;
+  font-size: 24px;
+  height: 47px;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile-card .content .body {
+  height: 350px;
+  padding: 10px;
+}
+.meter{
+    font-size:8px;
+    width:100%;
+    background-color:#99bbcc;
+    z-index:2;
+    position:relative;
+    overflow:hidden;
+}
+.fill{
+    font-size:8px;
+    background-color:#0b894e;
+    width:50%;
+    height :8px;
+    z-index:1;
+    position:relative;
+    overflow:hidden;
+}
+#text{
+    font-size:8px;
+    position:relative;
+    top:2px;
+}
+.t{
+    font-size:25px;
+    align:center;
+    text-align:center;
+    color:red;
+}
+.th{
+    font-size:30px;
+    align:center;
+    text-align:center;
+    color:#00f00f;
+  }
+  
+  
+  
+       </textarea> 
+ <textarea id="JS">
+ // JS
+ console.log=function(e){
+     alert(e)
+     }
+  alert("Hello World");
+     console.log("Console.log alert()");
+     var xps=0;
+    var t1=setInterval(t,0.1);
+    
+    function t() 
+          {
+          var       xp=document.getElementById("loader");
+           var xp1=document.getElementById("text");
+          var lvl=document.getElementById("level");
+          var stw=document.getElementById("st");
+          var b="https://lh3.googleusercontent.com/-GSahkO3q0mU/WWMK5JvZCiI/AAAAAAAAATA/TUUoGZLSV-cNpfiWXlnQk9pfBt5FnXArACJoC/w981-h954-n-rw/b.jpg";
+          var s="https://lh3.googleusercontent.com/-mnuVRLKIR5Q/WWMK5MGiSdI/AAAAAAAAATI/PojmB-itu1Ak3g0dY-UdWv_JbVHC_lIMwCJoC/w954-h954-n-rw/s.jpg";
+          var g="https://lh3.googleusercontent.com/-TAJ1h_VKMIE/WWMK5L41MUI/AAAAAAAAATM/0saWPfDx4XUk3qAFIRXlVH87DRs8Q9AmgCJoC/w969-h954-n-rw/g.jpg";
+          var p="https://lh3.googleusercontent.com/-hHBqVm35C9s/WWMK5JUK2uI/AAAAAAAAATE/gNWyKelgLUoUqTXQ8eIOrRjavmt2Gko2gCJoC/w912-h954-n-rw/p.jpg";
+            if (xps >= 20400) 
+            {
+              clearInterval(t1);
+              alert("😊");
+              xp1.innerHTML="20000xp";
+            } 
+            else 
+            {
+              xps=xps+18; 
+              var levl, st ;
+              
+    if (xps>=0 && xps<50){
+        levl=1;
+        st="y";
+        }
+    else if (xps>=50 && xps<150){
+        levl=2;
+        st="0";
+        }
+    else if(xps>=150 && xps<300){
+          levl=3;
+          st="0";
+        }
+    else if(xps>=300 && xps<500){
+        levl=4;
+        st="0";
+        }
+    else if(xps>=500 && xps<1000){
+        levl=5;
+        st=b;
+         }
+        else if (xps>=1000 && xps<2000){
+          levl=6;
+          st=b;
+         }
+        else if (xps>=2000 && xps<3000){
+        levl=7;
+        st=s;
+         }
+        else if (xps>=3000 && xps<4000){
+        levl=8;
+        st=s;
+         }
+        else if (xps>=4000 && xps<5000){
+          levl=9;
+          st=s;
+         }
+        else if (xps>=5000 && xps<6500){
+        levl=10;
+        st=g;
+         }
+        else if (xps>=6500 && xps<8000){
+        levl=11;
+        st=g;
+         }
+        else if (xps>=8000 && xps<10000){
+          levl=12;
+          st=g;
+         }
+        else if (xps>=10000 && xps<13000){
+        levl=13;
+        st=g;
+         }
+        else if (xps>=13000 && xps<15000){
+        levl=14;
+        st=g;
+        }
+        else if (xps>=15000 && xps<20000){
+          levl=15;
+          st=g;
+        }
+        else if (xps>=20000 && xps<100000){
+        levl=16;
+        st=p;
+        }
+    else{
+        levl="7";
+        st="h";
+}
+              
+              lvl.innerHTML="Level "+levl;
+              xp.style.width=100*(xps/20400)+"%";
+              xp1.innerHTML=xps+"xp";
+              stw.innerHTML="<img src='"+st+"' >";
+             if (xps<500){
+             document.getElementById("st").style.opacity=0;
+             xps=xps-16
+              }
+             else{
+                 document.getElementById("st").style.opacity=1;
+             }
+              }
+    
+}
+
+
+ //comment
+ 
+ 
+ </textarea> 
+       <div id="OUTPUT"></div>
+       
+       <div class="vr"></div>
+    </body>
+</html>

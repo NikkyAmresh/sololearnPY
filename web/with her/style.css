@@ -1,0 +1,18 @@
+body {
+    font-weight:bold;
+    background-color:#f6f6f6;
+}
+span{color:#4286F5;}
+div{
+    
+    top:100px;
+    width:100%;
+    line-height:30px;
+    left:0px;
+    color:#333;
+    text-align:center;
+    font-size:15px;
+}
+img{
+    width:100%;
+}

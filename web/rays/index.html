@@ -1,0 +1,121 @@
+<!-- Created by Алексей Васильев-->
+
+<!DOCTYPE html>
+
+<body>
+
+ <INPUT TYPE="button" VALUE="Tap" NAME="Btn"                                  
+   onClick="restart()" class="button">
+   
+
+<script>
+
+ W=window.innerWidth;
+ H=window.innerHeight; 
+ var canvas = document.createElement('canvas'),
+ ctx = canvas.getContext('2d');
+ document.body.appendChild(canvas);
+ canvas.width=W;
+ canvas.height=H;
+
+ var stick=function(x1,y1,x2,y2,st,maxage){
+  this.x1=x1;
+  this.x2=x2;
+  this.y1=y1;
+  this.y2=y2;
+  this.st=st;
+  this.maxage=maxage;
+  this.age=Math.random()*this.maxage>>0;
+  this.c='#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+  this.r=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+  this.a=Math.floor(Math.atan((y2-y1)/(x2-x1))*180/Math.PI);
+  this.dir=[-this.st,this.st][Math.random()*2>>0];
+
+  this.move=function(){
+   this.age--;
+   this.a+=this.dir;
+   if (this.a<0) this.a=360-this.a
+   if (this.a>360) this.a=this.a-360;
+
+   var nx2=this.r*cosarray[this.a]+this.x1;
+   var ny2=this.r*sinarray[this.a]+this.y1;
+  
+   while(1){
+     if (!(nx2<5 || nx2>W*0.9 || ny2<5 || ny2>H*0.9))
+      break;
+     this.refl();
+     nx2=this.r*cosarray[this.a]+this.x1;
+     ny2=this.r*sinarray[this.a]+this.y1;
+   }
+
+   this.x2=this.r*cosarray[this.a]+this.x1;
+   this.y2=this.r*sinarray[this.a]+this.y1;
+   if (this.age<=0)
+    this.refl();
+  }
+
+  this.draw=function(){
+   ctx.beginPath();
+   ctx.strokeStyle=this.c;
+   ctx.moveTo(this.x1,this.y1);
+   ctx.lineTo(this.x2,this.y2);
+   ctx.stroke();
+  }
+
+   this.refl=function(){
+    var tx=this.x1;
+    var ty=this.y1;
+    this.x1=this.x2;
+    this.y1=this.y2;
+    this.x2=tx;
+    this.y2=ty;
+    this.a=180+this.a;
+    this.dir=[-this.st,this.st][Math.random()*2>>0];
+    this.age=Math.random()*this.maxage>>0;
+   }
+
+ }
+
+  var field=function(n,l,st,maxage){
+   this.n=n;
+   this.F=[];
+   for (var i=0;i<this.n;i++)
+    this.F.push(new stick (W/2,H/2,l+W/2,l+H/2,st,maxage));
+
+   this.move=function(){
+    for (var i=0;i<this.n;i++)
+     this.F[i].move();
+   }
+
+   this.draw=function(){
+    ctx.fillStyle='rgba(0,0,0,0.1)';
+    ctx.fillRect(0,0,W,H);
+    for (var i=0;i<this.n;i++)
+     this.F[i].draw();
+   }
+
+  }
+
+ var N=new field(200,60,2,33);
+ var sinarray=[];
+ for (var i=0;i<360;i++)
+  sinarray.push(Math.sin(i*Math.PI/180));
+ var cosarray=[];
+ for (var i=0;i<=360;i++)
+  cosarray.push(Math.cos(i*Math.PI/180));
+
+ function restart(){
+  N=new field(Math.floor(Math.random()*500+1),Math.floor(Math.random()*60+1),Math.floor(Math.random()*45+1),Math.floor(Math.random()*45+1));   
+ }
+
+ function doer(){
+  N.move();
+  N.draw();
+  requestAnimationFrame(doer)
+ }
+
+ doer();
+
+
+</script>
+</body>

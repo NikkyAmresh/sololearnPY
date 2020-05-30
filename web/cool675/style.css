@@ -1,0 +1,16 @@
+/* Created by ChessMaster */
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2b548c;
+}
+
+p {
+    position: absolute;
+    text-align: center;
+    top: -5%;
+    font-size: 10vw;
+    color: #101060;
+}

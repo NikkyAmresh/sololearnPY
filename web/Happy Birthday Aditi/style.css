@@ -1,0 +1,32 @@
+body { margin: 0; background: #020202; cursor: crosshair; } canvas{display:block} h2 { position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-family: "Source Sans Pro"; font-size: 4em; font-weight: 900; -webkit-user-select: none; user-select: none; }
+h2{
+    color:#00f;
+    text-shadow:0px 0px 21px #00f;
+    animation:a 10s alternate infinite;
+}
+@keyframes a{
+    0%{
+        color:#000;
+    }
+    10%{
+        color:#0af;
+    }
+    20%{
+        color:#f0f;
+    }
+    30%{
+        color:#0ff;
+    }
+    40%{
+        color:#fa0;
+    }
+    50%{
+        color:#f0f;
+    }
+    60%{
+        color:#ff0;
+    }
+    70%{
+        color:#fff;
+    }
+}

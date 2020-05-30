@@ -1,0 +1,1 @@
+document.write("<h1>"+a[Math.floor(Math.random()*a.length)]+"</h1>")

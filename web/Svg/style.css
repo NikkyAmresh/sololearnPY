@@ -1,0 +1,66 @@
+body {
+    
+}
+svg{
+    enable-background:new 0 0 45 45;
+}
+path{
+    fill-opacity:1;
+    fill-rule:nonzero;
+    stroke:none;
+    stroke-width:0.1;
+}
+#a{
+    transform:matrix(1.25,0,0,-1.25,0,45);
+}
+#b,#c,#d{
+    fill:transparent;
+}
+#b{
+    stroke-dasharray:140;
+}
+#c{
+    stroke-dasharray:70;
+}
+#d{
+    stroke-dasharray:115;
+}
+@keyframes b{
+    0%{
+        fill:transparent;
+        stroke-dashoffset:140;  
+    }
+    99%{
+        fill:transparent;
+    }
+    100%{
+       fill:#77b255;
+       stroke-dashoffset: 0;  
+    }
+}
+@keyframes c{
+    0%{
+        fill:transparent;
+        stroke-dashoffset:70;  
+    }
+    99%{
+        fill:transparent;
+    }
+    100%{
+       fill:#ea596e;
+       stroke-dashoffset: 0;  
+    }
+}
+@keyframes d{
+    0%{
+        fill:transparent;
+        stroke-dashoffset:115;  
+    }
+    99%{
+        fill:transparent;
+    }
+    100%{
+       fill:#f4abba;
+       stroke-dashoffset: 0;  
+    }
+}

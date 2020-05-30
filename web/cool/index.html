@@ -1,0 +1,82 @@
+<!-- Created by Алексей Васильев-->
+
+<!DOCTYPE html>
+<script language="JavaScript">
+
+ from=1; till=1; 
+ rotations=0; fin=0; 
+ finrotations=0;
+ c=5; a="Sololearn forever";
+
+ function setbackground(a)
+  {
+   setTimeout( "setbackground(a)", 10); 
+ 
+   if (fin==1)
+    {
+     finrotations=finrotations+1;
+     if (finrotations==5)
+      {
+       document.getElementById(from).innerHTML = a.charAt(from-1);
+       from++;
+       if (from==a.length+1)
+        {
+         fin=0; 
+         from=1;
+         till=1;
+         finrotations=0;
+     
+        }
+       finrotations=0;
+      }
+    }
+  
+    
+  for(i=from;i<=till;i++)
+    document.getElementById(i).innerHTML = parseInt(Math.random()*9);
+   
+ if (fin!=1) {
+  rotations++;
+  if (rotations==5) {
+    rotations=0;
+    if (till<c)    
+     till++;
+    else
+     if (till>=c) { 
+       document.getElementById(from).innerHTML = a.charAt(from-1);
+       from++; till++;
+       if (till>a.length) {
+         till=a.length;
+         fin=1;
+       }
+     }
+  }
+ }
+}
+</script>
+
+<BODY onLoad="setbackground(a)">
+
+
+<script>   
+
+ function WriteTable(a) {
+  for (i=1;i<=5;i++)
+  document.write("<BR>");
+
+  document.write("<TABLE ALIGN=\"CENTER\"><TR>");
+
+  for (j=1;j<=a.length;j++) {
+   if (j==1)
+     document.write("<TD VALIGN=\"BOTTOM\" WIDTH=\"19\"><FONT SIZE=\"6\" COLOR=\"RED\"><B><DIV ID=\""+j+"\">");
+   else
+    document.write("<TD WIDTH=\"19\"><FONT SIZE=\"5\"><B><DIV ID=\""+j+"\">");
+    document.write(a.charAt(j-1),"</DIV></B></FONT></TD>"); 
+  }
+  document.write("</TR></TABLE>");
+ }
+
+WriteTable(a);
+
+</script>
+</BODY>

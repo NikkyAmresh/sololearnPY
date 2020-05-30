@@ -1,0 +1,23 @@
+body {
+    Background-color:#a6c6ed;
+}
+h1.heading{
+    text-align:center;
+    font-weight:lighter;
+    color:#222;
+}
+small{
+    text-align:center;
+    margin-left:0px;
+    width:100%;
+    color:#222;
+    padding-top:-30px;
+}
+header{
+    position:fixed;
+    top:10px;
+    left:0px;
+    width:100%;
+    font-weight:lighter;
+    text-align:center;
+}

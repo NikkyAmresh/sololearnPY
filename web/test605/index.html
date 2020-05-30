@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+    <div>JavaScript Encoder</div>
+    Decoder
+        <textarea placeholder="Enter your encoded result to decode" id="s"></textarea><br> 
+        <input type="submit" value="Decode"  onclick="dec($('#s').val())"/>
+                 <br>
+    Encoder
+         <textarea id="r" placeholder="Enter your word to encode"></textarea>
+         <input type="button" value="Encode" onclick="enc($('#r').val())"/>     
+    </body>
+</html>

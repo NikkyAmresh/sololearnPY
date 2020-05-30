@@ -1,0 +1,79 @@
+<!-- Created by #00FF00-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>solo certificate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <form name="myform" onsubmit="validateForm()" action="/action_page.php" method="post">
+        <p class="lebel">get certified
+        </p>
+        
+  <input list="courses" name="courses" placeholder="  Select a Course">
+  <datalist id="courses">
+    <option value="html">
+    <option value="css">
+    <option value="js">
+    <option value="jquery">
+    <option value="php">
+    <option value="sql">
+    <option value="ruby">
+    <option value="swift">
+    <option value="java">
+    <option value="python">
+    <option value="c++">
+    <option value="c#">
+  </datalist>
+  
+  <input type="text" name="name" placeholder="  Enter Your Name" required/>
+  
+  <input type="number" name="solo_id" placeholder="  Enter your Sololearn id" required/>
+  
+  <input type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" value="submit"/>
+</form>
+<div id="ok">
+<div class="modal fade" id="myModal" role="dialog">
+<div class="certificate">
+    <p class="header">certificate</p>
+    <div class="solo-logo">
+        <p class="sol">sol</p><img class="logo" src="https://lh3.googleusercontent.com/_Kj4iKeoQh8GsIYqO7t5TGnbnHcTgM1LbmW47XY9q5LNhpGkVq3cLM6Fnyw6JVLlboQ=w300-rw"/><p class="learn">learn</p>
+        <br />
+        <p class="dis">discover your potential</p>
+    </div>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    <p id="issue-date">Issued</p>
+    <p class="line1"><i>This to certify that</i></p>
+    <p id="name"></p>
+    <p class="line2"><i>has successfully completed the</i></p>
+    <p id="course"></p>
+    <img class="sign" src="https://s26.postimg.org/8v7toziux/IMG_20170929_235455.jpg"/>
+    <img class="bglogo" src="https://s1.postimg.org/4r43luoxqn/1506958365889.png"/>
+     <img class="certified" src="https://s1.postimg.org/4tkjnx80xb/1507142941509.png"/>
+    <p id="c-text"></p>
+    <p class="yeva"><i><b>Yeva Hyusyan</b></i></p>
+    <p class="ceo"><i>Chief Executive Officer</i></p>
+    <p id="solo-id">certificate</p>
+    
+</div>
+</div>
+</div>
+    </body>
+</html>

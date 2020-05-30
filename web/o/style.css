@@ -1,0 +1,21 @@
+/* Created by QuentinJanuel */
+
+body {
+    margin: auto;
+    font-family: 'Bellefair', serif;
+    background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a6/22/50/a62250e0b8576e94f8082cde346ad8a7.jpg');
+    background-size: 100%;
+    background-color: #000;
+}
+canvas {
+    width: 100vmin;
+    height: 100vmin;
+    display: block;
+    margin: auto;
+    border: none !important;
+}
+h2, div{
+    text-align: center;
+    color: #FFF;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}

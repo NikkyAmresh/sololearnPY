@@ -1,0 +1,45 @@
+/*Sololearn Theme*/
+body{
+    background-color:#333A42;
+    color:#C1C6CA;
+}
+img.entry-image{
+    width:95%;
+    margin-left:2.5%;
+    height:80px;
+}
+.u{
+    margin-top:60px;
+}
+p{
+    font-size:18px;
+    padding:10px;
+    font-weight:lighter;
+    
+}
+em,l{
+    font-weight:normal;
+}
+.header{
+    background-color:#36474F;
+    position:fixed;
+    color:#fff;
+    top:0px;
+    left:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-weight:lighter;
+    font-size:35px;
+    height:40px;
+    text-align:center;
+    width:100%;
+}
+.code{     
+        overflow-x:scroll;
+        border:1px solid;
+        width:98%;
+        color:#fff;
+        font-size:10px;
+        height:300px;
+        padding:5px;
+     }

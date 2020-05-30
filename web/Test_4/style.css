@@ -1,0 +1,39 @@
+.bar{
+    margin-top:80px;
+}
+#next{margin-top:30px;}
+h2{
+    padding-left:10px;
+    text-align:center;
+}
+#error{
+    display:none;
+    background-color:#fff;
+}
+.no-close .ui-dialog-titlebar-close {
+
+display: none;
+
+}
+.ui-widget-overlay {
+  background-color:#dcdcff;
+  opacity: 1; 
+  }
+b.error{
+    Color:red;
+}
+#sign_out{
+    display:none;
+    text-align:center;
+}
+img.avatar{
+    border-radius:50%;
+    width:70px;
+    height:70px;
+    text-align:center;
+    border:1px solid;
+}
+#input{
+   display:none;
+   background-color:#fff;
+}

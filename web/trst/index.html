@@ -1,0 +1,155 @@
+<!-- Created by Jaagrav-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer</title>
+        <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+        <script>
+        alert("Enter your favourite coder's sololearn profile link and screenshot it and post it.");
+        
+        var link = prompt("Enter your profile link or tap on OK.", "https://www.sololearn.com/Profile/4586359");
+        
+            var profileId = "";
+            function rotateHue(){
+                document.getElementById('wreath').style.filter += "hue-rotate("+(Math.floor(Math.random()*360))+"deg)";
+            }
+            setInterval(rotateHue,500);
+            function getProperLink(){
+                
+                profileId = link.replace("https://www.sololearn.com/Profile/","");
+                profileId = profileId.replace("/?ref=app","");
+                let text = httpGet('https://www.sololearn.com/Profile/'+profileId);
+                let name = text.split("title>")[1].split("&")[0];
+                for(var i=0;i<name.length;i++){
+                document.getElementById("name").innerHTML += name.charAt(i);
+                if(name.charAt(i)==" ")
+                break;}
+            }
+            function httpGet(theUrl) {
+                theUrl="https://cors-anywhere.herokuapp.com/"+ theUrl;
+                if (window.XMLHttpRequest) {
+                xmlhttp=new XMLHttpRequest();
+                } else {
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function(){
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200) { 
+                        return xmlhttp.responseText;
+                    }
+                };
+                xmlhttp.open("GET", theUrl, false );
+                xmlhttp.send();
+                return xmlhttp.responseText;
+            }
+            window.onload = function(){
+                getProperLink();
+                document.getElementById('face').src = 'https://api.sololearn.com/Uploads/Avatars/'+profileId+'.jpg' ;
+                document.getElementById('bg').src = 'https://api.sololearn.com/Uploads/Avatars/'+profileId+'.jpg';
+                console.log();
+            }
+            function setDeg(){
+                var hours = ( new Date().getHours() + new Date().getMinutes()/60) / 12 * 360;
+                var mins = new Date().getMinutes() / 60 * 360;
+                var secs = ( new Date().getSeconds() + new Date().getMilliseconds()/1000) /60 * 360;
+                document.getElementById('hour').style.transform = 'rotate('+hours+'deg)';
+                document.getElementById('mins').style.transform = 'rotate('+mins+'deg)';
+                document.getElementById('secs').style.transform = 'rotate('+secs+'deg)';
+            }
+            setInterval(setDeg,1);
+        </script>
+        <style>
+            body{background: #000;}
+            #bg{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                filter: blur(15px);
+                margin: auto;top: 0;bottom: 0;left: 0;right: 0;
+            }
+            #wreath{
+                animation:a 60s infinite;
+                position: absolute;
+                height: 190pt; width: 190pt; 
+                transition:10s;
+                animation-timing-function:cubic-bezier(0,0,0,0);
+            }
+            @keyframes a{
+                100%{
+                    transform:rotate(360deg);
+                }
+            }
+            .container{
+                position: absolute;
+                height: 200pt;
+                width: 300pt;
+                top: 0;right: 0;left: 0;bottom: 0;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #face{
+                position: absolute;
+                height: 150pt;
+                width: 150pt;
+                border-radius: 50%;
+            }
+            #hour,#mins,#secs{
+                position: absolute;
+                height: 50pt;
+                width:2px;
+                transform-origin: bottom;
+                background-color: white;
+                border-radius:10px;
+            }
+            #hour{
+                height: 45px;
+                top: 35%;
+                transform: rotate(90deg);
+                background: rgb(85, 207, 255);
+                box-shadow: 0 0 5px rgb(0, 0, 0);
+                transition:1s;
+            }
+            #mins{
+                background: rgb(89, 255, 89);
+                box-shadow: 0 0 5px rgb(0, 0, 0);
+                top: 27%;
+                transform: rotate(-45deg);
+                transition:1s;
+            }
+            h1{
+                position: absolute;
+                bottom: -50%;
+                text-align: center;
+                font-family: 'Courgette', cursive;
+                text-shadow:0 0 5px rgb(255, 255, 255);
+            }
+            #name{
+                position:absolute;
+                top:-80%;
+                text-shadow:0 0 5px white;
+            }
+            
+            #secs{
+                background: #000;
+                border:1px solid rgb(24, 255, 166);
+                height: 55pt;
+                top: 24%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img draggable="false" src="" alt="Loading..." id="face" onclick="rotateHue()">
+            <div id="hour"></div>
+            <div id="mins"></div>
+            <h1 id="CT" style="color: rgb(0, 0, 0);" onclick="rotateHue()">It's Time To Code!!!</h1>
+            <img draggable="false" src="https://cdn140.picsart.com/288101772034211.png" alt="Loading..." id="wreath" onclick="rotateHue()">
+            <h1 id="name" onclick="rotateHue()">My favourite coder<br><br></h1>
+            <div id="secs"></div>
+        </div>
+        <img draggable="false" src="" id="bg" onclick="rotateHue()">
+    </body>
+</html>

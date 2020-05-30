@@ -1,0 +1,200 @@
+<!-- Created by Jay-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animated Letters</title>
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+
+                padding: 0;
+                margin: 0;
+                font-family: 'Rubik', sans-serif;
+                background-color: rgba(220,220,255,0.5);
+
+            }
+
+            #title{
+
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                font-size: 1.5em;
+
+            }
+
+            #mySection{
+
+                width: 70vw;
+                height: 100vh;
+                left: 15vw;
+                position: relative;
+                background-color: rgb(255,255,255);
+
+            }
+
+            #output{
+
+                text-align: center;
+                position: relative;
+                top: 50vh;
+                font-size: 2em;
+                font-weight: bold;
+
+            }
+
+            #input{
+
+                text-align: center;
+                position: absolute;
+                width: 150px;
+                left: calc(50% - 70px);
+                height: 20px;
+                top: 30vh;
+
+            }
+
+            input{
+
+                display: inline;
+                width: 100px;
+                margin-right: 5px;
+                border-radius: 3px;
+
+            }
+
+            p{
+
+                display: inline;
+
+            }
+
+            #disclaimer{
+
+                position: absolute;
+                top: 15vh;
+                font-size: 0.9em;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            #footer{
+
+                padding: 3px;
+                font-size: 10px;
+                text-align: right;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+
+            #footer > p{
+
+                display: inline;
+
+            }
+        </style>
+    </head>
+    <body>
+        <section id="mySection">
+            <div id="title">
+                <p>Animated Numbers</p>
+            </div>
+            <div id="disclaimer">
+                <p>Type in your name and see magic... sorta!</p>
+            </div>
+            <div id="output">
+            </div>
+            <div id="input">
+                <input id="inputBox" type="text" placeholder="eg. 'Jay'"/><button id="inputButton" onclick="main()">Go</button>
+            </div>
+        </section>
+        <div id="footer">
+            <p>&copy;<a href="https://www.sololearn.com/Profile/100073">Jay</a> 173/365</p>
+        </div>
+        <script>
+            var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+            var pattern = /[^a-zA-Z]/g;
+            var timeCheck = false;
+            var anInterval;
+
+            function main(){
+
+                var inputWord = ""+document.getElementById("inputBox").value;
+                var tempWord = inputWord;
+                var j = 0;
+
+                if(timeCheck == true){
+
+                    clearInterval(anInterval);
+
+                }
+                
+                timeCheck = true;
+
+                if(inputWord.match(pattern)){
+
+                    alert("Please enter a whole word");
+                    clearInterval(anInterval);
+                    return;
+
+                } else if (inputWord == ""){
+
+                    alert("Please enter a whole word");
+                    clearInterval(anInterval);
+                    return;
+
+                }
+
+                anInterval = setInterval(function(){
+
+                    var finishedLetters = 0;
+                    var timeLimit = 200;
+                    j++;
+
+                    finishedLetters = Math.floor((j/timeLimit)*inputWord.length);
+
+                    separateWord(finishedLetters,tempWord,inputWord);
+
+                    if(j >= timeLimit){
+
+                        timeCheck = false;
+                        clearInterval(anInterval);
+
+                    }
+
+                },50);
+
+            }
+
+            function separateWord(fLetters,tempWord,inputWord){
+
+                var arr = [];
+
+                for(let i=0; i<inputWord.length; i++){
+
+                    if((i+1)<=fLetters){
+
+                        arr.push(""+inputWord[i]);
+
+                    } else {
+
+                        arr.push(""+alphabet[Math.floor(Math.random()*alphabet.length)]);
+
+                    }
+
+                }
+
+                tempWord = arr.join("");
+                document.getElementById("output").innerHTML = tempWord;
+
+            }
+
+            // an animation of your name in letters changing constantly every few miliseconds until evetually, one by one they form your name "Jay" (lets say the previous words are "rei", "jgn", "kge" etc)
+        </script>
+    </body>
+</html>

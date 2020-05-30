@@ -1,0 +1,1 @@
+for(var i=1;i<73;i++){document.write("<a href='http://szcdn1.raagalahari.com/april2016/hd/disha-patani-hd-photos/disha-patani-hd-photos"+i+".jpg' download>http://szcdn1.raagalahari.com/april2016/hd/disha-patani-hd-photos/disha-patani-hd-photos"+i+".jpg</a><br><br>")}

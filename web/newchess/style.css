@@ -1,0 +1,37 @@
+body {
+    background:linear-gradient(to bottom right, #648CDD, #B267B1);
+}
+table{
+    border:0.1px solid;
+    margin-top:30px;
+}
+td{
+    width:40px;
+    height:40px;
+    border:none;
+    font-size:30px;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.bgw{
+    background-color:#EDDFED;
+    text-shadow:0 0 1px #000,0 0 2px;
+}
+.bgb{
+    background-color:#755595;
+    text-shadow:0 0 1px #fff,0 0 2px;
+}
+td:hover{
+    border:0.2px solid #4CAF50;
+}
+.wt{
+    color:#fff;
+}
+.bk{
+    color:#000;
+}
+h1{
+    color:#fff;
+    font-weight:lighter;
+}
