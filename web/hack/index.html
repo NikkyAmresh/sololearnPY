@@ -48,7 +48,8 @@ Created originally by Russel Reeder-->
     transition: calc(1.9s + 5s);
 }
     </style>
-    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
     <body><div class="container" onClick="clearInterval(hacked);//doesnt work, should stop hack typing when keyboard is not displayed">
         <div id="splash" class="container" onClick="      document.getElementById('splash').innerHTML = ('Hacking in progress. Taking over keyboard.')//changes value of this element;
         setTimeout(function(){ document.getElementById('splash').style.display = 'none'; },5000)//removes this element from the dom after 5s from click event;">Click me to get hacked.</div>
@@ -78,5 +79,6 @@ function checkForDelete(e) {
     if (k) { event.preventDefault(); return false;}
 }
         </script>
-    </body>
+    <script type="text/javascript" src="script.js"></script>
+	</body>
 </html>

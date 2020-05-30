@@ -5,7 +5,8 @@
         <title>Search Engine</title>
         <script src="https://dl.dropboxusercontent.com/s/i8vpm0vlhrlc1en/Module.js?dl=1&raw=1"></script>
         <!-- contact me for Module.js documentation... -->
-    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
     <body>
         <form method="get" action="https://www.google.com/search" onsubmit="tog('input[1]',20,.02,'tog(\'input[1]\',20)')">
         <input type="search" name="q" placeholder="Perform a search on Google" autofocus autocomplete="on">
@@ -14,7 +15,8 @@
         </form>
         <div></div>
         $$ele('input[0]').focus();ele('div[0]').style.top=ev[1]+7+'px';ele('div[0]').style.left=ev[0]+'px';new Date().toString()+'\nClient Width : '+innerWidth+', Window Height : '+innerHeight+',\nMouse Coordinates : ['+ev+']'$$
-    </body>
+    <script type="text/javascript" src="script.js"></script>
+	</body>
 </html>
 
 <!-- By @ValentinHacker, don't steal! -->
